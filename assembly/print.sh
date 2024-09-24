@@ -1,3 +1,5 @@
 #! /bin/bash
 
-arm-none-eabi-objdump -d compile.o
+# Print the contents of the assembled output
+
+arm-none-eabi-objdump -d out/program.o
