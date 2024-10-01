@@ -1,3 +1,5 @@
+`timescale 1ns/1ns
+
 module alu_tb();
     reg [31:0] LHS, RHS;
     reg [4:0] uop;
