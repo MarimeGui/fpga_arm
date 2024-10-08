@@ -19,6 +19,12 @@ module alu_tb();
         $dumpfile("dump.vcd"); 
         $dumpvars(0, alu_tb);
 
+        // Test 0: NOP
+        LHS <= 32'h00000000;
+        RHS <= 32'h00000001;
+        uop <= 5'b00000;  // Nothing
+        #10;
+		
         // Test 1: ADD (0 + 1)
         LHS <= 32'h00000000;
         RHS <= 32'h00000001;

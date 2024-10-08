@@ -1,13 +1,17 @@
 vsim -gui work.alu_tb
 # vsim -gui work.alu_tb 
-# Start time: 13:54:31 on Oct 08,2024
+# Start time: 14:27:09 on Oct 08,2024
 # Loading work.alu_tb
 # Loading work.ALU
-vsim -gui work.alu_tb
-# End time: 13:55:01 on Oct 08,2024, Elapsed time: 0:00:30
+quit -sim
+# End time: 14:27:51 on Oct 08,2024, Elapsed time: 0:00:42
 # Errors: 0, Warnings: 1
+# Compile of alu.v was successful.
+# Compile of alu_tb.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.alu_tb
 # vsim -gui work.alu_tb 
-# Start time: 13:55:01 on Oct 08,2024
+# Start time: 14:30:05 on Oct 08,2024
 # Loading work.alu_tb
 # Loading work.ALU
 add wave -position end  sim:/alu_tb/LHS
@@ -15,9 +19,14 @@ add wave -position end  sim:/alu_tb/RHS
 add wave -position end  sim:/alu_tb/uop
 add wave -position end  sim:/alu_tb/out
 add wave -position end  sim:/alu_tb/flags
-run
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Nicolas  Hostname: DESKTOP-3T5D140  ProcessID: 9904
+#           Attempting to use alternate WLF file "./wlft07565n".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft07565n
 run -all
-# ** Note: $finish    : C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/alu_tb.v(70)
-#    Time: 80 ns  Iteration: 0  Instance: /alu_tb
+# ** Note: $finish    : C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/alu_tb.v(76)
+#    Time: 90 ns  Iteration: 0  Instance: /alu_tb
 # 1
-# Break in Module alu_tb at C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/alu_tb.v line 70
+# Break in Module alu_tb at C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/alu_tb.v line 76
+# WARNING: No extended dataflow license exists

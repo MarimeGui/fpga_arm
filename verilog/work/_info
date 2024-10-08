@@ -10,49 +10,49 @@ z2
 cModel Technology
 dC:/intelFPGA/20.1
 vALU
-Z0 !s110 1727797123
+!s110 1728390594
 !i10b 1
 !s100 7@nZ?_i`VilPdbXU^z7g^1
-Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
 I?c8AR5nCCT4Xn:lW5]d@@1
-Z2 VDg1SIo80bB@j0V0VzS_@n1
-Z3 dC:/ProgramsWorkspace/Vivado/fpga_arm/verilog
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/ProgramsWorkspace/Vivado/fpga_arm/verilog
 w1727796452
 8C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/alu.v
 FC:/ProgramsWorkspace/Vivado/fpga_arm/verilog/alu.v
-!i122 2
+!i122 4
 L0 1 48
-Z4 OV;L;2020.1;71
+Z3 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z5 !s108 1727797123.000000
+!s108 1728390594.000000
 !s107 C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/alu.v|
-!s90 -reportprogress|300|-work|work|C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/alu.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/alu.v|
 !i113 1
-Z6 o-work work
-Z7 tCvgOpt 0
+Z4 o-work work
+Z5 tCvgOpt 0
 n@a@l@u
 valu_tb
-R0
+!s110 1728390595
 !i10b 1
-!s100 >>VfjbIG58;lS_K>MdbEz3
+!s100 1U:j?jA68PMe8UECW]M<o1
+R0
+Ia@[`0YLICWcnbgMVzHLdn0
 R1
-I1[dNoAHJ3V3jL2a2SLzdo3
 R2
-R3
-w1727797100
+w1728390583
 8C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/alu_tb.v
 FC:/ProgramsWorkspace/Vivado/fpga_arm/verilog/alu_tb.v
-!i122 3
-L0 3 70
-R4
+!i122 5
+L0 3 76
+R3
 r1
 !s85 0
 31
-R5
+!s108 1728390595.000000
 !s107 C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/alu_tb.v|
-!s90 -reportprogress|300|-work|work|C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/alu_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/alu_tb.v|
 !i113 1
-R6
-R7
+R4
+R5
