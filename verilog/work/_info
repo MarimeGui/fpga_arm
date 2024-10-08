@@ -1,0 +1,58 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/20.1
+vALU
+Z0 !s110 1727797123
+!i10b 1
+!s100 7@nZ?_i`VilPdbXU^z7g^1
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I?c8AR5nCCT4Xn:lW5]d@@1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/ProgramsWorkspace/Vivado/fpga_arm/verilog
+w1727796452
+8C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/alu.v
+FC:/ProgramsWorkspace/Vivado/fpga_arm/verilog/alu.v
+!i122 2
+L0 1 48
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1727797123.000000
+!s107 C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/alu.v|
+!s90 -reportprogress|300|-work|work|C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/alu.v|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+n@a@l@u
+valu_tb
+R0
+!i10b 1
+!s100 >>VfjbIG58;lS_K>MdbEz3
+R1
+I1[dNoAHJ3V3jL2a2SLzdo3
+R2
+R3
+w1727797100
+8C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/alu_tb.v
+FC:/ProgramsWorkspace/Vivado/fpga_arm/verilog/alu_tb.v
+!i122 3
+L0 3 70
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/alu_tb.v|
+!s90 -reportprogress|300|-work|work|C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/alu_tb.v|
+!i113 1
+R6
+R7

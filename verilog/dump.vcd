@@ -1,0 +1,329 @@
+$date
+	Tue Oct 08 13:55:22 2024
+$end
+$version
+	ModelSim Version 2020.1
+$end
+$timescale
+	1ns
+$end
+
+$scope module alu_tb $end
+$var reg 32 ! LHS [31:0] $end
+$var reg 32 " RHS [31:0] $end
+$var reg 5 # uop [4:0] $end
+$var wire 1 $ out [31] $end
+$var wire 1 % out [30] $end
+$var wire 1 & out [29] $end
+$var wire 1 ' out [28] $end
+$var wire 1 ( out [27] $end
+$var wire 1 ) out [26] $end
+$var wire 1 * out [25] $end
+$var wire 1 + out [24] $end
+$var wire 1 , out [23] $end
+$var wire 1 - out [22] $end
+$var wire 1 . out [21] $end
+$var wire 1 / out [20] $end
+$var wire 1 0 out [19] $end
+$var wire 1 1 out [18] $end
+$var wire 1 2 out [17] $end
+$var wire 1 3 out [16] $end
+$var wire 1 4 out [15] $end
+$var wire 1 5 out [14] $end
+$var wire 1 6 out [13] $end
+$var wire 1 7 out [12] $end
+$var wire 1 8 out [11] $end
+$var wire 1 9 out [10] $end
+$var wire 1 : out [9] $end
+$var wire 1 ; out [8] $end
+$var wire 1 < out [7] $end
+$var wire 1 = out [6] $end
+$var wire 1 > out [5] $end
+$var wire 1 ? out [4] $end
+$var wire 1 @ out [3] $end
+$var wire 1 A out [2] $end
+$var wire 1 B out [1] $end
+$var wire 1 C out [0] $end
+$var wire 1 D flags [3] $end
+$var wire 1 E flags [2] $end
+$var wire 1 F flags [1] $end
+$var wire 1 G flags [0] $end
+
+$scope module UUT $end
+$var wire 1 H LHS [31] $end
+$var wire 1 I LHS [30] $end
+$var wire 1 J LHS [29] $end
+$var wire 1 K LHS [28] $end
+$var wire 1 L LHS [27] $end
+$var wire 1 M LHS [26] $end
+$var wire 1 N LHS [25] $end
+$var wire 1 O LHS [24] $end
+$var wire 1 P LHS [23] $end
+$var wire 1 Q LHS [22] $end
+$var wire 1 R LHS [21] $end
+$var wire 1 S LHS [20] $end
+$var wire 1 T LHS [19] $end
+$var wire 1 U LHS [18] $end
+$var wire 1 V LHS [17] $end
+$var wire 1 W LHS [16] $end
+$var wire 1 X LHS [15] $end
+$var wire 1 Y LHS [14] $end
+$var wire 1 Z LHS [13] $end
+$var wire 1 [ LHS [12] $end
+$var wire 1 \ LHS [11] $end
+$var wire 1 ] LHS [10] $end
+$var wire 1 ^ LHS [9] $end
+$var wire 1 _ LHS [8] $end
+$var wire 1 ` LHS [7] $end
+$var wire 1 a LHS [6] $end
+$var wire 1 b LHS [5] $end
+$var wire 1 c LHS [4] $end
+$var wire 1 d LHS [3] $end
+$var wire 1 e LHS [2] $end
+$var wire 1 f LHS [1] $end
+$var wire 1 g LHS [0] $end
+$var wire 1 h RHS [31] $end
+$var wire 1 i RHS [30] $end
+$var wire 1 j RHS [29] $end
+$var wire 1 k RHS [28] $end
+$var wire 1 l RHS [27] $end
+$var wire 1 m RHS [26] $end
+$var wire 1 n RHS [25] $end
+$var wire 1 o RHS [24] $end
+$var wire 1 p RHS [23] $end
+$var wire 1 q RHS [22] $end
+$var wire 1 r RHS [21] $end
+$var wire 1 s RHS [20] $end
+$var wire 1 t RHS [19] $end
+$var wire 1 u RHS [18] $end
+$var wire 1 v RHS [17] $end
+$var wire 1 w RHS [16] $end
+$var wire 1 x RHS [15] $end
+$var wire 1 y RHS [14] $end
+$var wire 1 z RHS [13] $end
+$var wire 1 { RHS [12] $end
+$var wire 1 | RHS [11] $end
+$var wire 1 } RHS [10] $end
+$var wire 1 ~ RHS [9] $end
+$var wire 1 !! RHS [8] $end
+$var wire 1 "! RHS [7] $end
+$var wire 1 #! RHS [6] $end
+$var wire 1 $! RHS [5] $end
+$var wire 1 %! RHS [4] $end
+$var wire 1 &! RHS [3] $end
+$var wire 1 '! RHS [2] $end
+$var wire 1 (! RHS [1] $end
+$var wire 1 )! RHS [0] $end
+$var wire 1 *! uop [4] $end
+$var wire 1 +! uop [3] $end
+$var wire 1 ,! uop [2] $end
+$var wire 1 -! uop [1] $end
+$var wire 1 .! uop [0] $end
+$var reg 32 /! out [31:0] $end
+$var reg 4 0! flags [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 !
+b1 "
+b1 #
+b1 /!
+b0 0!
+1C
+0B
+0A
+0@
+0?
+0>
+0=
+0<
+0;
+0:
+09
+08
+07
+06
+05
+04
+03
+02
+01
+00
+0/
+0.
+0-
+0,
+0+
+0*
+0)
+0(
+0'
+0&
+0%
+0$
+0G
+0F
+0E
+0D
+1.!
+0-!
+0,!
+0+!
+0*!
+1)!
+0(!
+0'!
+0&!
+0%!
+0$!
+0#!
+0"!
+0!!
+0~
+0}
+0|
+0{
+0z
+0y
+0x
+0w
+0v
+0u
+0t
+0s
+0r
+0q
+0p
+0o
+0n
+0m
+0l
+0k
+0j
+0i
+0h
+0g
+0f
+0e
+0d
+0c
+0b
+0a
+0`
+0_
+0^
+0]
+0\
+0[
+0Z
+0Y
+0X
+0W
+0V
+0U
+0T
+0S
+0R
+0Q
+0P
+0O
+0N
+0M
+0L
+0K
+0J
+0I
+0H
+$end
+#10
+b1 !
+b10 #
+0.!
+1-!
+1g
+b0 /!
+b1 0!
+1G
+0C
+#20
+b11110000111100001111000011110000 !
+b1111000011110000111100001111 "
+b11 #
+1.!
+1(!
+1'!
+1&!
+1!!
+1~
+1}
+1|
+1w
+1v
+1u
+1t
+1o
+1n
+1m
+1l
+0g
+1c
+1b
+1a
+1`
+1[
+1Z
+1Y
+1X
+1S
+1R
+1Q
+1P
+1K
+1J
+1I
+1H
+b0 0!
+b1 0!
+#30
+b10101010101010101010101010101010 !
+b1010101010101010101010101010101 "
+b100 #
+0.!
+0-!
+1,!
+0(!
+0&!
+1%!
+1#!
+0~
+0|
+1{
+1y
+0v
+0t
+1s
+1q
+0n
+0l
+1k
+1i
+1f
+1d
+0c
+0a
+1^
+1\
+0[
+0Y
+1V
+1T
+0S
+0Q
+1N
+1L
+0K
+0I
+b0 0!
+b1111111111111

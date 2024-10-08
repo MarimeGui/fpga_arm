@@ -1,0 +1,23 @@
+vsim -gui work.alu_tb
+# vsim -gui work.alu_tb 
+# Start time: 13:54:31 on Oct 08,2024
+# Loading work.alu_tb
+# Loading work.ALU
+vsim -gui work.alu_tb
+# End time: 13:55:01 on Oct 08,2024, Elapsed time: 0:00:30
+# Errors: 0, Warnings: 1
+# vsim -gui work.alu_tb 
+# Start time: 13:55:01 on Oct 08,2024
+# Loading work.alu_tb
+# Loading work.ALU
+add wave -position end  sim:/alu_tb/LHS
+add wave -position end  sim:/alu_tb/RHS
+add wave -position end  sim:/alu_tb/uop
+add wave -position end  sim:/alu_tb/out
+add wave -position end  sim:/alu_tb/flags
+run
+run -all
+# ** Note: $finish    : C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/alu_tb.v(70)
+#    Time: 80 ns  Iteration: 0  Instance: /alu_tb
+# 1
+# Break in Module alu_tb at C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/alu_tb.v line 70
