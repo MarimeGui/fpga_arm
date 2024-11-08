@@ -1,0 +1,57 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/ProgramsWorkspace/Vivado/fpga_arm/verilog
+vrom
+Z0 !s110 1730822336
+!i10b 1
+!s100 9zeLzL>_UhKXAVBeb66E72
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IKgLFK>f_iFZ@VkoMKNI:M3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/ProgramsWorkspace/Vivado/fpga_arm/verilog/rom
+w1730822138
+8C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/rom/rom.v
+FC:/ProgramsWorkspace/Vivado/fpga_arm/verilog/rom/rom.v
+!i122 18
+L0 37 20
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1730822336.000000
+!s107 C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/rom/rom.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/rom/rom.v|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+vrom_tb
+R0
+!i10b 1
+!s100 :T>:8dkDT>SIB]:0W;V351
+R1
+IPYLcIGo?UiCdkFg2VVLHl3
+R2
+R3
+w1730822141
+8C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/rom/rom_tb.v
+FC:/ProgramsWorkspace/Vivado/fpga_arm/verilog/rom/rom_tb.v
+!i122 19
+L0 3 57
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/rom/rom_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/rom/rom_tb.v|
+!i113 1
+R6
+R7

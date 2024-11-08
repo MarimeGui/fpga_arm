@@ -1,0 +1,5 @@
+# Compile of rom.v was successful.
+# Compile of rom_tb.v was successful.
+# 2 compiles, 0 failed with no errors.
+# can't read "Startup(-L)": no such element in array
+# Load canceled
