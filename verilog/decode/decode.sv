@@ -123,7 +123,7 @@ always @ (posedge clk) begin
             casez(instruction[9:6])
                 // ----- EOR
                 4'b0001: begin
-                    uop=4
+                    uop=4;
                     sel_p0=instruction[2:0];
                     sel_in=instruction[2:0];
                     sel_p1=instruction[5:3];
@@ -138,23 +138,25 @@ always @ (posedge clk) begin
                 3'b0??: begin
                     uop=10;
                     sel_in=instruction[2:0];
-                    sel_p1=instruction[5:3];// adresse memmoire
+                    sel_p1=instruction[5:3];
+                    // TODO: Missing offset
                 end
 
                 // ----- STR
                 3'b1??: begin
                     uop=9;
                     sel_p0=instruction[2:0];
-                    sel_p1=instruction[5:3];// adresse memoire
+                    sel_p1=instruction[5:3];
+                    // TODO: Missing offset
                 end
             endcase
         end
 
         // Unconditional Branch
-        6'b11100?: begin
-            // ----- B
-            // TODO
-        end
+        // 6'b11100?: begin
+        //     // ----- B
+        //     // TODO
+        // end
 
         // Conditional Branch
         6'b1101??: begin
