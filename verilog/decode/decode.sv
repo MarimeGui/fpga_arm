@@ -48,6 +48,29 @@ always @ (posedge clk) begin
                     sel_in = instruction[10:8];
                     num_to_rhs = 1;
                 end
+                // Sub between registers
+                5'b01101: begin
+                    uop = 5'b00001;
+                    sel_p0 = instruction[8:6];
+                    sel_p1 = instruction[5:3];
+                    sel_in = instruction[2:0];
+                end
+                // Sub Immediate 3 to Register
+                5'b01111: begin
+                
+                end
+                // Sub Immediate 8 to Register
+                5'b111??: begin
+                
+                end
+                // LSL immediate
+                5'b00???: begin
+                    uop= 5'b00110;
+                    num = instruction[10:6];
+                    sel_p1 = instruction[5:3];
+                    sel_in = instruction[2:0];
+                    num_to_rhs = 1;
+                end
 
                 default: explose = 1;
             endcase

@@ -5,4 +5,4 @@
 mkdir -p out
 arm-none-eabi-as -march=armv7 program.s -o out/program.o
 arm-none-eabi-objcopy -O binary -j .text out/program.o out/program.bin
-python to_hex.py out/program.bin out/program.hex
+python3 to_hex.py out/program.bin out/program.hex
