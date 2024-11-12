@@ -1,11 +1,4 @@
-C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/rom/rom_tb.v {1 {vlog -work work -stats=none C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/rom/rom_tb.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module rom_tb
-
-Top level modules:
-	rom_tb
-
-} {} {}} C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/rom/rom.v {1 {vlog -work work -stats=none C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/rom/rom.v
+C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/rom/rom.v {1 {vlog -work work -stats=none C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/rom/rom.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module rom
 

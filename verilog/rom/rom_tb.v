@@ -26,30 +26,33 @@ module rom_tb();
         $dumpfile("rom_tb.vcd");
         $dumpvars(0, rom_tb);
 
-		// Read address 32'h08000054
+		// Write 0x01234567 at address 0x08000000
+		data_in = 32'h01234567;
+		write_enable = 1;
+		address = 32'h08000000;
+		#10
+		// Read address 0x08000000
 		write_enable = 0;
 		data_in = 32'h11111111;
-		address = 8'h54;
 		#10
 		
-		// Write 0x12345678 at address 0x08000054
-		data_in = 32'h12345678;
+		// Try to write 0xFEDCBA90 at address 0x08100000
+		address = 32'h08100000;
 		write_enable = 1;
+		data_in = 32'hFEDCBA90;
 		#10
-/*		
-		// Try to read address 32'h08100060
+		// Try to read address 0x08100000
 		write_enable = 0;
-		address = 8'h60;
-		data_in = //32'hFEDCBA90;
 		#10
 		
-		// Try to write 0xFEDCBA90 at address 32'h08100060
+		// Write 0x89ABCDEF at address 0x080FFFFF
+		data_in = 32'h89ABCDEF;
 		write_enable = 1;
+		address = 32'h080FFFFF;
 		#10
-*/		
-		// Read address 32'h08000054
+		// Read address 0x89ABCDEF
 		write_enable = 0;
-		//address = 32'h08000054;
+		data_in = 32'h11111111;
 		#10
 		
         $stop;
