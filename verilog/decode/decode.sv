@@ -84,17 +84,26 @@ always @ (posedge clk) begin
 
                 // MOV - Register
                 5'b00000: begin
-                    // TODO
+                    uop=8;
+                    sel_p0=instruction[5:3];
+                    sel_in=instruction[2:0];
                 end
                 // MOV - Immediate
                 5'b100??: begin
-                    // TODO
+                    uop=8;
+                    sel_in=instruction[10:8];
+                    num_to_rhs=1;
+                    num=instruction[7:0];
                 end
 
                 // ----- CMP
 
+                // CMP - Immediate
                 5'b101??: begin
-                    // TODO
+                    uop=5;
+                    sel_p1=instruction[10:8];
+                    num=instruction[7:0];
+                    num_to_rhs=1;
                 end
 
                 default: explose = 1;
