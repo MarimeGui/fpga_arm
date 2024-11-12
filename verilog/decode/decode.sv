@@ -55,18 +55,26 @@ always @ (posedge clk) begin
 
                 // SUB - between registers
                 5'b01101: begin
-                    uop = 5'b00001;
+                    uop = 2;
                     sel_p0 = instruction[8:6];
                     sel_p1 = instruction[5:3];
                     sel_in = instruction[2:0];
                 end
                 // SUB - Immediate 3 to Register
                 5'b01111: begin
-                    // TODO
+                    uop = 2;
+                    num = instruction[8:6];
+                    sel_p1 = instruction[5:3];
+                    sel_in = instruction[2:0];
+                    num_to_rhs = 1;
                 end
                 // SUB - Immediate 8 to Register
                 5'b111??: begin
-                    // TODO
+                    uop =2;
+                    num = instruction[7:0];
+                    sel_p1 = instruction[10:8];
+                    sel_in = instruction[10:8];
+                    num_to_rhs = 1;
                 end
 
                 // ----- LSL
@@ -115,7 +123,10 @@ always @ (posedge clk) begin
             casez(instruction[9:6])
                 // ----- EOR
                 4'b0001: begin
-                    // TODO
+                    uop=4
+                    sel_p0=instruction[2:0];
+                    sel_in=instruction[2:0];
+                    sel_p1=instruction[5:3];
                 end
             endcase
         end
@@ -125,12 +136,16 @@ always @ (posedge clk) begin
             casez(instruction[11:9])
                 // ----- LDR
                 3'b0??: begin
-                    // TODO
+                    uop=10;
+                    sel_in=instruction[2:0];
+                    sel_p1=instruction[5:3];// adresse memmoire
                 end
 
                 // ----- STR
                 3'b1??: begin
-                    // TODO
+                    uop=9;
+                    sel_p0=instruction[2:0];
+                    sel_p1=instruction[5:3];// adresse memoire
                 end
             endcase
         end
