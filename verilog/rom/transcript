@@ -310,3 +310,150 @@ run
 # ** Note: $stop    : C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/rom/rom_tb.v(58)
 #    Time: 60 ns  Iteration: 0  Instance: /rom_tb
 # Break in Module rom_tb at C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/rom/rom_tb.v line 58
+# Compile of rom.v was successful.
+# Compile of rom_tb.v was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# Closing VCD file "rom_tb.vcd"
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rom_tb
+# Loading work.rom
+run
+# ** Note: $stop    : C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/rom/rom_tb.v(58)
+#    Time: 60 ns  Iteration: 0  Instance: /rom_tb
+# Break in Module rom_tb at C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/rom/rom_tb.v line 58
+# Compile of rom.v was successful.
+# Compile of rom_tb.v was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# Closing VCD file "rom_tb.vcd"
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rom_tb
+# Loading work.rom
+run
+# ** Note: $stop    : C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/rom/rom_tb.v(58)
+#    Time: 60 ns  Iteration: 0  Instance: /rom_tb
+# Break in Module rom_tb at C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/rom/rom_tb.v line 58
+# Compile of rom.v was successful.
+# Compile of rom_tb.v was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# Closing VCD file "rom_tb.vcd"
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rom_tb
+# Loading work.rom
+run
+# ** Note: $stop    : C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/rom/rom_tb.v(58)
+#    Time: 60 ns  Iteration: 0  Instance: /rom_tb
+# Break in Module rom_tb at C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/rom/rom_tb.v line 58
+# Compile of rom.v was successful.
+# Compile of rom_tb.v was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# Closing VCD file "rom_tb.vcd"
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rom_tb
+# Loading work.rom
+run
+# ** Note: $stop    : C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/rom/rom_tb.v(58)
+#    Time: 60 ns  Iteration: 0  Instance: /rom_tb
+# Break in Module rom_tb at C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/rom/rom_tb.v line 58
+# Compile of rom.v was successful.
+# Compile of rom_tb.v was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# Closing VCD file "rom_tb.vcd"
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rom_tb
+# Loading work.rom
+run
+# ** Note: $stop    : C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/rom/rom_tb.v(58)
+#    Time: 60 ns  Iteration: 0  Instance: /rom_tb
+# Break in Module rom_tb at C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/rom/rom_tb.v line 58
+# Compile of rom.v was successful.
+# Compile of rom_tb.v was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# Closing VCD file "rom_tb.vcd"
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rom_tb
+# Loading work.rom
+run
+# ** Note: $stop    : C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/rom/rom_tb.v(58)
+#    Time: 60 ns  Iteration: 0  Instance: /rom_tb
+# Break in Module rom_tb at C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/rom/rom_tb.v line 58
+# Compile of rom.v was successful.
+# Compile of rom_tb.v was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# Closing VCD file "rom_tb.vcd"
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rom_tb
+# Loading work.rom
+run
+# ** Note: $stop    : C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/rom/rom_tb.v(58)
+#    Time: 60 ns  Iteration: 0  Instance: /rom_tb
+# Break in Module rom_tb at C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/rom/rom_tb.v line 58
+run
+# Compile of rom.v was successful.
+# Compile of rom_tb.v was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# Closing VCD file "rom_tb.vcd"
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rom_tb
+# Loading work.rom
+run
+# ** Note: $stop    : C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/rom/rom_tb.v(58)
+#    Time: 60 ns  Iteration: 0  Instance: /rom_tb
+# Break in Module rom_tb at C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/rom/rom_tb.v line 58
+run
+# Compile of rom.v was successful.
+# Compile of rom_tb.v was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# Closing VCD file "rom_tb.vcd"
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rom_tb
+# Loading work.rom
+run
+# ** Note: $stop    : C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/rom/rom_tb.v(58)
+#    Time: 60 ns  Iteration: 0  Instance: /rom_tb
+# Break in Module rom_tb at C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/rom/rom_tb.v line 58
+restart
+# Closing VCD file "rom_tb.vcd"
+# Compile of rom.v was successful.
+# Compile of rom_tb.v was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rom_tb
+# Loading work.rom
+run
+# ** Note: $stop    : C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/rom/rom_tb.v(58)
+#    Time: 60 ns  Iteration: 0  Instance: /rom_tb
+# Break in Module rom_tb at C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/rom/rom_tb.v line 58
+# Compile of rom.v was successful.
+# Compile of rom_tb.v was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# Closing VCD file "rom_tb.vcd"
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rom_tb
+# Loading work.rom
+run
+# ** Note: $stop    : C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/rom/rom_tb.v(58)
+#    Time: 60 ns  Iteration: 0  Instance: /rom_tb
+# Break in Module rom_tb at C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/rom/rom_tb.v line 58
+# Compile of rom.v was successful.
+# Compile of rom_tb.v was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# Closing VCD file "rom_tb.vcd"
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rom_tb
+# Loading work.rom
+run
+# ** Note: $stop    : C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/rom/rom_tb.v(58)
+#    Time: 60 ns  Iteration: 0  Instance: /rom_tb
+# Break in Module rom_tb at C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/rom/rom_tb.v line 58
