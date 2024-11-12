@@ -43,3 +43,15 @@ run
 # ** Note: $stop    : C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/sram1/sram1_tb.v(67)
 #    Time: 80 ns  Iteration: 0  Instance: /sram1_tb
 # Break in Module sram1_tb at C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/sram1/sram1_tb.v line 67
+# Compile of sram1.v was successful.
+# Compile of sram1_tb.v was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# Closing VCD file "sram1_tb.vcd"
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.sram1_tb
+# Loading work.sram1
+run
+# ** Note: $stop    : C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/sram1/sram1_tb.v(67)
+#    Time: 80 ns  Iteration: 0  Instance: /sram1_tb
+# Break in Module sram1_tb at C:/ProgramsWorkspace/Vivado/fpga_arm/verilog/sram1/sram1_tb.v line 67

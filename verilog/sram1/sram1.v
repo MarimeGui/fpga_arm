@@ -30,7 +30,7 @@ always @(posedge clock) begin
 end
 
 always @(negedge clock) begin
-	data_out <= 31'bZ;
+	data_out <= 32'bZ;
 end
 
 endmodule
