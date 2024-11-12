@@ -1,6 +1,0 @@
-/home/reddot/Documentos/ENSEA/Project/verilog/reg_file/regs.v {0 {vlog -work work -stats=none /home/reddot/Documentos/ENSEA/Project/verilog/reg_file/regs.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  2 2021
--- Compiling module regs
-** Error: /home/reddot/Documentos/ENSEA/Project/verilog/reg_file/regs.v(9): 'Port' must not be declared to be an array: regs.
-
-} {4.0 5.0} {}}
