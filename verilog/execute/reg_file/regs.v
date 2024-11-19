@@ -1,5 +1,6 @@
 module regs (
     input clock,
+	input in_enable, // Enable in hight level. A low level disable writing but not for PC
     input [31:0] in_reg, pc_in,
     input [3:0] sel_in, sel_p0, sel_p1,
     input [3:0] flags_in,
@@ -20,9 +21,11 @@ end
 
 // Register write operation
 always @ (posedge clock) begin
-    regs[sel_in] <= in_reg;     // Write to the register selected by sel_in
-    flags <= flags_in;      // Update flags register
     regs[15] <= pc_in;      // Update PC (r15) with pc_in
+	if (in_enable) begin // Enable or disable writing but not for PC
+		regs[sel_in] <= in_reg;     // Write to the register selected by sel_in
+		flags <= flags_in;      // Update flags register
+	end
 end
 
 endmodule
