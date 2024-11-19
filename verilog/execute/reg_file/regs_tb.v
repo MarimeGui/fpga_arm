@@ -12,7 +12,7 @@ module regs_tb();
     // Instantiate the regs module
     regs UUT (
         .clock(clock),
-        .in(in),
+        .in_reg(in_reg),
         .sel_in(sel_in),
         .sel_p0(sel_p0),
         .sel_p1(sel_p1),
