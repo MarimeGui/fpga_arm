@@ -2,12 +2,11 @@
 
 module regs_tb();
     reg clock;
-    reg [31:0] in;
+    reg [31:0] in_reg;
     reg [3:0] sel_in, sel_p0, sel_p1;
     reg [3:0] flags_in;
     wire [31:0] p0, p1, pc_out;
     wire [3:0] flags_out;
-    wire [31:0] regs[15:0]; // Register file output for inspection
 
     // Instantiate the regs module
     regs UUT (
@@ -20,8 +19,7 @@ module regs_tb();
         .p0(p0),
         .p1(p1),
         .pc_out(pc_out),
-        .flags_out(flags_out),
-        .regs(regs) // Expose regs for testing purposes
+        .flags_out(flags_out)
     );
 
     // Clock generation (50% duty cycle, period = 10ns)
@@ -36,7 +34,7 @@ module regs_tb();
         $dumpvars(0, regs_tb);
 
         // Initialize inputs
-        in = 32'h00000000;
+        in_reg = 32'h00000000;
         sel_in = 4'b0000; 
         sel_p0 = 4'b0000;
         sel_p1 = 4'b0001;
@@ -44,16 +42,16 @@ module regs_tb();
         
         // Step 1: Write to r0 and r1
         #10; // Wait for clock to stabilize
-        in = 32'h12345678; // Data to write
+        in_reg = 32'h12345678; // Data to write
         sel_in = 4'b0000; // Write to r0
         #10; // Wait for positive edge of clock
 
-        in = 32'h87654321; // Data to write
+        in_reg = 32'h87654321; // Data to write
         sel_in = 4'b0001; // Write to r1
         #10;
 
         // Step 2: Write to PC (r15)
-        in = 32'hABCD1234; // Write to r15 (PC)
+        in_reg = 32'hABCD1234; // Write to r15 (PC)
         sel_in = 4'b1111; // Select PC (r15)
         #10;
 
@@ -74,6 +72,6 @@ module regs_tb();
 
         // Add more test cases as needed, such as writing to r2-r12, and testing the stack pointer (r13) and link register (r14).
         
-        $stop;
+        $stop; // End simulation
     end
 endmodule

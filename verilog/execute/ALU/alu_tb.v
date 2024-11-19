@@ -3,7 +3,7 @@
 module alu_tb();
     reg [31:0] LHS, RHS;
     reg [4:0] uop;
-    wire [31:0] out;
+    wire [31:0] out_alu;
     wire [3:0] flags; // [Z, C, N, V]
 
     // Instantiate the ALU module
@@ -11,7 +11,7 @@ module alu_tb();
         .LHS(LHS),
         .RHS(RHS),
         .uop(uop),
-        .out(out),
+        .out_alu(out_alu),
         .flags(flags)
     );
 
@@ -72,7 +72,6 @@ module alu_tb();
         uop <= 5'b01000;  // MOV operation
         #10;
         
-        // End simulation
-        $finish;
+        $stop; // End simulation
     end
 endmodule

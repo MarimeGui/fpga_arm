@@ -71,6 +71,8 @@ module execute_tb();
 
         $display("P0 value (R2): %h", in_reg);
         $display("Flags: %b", flags_in);
+		
+        $stop; // End simulation
     end
 
 
