@@ -1,14 +1,38 @@
 module Decode(
     input [15:0] instruction,
     input clk,
+    input reset,
+    input [31:0] PC_in,
     output reg [4:0] uop,
     output reg num_to_rhs,
     output reg [31:0] num,
+    output reg [31:0] in_reg,
+    output reg [31:0] PC_out,
     output reg [3:0] sel_p0,
     output reg [3:0] sel_p1,
     output reg [3:0] sel_in,
-    output reg explose
+    output reg explose,
+    output reg in_enable_reg
 );
+
+wire [31:0] LR_reg;
+wire [2:0] counter;
+
+// Counter for delays on branch operations
+always @(posedge clock) begin
+    switch(counter):
+    case 1:
+        in_enable_reg <= 0;
+    case 2:
+        reset <= 1;
+    case 3:
+        in_enable_reg <= 1;
+end
+
+always @(posedge clock) begin
+    if(counter != 4):
+        counter +=1;
+end
 
 always @ (posedge clk) begin
     // Default outputs
@@ -153,10 +177,18 @@ always @ (posedge clk) begin
         end
 
         // Unconditional Branch
-        // 6'b11100?: begin
+        6'b11100?: begin
+            sel_in <= 14;
+            in_reg <= PC_out;
+            PC_in <= PC_out + instruction[10:0] - 3;
+            reset <= 1;
+            counter <= 0;
+            // TODO: implement counter logic for execution delay
+
+
         //     // ----- B
         //     // TODO
-        // end
+        end
 
         // Conditional Branch
         6'b1101??: begin
