@@ -2,6 +2,7 @@
 
 module execute_tb();
     reg clock;
+	reg in_reg_enable;
     reg [31:0] in_reg, pc_in;
     reg [3:0] sel_in, sel_p0, sel_p1;
     reg [3:0] flags_in;
@@ -14,6 +15,7 @@ module execute_tb();
 
     regs UUT_A (
         .clock(clock),
+		.in_reg_enable(in_enable),
         .in_reg(in_reg),
         .pc_in(pc_in),
         .sel_in(sel_in),
@@ -50,6 +52,8 @@ module execute_tb();
         $dumpfile("execute_tb.vcd"); 
         $dumpvars(0, execute_tb);
         #10;
+		
+		in_reg_enable <= 1; // Enable write in reg module
 
         in_reg = 32'h2; // Data in r0
         sel_in = 4'b0000;

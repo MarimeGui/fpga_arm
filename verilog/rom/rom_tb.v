@@ -17,7 +17,7 @@ module rom_tb();
 
     // Clock generation (50% duty cycle, period = 10ns)
 	initial begin
-        clock = 0;
+        clock = 1;
         forever #5 clock = ~clock; // Clock toggles every 5ns -> period of 10ns
     end
 
@@ -45,10 +45,10 @@ module rom_tb();
 		write_enable = 0;
 		#10
 		
-		// Write 0x89ABCDEF at address 0x080FFFFF
+		// Write 0x89ABCDEF at address 0x080FFFFC
 		data_in = 32'h89ABCDEF;
 		write_enable = 1;
-		address = 32'h080FFFFF;
+		address = 32'h080FFFFC;
 		#10
 		// Read address 0x89ABCDEF
 		write_enable = 0;
