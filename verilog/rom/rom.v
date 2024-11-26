@@ -11,18 +11,28 @@ module rom(
 	output reg [31:0] data_out
 );
 
-reg [31:0] rom_block [1048575:0]; // 0xF FFFF = 1048575
+reg [7:0] rom_block [1048575:0]; // 0xF FFFF * 4 = 1048575 * 4 = 4194300
 
-always @(posedge clock) begin
-	if ( address[31:20] == 12'h080 ) begin // Check if the address is for the ROM, so if its start by 0x080
-        if(write_enable)
-            rom_block[address[19:0]] <= data_in; // Write
-        else
-            data_out <= rom_block[address[19:0]]; // Read
+always @(negedge clock) begin
+	if (address[31:20] == 12'h080) begin // Check if the address is for the ROM, so if its start by 0x080
+        if(write_enable) begin // Write
+            rom_block[address[19:0]+3] <= (data_in >> 24) & 8'hFF;
+            rom_block[address[19:0]+2] <= (data_in >> 16) & 8'hFF;
+            rom_block[address[19:0]+1] <= (data_in >> 8) & 8'hFF;
+            rom_block[address[19:0]] <= data_in & 8'hFF;
+        end else begin // Read
+            data_out <=
+				  rom_block[address[19:0]+3] << 24
+				| rom_block[address[19:0]+2] << 16
+				| rom_block[address[19:0]+1] << 8
+				| rom_block[address[19:0]];
+		end
+	end else begin // Adress is not an adress in ROM
+		data_out <= 32'bZ;
 	end
 end
 
-always @(negedge clock) begin
+always @(posedge clock) begin
 	data_out <= 32'bZ;
 end
 
