@@ -20,16 +20,26 @@ module sram1(
 
 reg [31:0] sram1_block [32767:0]; // 0x7FFF = 32 767
 
-always @(posedge clock) begin
+always @(negedge clock) begin
 	if ( (address[31:16] == 16'h2000) || (address[31:15] == 17'h4002) ) begin // Check if the address is for SRAM 1
-        if(read_write)
-            sram1_block[address[14:0]] <= data_in; // Write
-        else
-            data_out <= sram1_block[address[14:0]]; // Read
+		if(read_write) begin // Write
+            sram1_block[address[14:0]+3] <= (data_in >> 24) & 8'hFF;
+            sram1_block[address[14:0]+2] <= (data_in >> 16) & 8'hFF;
+            sram1_block[address[14:0]+1] <= (data_in >> 8) & 8'hFF;
+            sram1_block[address[14:0]] <= data_in & 8'hFF;
+        end else begin // Read
+            data_out <=
+				  sram1_block[address[14:0]+3] << 24
+				| sram1_block[address[14:0]+2] << 16
+				| sram1_block[address[14:0]+1] << 8
+				| sram1_block[address[14:0]];
+		end
+	end else begin // Adress is not an adress in ROM
+		data_out <= 32'bZ;
 	end
 end
 
-always @(negedge clock) begin
+always @(posedge clock) begin
 	data_out <= 32'bZ;
 end
 

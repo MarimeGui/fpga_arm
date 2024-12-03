@@ -17,7 +17,7 @@ module sram1_tb();
 
     // Clock generation (50% duty cycle, period = 10ns)
 	initial begin
-        clock = 0;
+        clock = 1;
         forever #5 clock = ~clock; // Clock toggles every 5ns -> period of 10ns
     end
 
@@ -55,8 +55,8 @@ module sram1_tb();
 		data_in = 32'h11111111;
 		#10
 		
-		// Try to write 0xFEDCBA90 at address 0x1FFFFFFF
-		address = 32'h1FFFFFFF;
+		// Try to write 0x55555555 at address 0x1FFFFFFC
+		address = 32'h1FFFFFFC;
 		read_write = 1;
 		data_in = 32'h55555555;
 		#10

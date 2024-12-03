@@ -11,7 +11,7 @@ module rom(
 	output reg [31:0] data_out
 );
 
-reg [7:0] rom_block [1048575:0]; // 0xF FFFF * 4 = 1048575 * 4 = 4194300
+reg [7:0] rom_block [1048575:0]; // 0xF FFFF = 1048575
 
 always @(negedge clock) begin
 	if (address[31:20] == 12'h080) begin // Check if the address is for the ROM, so if its start by 0x080
