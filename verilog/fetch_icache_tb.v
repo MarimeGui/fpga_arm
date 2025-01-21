@@ -36,11 +36,11 @@ module fetch_icache_tb();
 		
 		not_enable = 0;
 		delta_i = 0;
+		#10; // index = 10
 		#10; // index = 11
-		#10; // index = 12
 		
 		not_enable = 1;
-		delta_i = -3;
+		delta_i = -2;
 		#10; // index = 10 & data = 0x0
 		
 		delta_i = 0;
