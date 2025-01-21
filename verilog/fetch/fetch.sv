@@ -5,7 +5,7 @@ module Fetch(
 );
 
 initial begin
-	index = 10;
+	index = 9; // For stating at 10
 end
 
 always @(posedge clk) begin

@@ -26,23 +26,23 @@ module icache_tb();
 
 		not_enable = 0; // Enable
 
-		index = 0;
-		#10 // Read 1st cell
+		index = 10;
+		#10 // Read cell number 10
 		
-		index = 1;
-		#10 // Read 2nd cell
+		index = 11;
+		#10 // Read cell number 11
 		
-		index = 2;
-		#10 // Read 3rd cell
+		index = 12;
+		#10 // Read cell number 12
 		
 		not_enable = 1; // Disable
 		#10 // out must be at 0x0
 		
-		index = 3;
+		index = 13;
 		#10 // do nothing
 		
 		not_enable = 0;
-		#10; // Read the 4 cell
+		#10; // Read cell number 14
 		
         $stop;
 	end
