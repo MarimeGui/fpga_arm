@@ -1,4 +1,3 @@
-// TODO: Need to know from decode if instruction carried a num or not
 // TODO: Make sure all synchronous modules have coherent posedge negedge
 
 module Execute(
@@ -44,7 +43,7 @@ module Execute(
     Mux32 i_rhs_mux(
         .a(reg_p0)
         .b(delayed_num)
-        .sel() // TODO: Should uOp control the RHS ?
+        .sel(num_to_rhs)
         .out(num_mux_to_rhs_alu)
     );
 
