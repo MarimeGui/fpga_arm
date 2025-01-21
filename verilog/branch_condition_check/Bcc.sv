@@ -11,7 +11,6 @@ wire N = flags[1];
 wire V =flags[0];
 
 always @ (posedge clk) begin
-    Ok=0;
     if (not_enable)
         Ok =0;
     else 
