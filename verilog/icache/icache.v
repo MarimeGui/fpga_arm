@@ -1,5 +1,5 @@
 module icache (
-	input clock,
+	input clk,
 	input not_enable, // high = disable
 	input [31:0] index,
 	output reg [15:0] data
@@ -10,13 +10,13 @@ reg [15:0] cache_memory [999:0];
 
 initial begin
 	data <= 1'b0;
-	cache_memory[0] <= 16'h0123;
-	cache_memory[1] <= 16'h4567;
-	cache_memory[2] <= 16'h89AB;
-	cache_memory[3] <= 16'hCDEF;
+	cache_memory[10] <= 16'h0123;
+	cache_memory[11] <= 16'h4567;
+	cache_memory[12] <= 16'h89AB;
+	cache_memory[13] <= 16'hCDEF;
 end
 
-always @(posedge clock) begin
+always @(posedge clk) begin
 	if (!not_enable) begin
 		// Send the selected (index) memory cell
 		data <= cache_memory[index];

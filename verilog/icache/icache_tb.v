@@ -1,13 +1,13 @@
 `timescale 1ns/1ns
 
 module icache_tb();
-	reg clock;
+	reg clk;
 	reg not_enable;
 	reg [31:0] index;
 	wire [15:0] data;
 
 	icache UUT(
-		.clock(clock),
+		.clk(clk),
 		.not_enable(not_enable),
 		.index(index),
 		.data(data)
@@ -15,8 +15,8 @@ module icache_tb();
 	
 	// Clock generation (50% duty cycle, period = 10ns)
 	initial begin
-        clock = 0;
-        forever #5 clock = ~clock; // Clock toggles every 5ns -> period of 10ns
+        clk = 0;
+        forever #5 clk = ~clk; // Clock toggles every 5ns -> period of 10ns
     end
 	
 	// Test sequence
