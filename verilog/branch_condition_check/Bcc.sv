@@ -9,7 +9,9 @@ wire Z=flags[3];
 wire C = flags[2];
 wire N = flags[1];
 wire V =flags[0];
-
+initial begin
+    Ok = 0;
+end
 always @ (posedge clk) begin
     if (not_enable)
         Ok =0;
