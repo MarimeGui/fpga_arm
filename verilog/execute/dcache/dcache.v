@@ -1,11 +1,11 @@
 module dcache #(
-    parameter [3:0] STR_UOP = 4'b1001, 
-    parameter [3:0] LDR_UOP = 4'b1010
+    parameter [4:0] STR_UOP = 4'b1001, 
+    parameter [4:0] LDR_UOP = 4'b1010
 )(
     input clock,
-    input [4:0] addr,
+    input [31:0] addr,
     input [31:0] data_in,
-    input [3:0] uop,
+    input [4:0] uop,
     output reg [31:0] data_out
 );
 
