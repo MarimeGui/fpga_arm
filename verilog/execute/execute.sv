@@ -5,15 +5,15 @@ module Execute(
 
     // From Decode
     input num_to_rhs,
-    input num,
-    input sel_p0,
-    input sel_p1,
-    input sel_in,
-    input uop,
-    input branch_cond,
+    input [31:0] num,
+    input [3:0] sel_p0,
+    input [3:0] sel_p1,
+    input [3:0] sel_in,
+    input [4:0] uop,
+    input [3:0] branch_cond,
 
-    output reg global_disable,
-    output reg delta_instruction,
+    output wire global_disable,
+    output wire [31:0] delta_instruction
 );
 
     wire [31:0] reg_p0;
@@ -25,64 +25,76 @@ module Execute(
     wire [3:0] alu_flags_to_reg_flags;
     wire [31:0] dcache_out;
     wire [31:0] delayed_num;
+    wire delayed_num_to_rhs;
 
     regs i_regs(
-        .p0(reg_p0)
-        .in_reg(mux_to_reg_in_reg)
-        .in_flags(alu_flags_to_reg_flags)
+        .clock(clk),
+        .not_enable(global_disable),
+        .sel_in(sel_in),
+        .sel_p0(sel_p0),
+        .sel_p1(sel_p1),
+        .in_reg(mux_to_reg_in_reg),
+        .p0(reg_p0),
+        .p1(p1_reg_to_lhs_alu),
+        .in_flags(alu_flags_to_reg_flags),
         .out_flags(reg_flg_to_bcc)
     );
 
     Mux32 i_in_reg_mux(
-        .a(alu_out)
-        .b(dcache_out)
-        .sel() // TODO: Flow data into reg either from Data Cache or ALU depending on uOp
+        .a(alu_out),
+        .b(dcache_out),
+        .sel(uop == 4'd10), // Generally route ALU output into register input, unless instruction is a store
         .out(mux_to_reg_in_reg)
     );
 
     Mux32 i_rhs_mux(
-        .a(reg_p0)
-        .b(delayed_num)
-        .sel(num_to_rhs)
+        .a(reg_p0),
+        .b(num),
+        .sel(num_to_rhs),
         .out(num_mux_to_rhs_alu)
     );
 
     Mux32 i_delta_i(
-        .a(0)
-        .b(delayed_num)
-        .sel(global_disable)
+        .a(0),
+        .b(num),
+        .sel(global_disable),
         .out(delta_instruction)
     );
 
-    // TODO: Might require an enable and/or reset for branches
-    Delay32 i_delay(
-        .clk(clk)
-        .in(num)
-        .out(delayed_num)
-    );
+    // Delay1 i_num_signal_delay(
+    //     .clk(clk),
+    //     .in(num_to_rhs),
+    //     .out(delayed_num_to_rhs)
+    // );
 
-    alu i_alu(
-        .LHS(p1_reg_to_lhs_alu)
-        .RHS(num_mux_to_rhs_alu)
-        .uop(uop)
-        .out_alu(alu_out)
+    // Delay32 i_delay(
+    //     .clk(clk),
+    //     .in(num),
+    //     .out(delayed_num)
+    // );
+
+    ALU i_alu(
+        .LHS(p1_reg_to_lhs_alu),
+        .RHS(num_mux_to_rhs_alu),
+        .uop(uop),
+        .out_alu(alu_out),
         .flags(alu_flags_to_reg_flags)
     );
 
     // TODO: Shouldn't the link between not_enable and Ok be internal ?
     Bcc i_bcc(
-        .clk(clk)
-        .branch_cond(branch_cond)
-        .flags(reg_flg_to_bcc)
-        .not_enable(global_disable)
+        .clk(clk),
+        .branch_cond(branch_cond),
+        .flags(reg_flg_to_bcc),
+        .not_enable(global_disable),
         .Ok(global_disable)
     );
 
     dcache i_dcache(
-        .clock(clk)
-        .addr(alu_out)
-        .uop(uop)
-        .data_in(reg_p0)
+        .clock(clk),
+        .addr(alu_out),
+        .uop(uop),
+        .data_in(reg_p0),
         .data_out(dcache_out)
     );
 
