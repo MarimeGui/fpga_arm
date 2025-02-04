@@ -3,7 +3,7 @@ module ALU(
     input [31:0] RHS,
     input [4:0] uop,
     output reg [31:0] out_alu,
-    output reg [3:0] flags // [Z, C, N, V] (Zero, Carry, Negative, Overflow)
+    output reg [0:3] flags // [Z, C, N, V] (Zero, Carry, Negative, Overflow)
 );
 initial begin
     out_alu=32'b0;
