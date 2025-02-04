@@ -53,41 +53,71 @@ module execute_tb();
         branch_cond <= 0; // Not used
         #10;
 
-        // MOV r1 to r2
-        num_to_rhs <= 0; // Not used
-        num <= 0; // Not used
-        sel_p0 <= 1; // From r1
+        // MOV data into r2
+        num_to_rhs <= 1;
+        num <= 32'hDEAD;
+        sel_p0 <= 0; // Not used
         sel_p1 <= 0; // Not used
-        sel_in <= 2; // To r2
+        sel_in <= 2; // Choose r2
         uop <= 8;
         branch_cond <= 0; // Not used
         #10;
 
-        // ADD r1+r2 to r3
+        // MOV r2 to r3
+        num_to_rhs <= 0; // Not used
+        num <= 0; // Not used
+        sel_p0 <= 2; // From r2
+        sel_p1 <= 0; // Not used
+        sel_in <= 3; // To r3
+        uop <= 8;
+        branch_cond <= 0; // Not used
+        #10;
+
+        // ADD r1+r2 to r4
         num_to_rhs <= 0; // Unused
         num <= 0; // Unused
         sel_p0 <= 1; // r1
         sel_p1 <= 2; // r2
-        sel_in <= 3; // r3
+        sel_in <= 4; // r4
         uop <= 1;
         branch_cond <= 0; // Unused
         #10;
 
-        // AND r2 & r3 to r2
+        // AND r2 & r3 to r5
         num_to_rhs <= 0; // Unused
         num <= 0; // Unused
         sel_p0 <= 2; // r1
         sel_p1 <= 3; // r2
-        sel_in <= 2; // r3
+        sel_in <= 2; // r5
         uop <= 3;
         branch_cond <= 0; // Unused
         #10;
 
-        // CMP r2 and r3
+        // MOV 1 into r6
+        num_to_rhs <= 1;
+        num <= 32'h1;
+        sel_p0 <= 0; // Not used
+        sel_p1 <= 0; // Not used
+        sel_in <= 6; // Choose r6
+        uop <= 8;
+        branch_cond <= 0; // Not used
+        #10;
+
+        // MOV 1 into r7
+        num_to_rhs <= 1;
+        num <= 32'h1;
+        sel_p0 <= 0; // Not used
+        sel_p1 <= 0; // Not used
+        sel_in <= 7; // Choose r7
+        uop <= 8;
+        branch_cond <= 0; // Not used
+        #10;
+
+        // CMP r6 and r7
         num_to_rhs <= 0; // Unused
         num <= 0; // Unused
-        sel_p0 <= 2; // r1
-        sel_p1 <= 3; // r2
+        sel_p0 <= 6; // r6
+        sel_p1 <= 7; // r7
         sel_in <= 0; // Unused
         uop <= 5;
         branch_cond <= 0; // Unused
