@@ -27,6 +27,7 @@ always @ (posedge clk) begin
     sel_p1 = 0;
     sel_in = 0;
     explose = 0;
+    branch_cond = 4b'1111;
 
     casez(instruction[15:10])
         // Basic Operations

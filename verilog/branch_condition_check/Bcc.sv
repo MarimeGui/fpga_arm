@@ -109,6 +109,9 @@ always @ (posedge clk) begin
                 // no need for flags
                 Ok <= 1;
             end
+            4'b1111:begin //Undefined (does not branch)
+                Ok<=0;
+            end
         endcase
 end
 
