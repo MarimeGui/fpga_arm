@@ -9,7 +9,7 @@ module dcache #(
     output reg [31:0] data_out
 );
 
-reg [31:0] dcache_block [31:0];
+bit [31:0] dcache_block [31:0];
 
 always @(posedge clock) begin
     case (uop)
@@ -24,8 +24,8 @@ always @(posedge clock) begin
         end
 
         default: begin
-            // High-z output if neither STR nor LDR 
-            data_out <= 32'bz;
+            // 0 output if neither STR nor LDR 
+            data_out <= 32'b0;
         end
     endcase
 end

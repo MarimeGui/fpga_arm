@@ -86,7 +86,6 @@ module Execute(
         .clk(clk),
         .branch_cond(branch_cond),
         .flags(reg_flg_to_bcc),
-        .not_enable(global_disable),
         .Ok(global_disable)
     );
 

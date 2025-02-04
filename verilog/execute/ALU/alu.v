@@ -5,7 +5,9 @@ module ALU(
     output reg [31:0] out_alu,
     output reg [3:0] flags // [Z, C, N, V] (Zero, Carry, Negative, Overflow)
 );
-
+initial begin
+    out_alu=32'b0;
+end
 always @(*) begin
     // Reset flags
     flags = 4'b0000;

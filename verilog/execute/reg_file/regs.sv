@@ -22,8 +22,8 @@ module regs (
 
 // PC is stored separately
 
-reg [31:0] regs [14:0] = '{default: '0}; // Internal register file, r0 - r15 (r13 = SP, r14 = LR)
-reg [3:0] flags = 0; // Internal flags register
+bit [31:0] regs [14:0] ; // Internal register file, r0 - r15 (r13 = SP, r14 = LR)
+bit [3:0] flags ; // Internal flags register
 
 // Register read operation
 always @ (posedge clock) begin
