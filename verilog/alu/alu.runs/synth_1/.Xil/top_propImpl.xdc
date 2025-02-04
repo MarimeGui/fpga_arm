@@ -1,4 +1,6 @@
 set_property SRC_FILE_INFO {cfile:C:/Users/nicohaas57/Documents/Projet_2A_FPGA/alu/alu.srcs/constrs_1/new/arty-s7_50.xdc rfile:../../../alu.srcs/constrs_1/new/arty-s7_50.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:9 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN R2    IOSTANDARD SSTL135 } [get_ports { CLK100MHZ }]; #IO_L12P_T1_MRCC_34 Sch=ddr3_clk[200]
 set_property src_info {type:XDC file:1 line:19 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN J15   IOSTANDARD LVCMOS33 } [get_ports { flags_wire[0] }]; #IO_L23N_T3_FWE_B_15 Sch=led0_r
 set_property src_info {type:XDC file:1 line:20 export:INPUT save:INPUT read:READ} [current_design]

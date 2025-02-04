@@ -21,6 +21,7 @@
 
 
 module top(
+    input CLK100MHZ,
     input next,
     input reset,
     output [3:0] out_alu_top,
@@ -37,23 +38,26 @@ module top(
         .out_alu(out_alu_top),
         .flags(flags_wire) // [Z, C, N, V] (Zero, Carry, Negative, Overflow)
     );
-
-    reg [4:0] nb_uop;
     
-    assign LHS_wire = 3;
-    assign RHS_wire = 2;
+    assign LHS_wire = 2;
+    assign RHS_wire = 3;
     
-    always @(*) begin
-        uop_wire <= 2;
+    reg next_sync, next_sync_prev;
+    wire next_pulse;
+    
+    always @(posedge CLK100MHZ) begin
+        next_sync_prev <= next_sync;
+        next_sync <= next;
     end
-    /*
-    always @(posedge next or posedge reset) begin
+    
+    assign next_pulse = next_sync & ~next_sync_prev;
+    
+    always @(posedge CLK100MHZ or posedge reset) begin
         if (reset)
-            // Reset
             uop_wire <= 8;
-        else
+        else if (next_pulse)
             uop_wire <= uop_wire - 1;
-    end*/
+    end
 
 endmodule
 
