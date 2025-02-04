@@ -16,7 +16,6 @@ module Decode(
     output reg [3:0] branch_cond
 );
 
-wire [31:0] LR_reg;
 
 always @ (posedge clk) begin
     // Default outputs
@@ -27,7 +26,7 @@ always @ (posedge clk) begin
     sel_p1 = 0;
     sel_in = 0;
     explose = 0;
-    branch_cond = 4b'1111;
+    branch_cond = 4'b1111;
 
     casez(instruction[15:10])
         // Basic Operations
@@ -165,7 +164,7 @@ always @ (posedge clk) begin
         //unconditional branch will be treated like a conditional branch with condition "always":1110 
         6'b11100?: begin
            uop=0;
-           branch_cond=4'b01110;
+           branch_cond=4'b1110;
            num= instruction[10:0];
         end
 
