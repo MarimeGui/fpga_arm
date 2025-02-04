@@ -2,7 +2,6 @@
 
 module Bcc_tb();
     reg clock;
-	reg not_enable;
     reg [3:0] flags;// [Z, C, N, V] (Zero, Carry, Negative, Overflow),
     reg [3:0] branch_cond;
     wire out;
@@ -10,7 +9,6 @@ module Bcc_tb();
     // Instantiate the Bcc module
     Bcc UUT (
         .clk(clock),
-		.not_enable(not_enable),
         .flags(flags),
         .branch_cond(branch_cond),
         .Ok(out)
@@ -25,13 +23,12 @@ module Bcc_tb();
     // Test sequence
     initial begin
         // Initialize inputs
-		not_enable <= 1;
         branch_cond = 4'b1110;// by default condition initialized to always
         flags = 4'b0000;
         #10; // Wait for next clock cycle
         
         // Test BEQ = true
-        not_enable <= 0;
+
         flags = 4'b1111; // Z =1 , C = 1, N = 1 ,V = 1
         branch_cond = 4'b0000; // BEQ condition (true if Z =1)
         #10;

@@ -2,17 +2,19 @@ module Bcc(
     input [3:0] branch_cond,
     input clk,
     input [3:0] flags, // [Z, C, N, V] (Zero, Carry, Negative, Overflow)
-    input not_enable,
+    
     output reg Ok //=0 if not Ok and 1 if Ok
 );
 wire Z=flags[3];
 wire C = flags[2];
 wire N = flags[1];
 wire V =flags[0];
+wire not_enable = Ok;
 initial begin
     Ok = 0;
 end
 always @ (posedge clk) begin
+
     if (not_enable)
         Ok =0;
     else 
