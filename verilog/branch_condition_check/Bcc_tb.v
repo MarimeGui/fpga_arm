@@ -16,7 +16,7 @@ module Bcc_tb();
 
     // Clock generation (50% duty cycle, period = 10ns)
     initial begin
-        clock = 1;
+        clock = 0;
         forever #5 clock = ~clock; // Clock toggles every 5ns -> period of 10ns
     end
 

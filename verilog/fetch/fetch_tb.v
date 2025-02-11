@@ -13,7 +13,7 @@ module fetch_tb();
 
     // Setup clock
     initial begin
-        clk = 1;
+        clk = 0;
         forever #5 clk = ~clk;
     end
 
