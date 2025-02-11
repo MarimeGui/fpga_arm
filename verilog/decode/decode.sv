@@ -138,14 +138,17 @@ always @ (posedge clk) begin
         6'b0110??: begin
             casez(instruction[11:9])
                 // ----- LDR
+                // Immediate Register
                 3'b0??: begin
                     uop=10;
-                    sel_in=instruction[2:0];
-                    sel_p1=instruction[5:3];
-                    // TODO: Missing offset
+                    sel_in=instruction[2:0]; // Register to store value to
+                    sel_p1=instruction[5:3]; // LHS of address
+                    nu_to_rhs = 1;
+                    num = instruction[10:6]; // RHS of address
                 end
 
                 // ----- STR
+                // T1
                 3'b1??: begin
                     uop=9;
                     sel_p0=instruction[2:0]; // Register that has the value to write

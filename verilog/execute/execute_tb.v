@@ -83,11 +83,11 @@ module execute_tb();
         branch_cond <= 4'b1111; // Unused
         #10;
 
-        // AND r2 & r3 to r5
+        // AND r2 & r4 to r5
         num_to_rhs <= 0; // Unused
         num <= 0; // Unused
         sel_p0 <= 2; // r1
-        sel_p1 <= 3; // r2
+        sel_p1 <= 4; // r2
         sel_in <= 2; // r5
         uop <= 3;
         branch_cond <= 4'b1111; // Unused
@@ -133,6 +133,36 @@ module execute_tb();
         branch_cond <= 4'b1111; // Unused
         #10;
 
+        // 2nd NOP to test stability
+        num_to_rhs <= 0; // Unused
+        num <= 0; // Unused
+        sel_p0 <= 2; // Unused
+        sel_p1 <= 3; // Unused
+        sel_in <= 0; // Unused
+        uop <= 0;
+        branch_cond <= 4'b1111; // Unused
+        #10;
+
+        // STR r4 to an address
+        num_to_rhs <= 1; // RHS contains part of the address
+        num <= 32'd28; // RHS of the address to use
+        sel_p0 <= 1; // r1, value to write, should still be CAFE
+        sel_p1 <= 6; // r6, LHS of address
+        sel_in <= 0; // Unused
+        uop <= 9; // STR
+        branch_cond <= 4'b1111; // Unused
+        #10;
+
+        // LDR from same address into r8
+        num_to_rhs <= 1; // RHS contains part of the address
+        num <= 32'd28; // RHS of the address to use
+        sel_p0 <= 0; // Unused
+        sel_p1 <= 6; // r6, LHS of address
+        sel_in <= 8; // r8, register that will receive the value frm memory
+        uop <= 10; // LDR
+        branch_cond <= 4'b1111; // Unused
+        #10;
+
         // NOP
         num_to_rhs <= 0; // Unused
         num <= 0; // Unused
@@ -143,7 +173,7 @@ module execute_tb();
         branch_cond <= 4'b1111; // Unused
         #10;
 
-        
+        // Branch
 
         #10;
         $stop; // End simulation

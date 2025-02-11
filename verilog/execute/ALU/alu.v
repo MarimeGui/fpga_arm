@@ -34,7 +34,11 @@ always @(*) begin
             {flags[1], out_alu} = LHS << RHS;  
         end
         5'b00111: out_alu = LHS >> RHS;  // LSR (Logical Shift Right) 
-        5'b01000: out_alu = RHS;  // MOV 
+        5'b01000: out_alu = RHS;  // MOV
+        5'b01001, 5'b01010: begin // STR, LDR
+            // Just an add for address, but do not set any flags
+            out_alu = LHS + RHS;
+        end
     endcase
     
     // Set the Negative flag (N) based on MSB of the result
