@@ -3,65 +3,62 @@ module ALU(
     input [31:0] RHS,
     input [4:0] uop,
     output reg [31:0] out_alu,
-    output wire [3:0] flags_out // [Z, C, N, V] (Zero, Carry, Negative, Overflow)
+    output reg [3:0] flags_out // [Z, C, N, V] (Zero, Carry, Negative, Overflow)
 );
 
-reg [3:0] flags;
-assign flags_out = (uop == 0) ? flags_out : flags;
+    reg [3:0] flags;
 
-always @(*) begin
-    // Reset flags
-    //flags = 4'b0000;
+    always @(*) begin
+        // keeps flag values as standard
+        flags = flags_out;
 
-    case(uop)
-        5'b00000: begin // NOP
-            out_alu = 0;
-        end
-        5'b00001: begin  // ADD
-            {flags[1], out_alu} = LHS + RHS; // Set Carry flag (C)
-            // Overflow flag (for signed addition): Overflow occurs if signs of LHS and RHS are the same, but result sign differs.
-            flags[3] = ((LHS[31] == RHS[31]) && (out_alu[31] != LHS[31]));
-        end
-        5'b00010: begin  // SUB
-            {flags[1], out_alu} = LHS - RHS; // Set Carry flag (C) for borrow
-            // Overflow flag (for signed subtraction): Overflow occurs if signs of LHS and RHS are different, but result sign differs from LHS.
-            flags[3] = ((LHS[31] != RHS[31]) && (out_alu[31] != LHS[31]));
-        end
-        5'b00011: begin
-            out_alu = LHS & RHS;
-            flags[1] <= 0; flags[3] <= 0;
-        end
-        5'b00100: begin
-            out_alu = LHS ^ RHS;
-            flags[1] <= 0; flags[3] <= 0;
-        end
-        5'b00101: begin  // CMP (Compare)
-            {flags[1], out_alu} = LHS - RHS;  // Calculate difference for flags, but do not store result in `out_alu`
-            // Overflow flag for subtraction, same logic as SUB
-            flags[3] = ((LHS[31] != RHS[31]) && (out_alu[31] != LHS[31]));
-        end
-        5'b00110: begin  // LSL (Logical Shift Left)
-            {flags[1], out_alu} = LHS << RHS;
-            flags[3] <= 0;
-        end
-        5'b00111: begin
-            out_alu = LHS >> RHS;  // LSR (Logical Shift Right)
-            flags[1] <= 0; flags[3] <= 0;
-        end 
-        5'b01000: begin
-            out_alu = RHS;  // MOV
-            flags[1] <= 0; flags[3] <= 0;
-        end
-    endcase
-    
-    // Set the Negative flag (N) based on MSB of the result
-    flags[2] = out_alu[31];  
+        case (uop)
+            5'b00000: begin // NOP
+                out_alu = 0;
+                // Flags do not change
+            end
+            5'b00001: begin  // ADD
+                {flags[1], out_alu} = LHS + RHS; // Set Carry flag (C)
+                flags[3] = ((LHS[31] == RHS[31]) && (out_alu[31] != LHS[31])); // Overflow flag
+            end
+            5'b00010: begin  // SUB
+                {flags[1], out_alu} = LHS - RHS; // Carry (borrow)
+                flags[3] = ((LHS[31] != RHS[31]) && (out_alu[31] != LHS[31])); // Overflow
+            end
+            5'b00011: begin // AND
+                out_alu = LHS & RHS;
+                flags[1] = 0; flags[3] = 0;
+            end
+            5'b00100: begin // XOR
+                out_alu = LHS ^ RHS;
+                flags[1] = 0; flags[3] = 0;
+            end
+            5'b00101: begin  // CMP (Compare)
+                {flags[1], out_alu} = LHS - RHS;
+                flags[3] = ((LHS[31] != RHS[31]) && (out_alu[31] != LHS[31]));
+            end
+            5'b00110: begin  // LSL (Logical Shift Left)
+                {flags[1], out_alu} = LHS << RHS;
+                flags[3] = 0;
+            end
+            5'b00111: begin // LSR (Logical Shift Right)
+                out_alu = LHS >> RHS;
+                flags[1] = 0; flags[3] = 0;
+            end 
+            5'b01000: begin // MOV
+                out_alu = RHS;
+                flags[1] = 0; flags[3] = 0;
+            end
+        endcase
 
-    // Set the Zero flag (Z)
-    if (out_alu == 32'b0) 
-        flags[0] = 1'b1;  // Zero flag is set if result is zero
-    else 
-        flags[0] = 1'b0;
-end
+        // Flags Zero (Z) and Negative (N)
+        flags[2] = out_alu[31];  // Negative flag (N)
+        flags[0] = (out_alu == 32'b0) ? 1'b1 : 1'b0;  // Zero flag (Z)
+    end
+
+    // flags_out always receives flags
+    always @(*) begin
+        flags_out = flags;
+    end
 
 endmodule
