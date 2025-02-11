@@ -22,7 +22,7 @@ module dcache_tb();
     );
 
     initial begin
-        clock = 1'b0; // 10 ns clock
+        clock = 1'b1; // 10 ns clock
         forever #5 clock = ~clock;
     end
 

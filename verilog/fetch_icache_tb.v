@@ -28,7 +28,7 @@ module fetch_icache_tb();
 	
     // Setup clock
     initial begin
-        clk = 0;
+        clk = 1;
         forever #5 clk = ~clk;
     end
 
