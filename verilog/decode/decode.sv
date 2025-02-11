@@ -143,7 +143,7 @@ always @ (posedge clk) begin
                     uop=10;
                     sel_in=instruction[2:0]; // Register to store value to
                     sel_p1=instruction[5:3]; // LHS of address
-                    nu_to_rhs = 1;
+                    num_to_rhs = 1;
                     num = instruction[10:6]; // RHS of address
                 end
 
