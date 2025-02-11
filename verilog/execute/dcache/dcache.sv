@@ -13,14 +13,23 @@ bit [31:0] dcache_block [31:0];
 
 always @(posedge clock) begin
     case (uop)
-        STR_UOP: begin
-            // STR: Stores data on addr
-            dcache_block[addr] <= data_in;
-        end
-
         LDR_UOP: begin
             // LDR: Reads data stored on addr to data_out
             data_out <= dcache_block[addr];
+        end
+
+        default: begin
+            // 0 output if neither STR nor LDR 
+            data_out <= 32'b0;
+        end
+    endcase
+end
+
+always @(negedge clock) begin
+    case (uop)
+        STR_UOP: begin
+            // STR: Stores data on addr
+            dcache_block[addr] <= data_in;
         end
 
         default: begin
