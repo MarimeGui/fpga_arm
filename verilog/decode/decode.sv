@@ -2,20 +2,15 @@ module Decode(
     input [15:0] instruction,
     input clk,
     input reset,
-    input [31:0] PC_in,
     output reg [4:0] uop,
     output reg num_to_rhs,
     output reg [31:0] num,
-    output reg [31:0] in_reg,
-    output reg [31:0] PC_out,
     output reg [3:0] sel_p0,
     output reg [3:0] sel_p1,
     output reg [3:0] sel_in,
     output reg explose,
-    output reg in_enable_reg,
     output reg [3:0] branch_cond
 );
-
 
 always @ (posedge clk) begin
     // Default outputs
@@ -153,9 +148,10 @@ always @ (posedge clk) begin
                 // ----- STR
                 3'b1??: begin
                     uop=9;
-                    sel_p0=instruction[2:0];
-                    sel_p1=instruction[5:3];
-                    // TODO: Missing offset
+                    sel_p0=instruction[2:0]; // Register that has the value to write
+                    sel_p1=instruction[5:3]; // LHS of address
+                    num_to_rhs = 1;
+                    num = instruction[10:6]; // RHS of address
                 end
             endcase
         end
