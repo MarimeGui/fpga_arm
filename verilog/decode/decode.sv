@@ -32,7 +32,8 @@ always @ (negedge clk) begin
     sel_in = 0;
     explose = 0;
     branch_cond = 4'b1111;
-
+    case(reset)
+        0: begin
     casez(instruction[15:10])
         // Basic Operations
         6'b00????: begin
@@ -190,6 +191,9 @@ always @ (negedge clk) begin
 
         default: explose = 1;
     endcase
+    end
+endcase
+
 end
 
 endmodule
