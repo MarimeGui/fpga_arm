@@ -11,8 +11,18 @@ module Decode(
     output reg explose,
     output reg [3:0] branch_cond
 );
+initial begin
+    uop = 0;
+    num_to_rhs = 0;
+    num = 0;
+    sel_p0 = 0;
+    sel_p1 = 0;
+    sel_in = 0;
+    explose = 0;
+    branch_cond = 4'b1111;
+end
 
-always @ (posedge clk) begin
+always @ (negedge clk) begin
     // Default outputs
     uop = 0;
     num_to_rhs = 0;
