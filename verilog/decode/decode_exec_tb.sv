@@ -14,8 +14,8 @@ module decode_exec_tb();
     wire explose;
     wire global_disable;
     wire [31:0] delta_instruction;
-
-    Execute UUT (
+    wire reset  =0;
+    Execute execute (
         .clk(clk),
         .num_to_rhs(num_to_rhs),
         .num(num),
@@ -28,7 +28,7 @@ module decode_exec_tb();
         .delta_instruction(delta_instruction)
     );
 
-    Decode uut (
+    Decode decode (
         .clk(clk),
         .instruction(instruction),
         .uop(uop),
@@ -38,11 +38,12 @@ module decode_exec_tb();
         .sel_p1(sel_p1),
         .sel_in(sel_in),
         .explose(explose),
-        .branch_cond(branch_cond)
+        .branch_cond(branch_cond),
+        .reset(reset)
     );
 
     initial begin
-        clk = 0;
+        clk = 1;
         forever #5 clk = ~clk; // Clock toggles every 5ns -> period of 10ns
     end
 
@@ -54,10 +55,10 @@ module decode_exec_tb();
         instruction <=16'b0010000000000101;
 
         #10;
-        // R2 = Rb0 - 7 
+        // R2 = R0 - 7 
         instruction <= 16'b0001111111000010;
         #10;
-        // str [Rb1+a] <= Rc2
+        // str [R1+10] <= R2 --> [10] <= -2
         instruction <= 16'b0110001010001010;
         #10;
         instruction <= 0;

@@ -79,7 +79,14 @@ always @ (posedge clk) begin
                     sel_in = instruction[10:8];
                     num_to_rhs = 1;
                 end
+                // ----- MOV
 
+                // MOV - Register
+                5'b00000: begin
+                    uop=8;
+                    sel_p0=instruction[5:3];
+                    sel_in=instruction[2:0];
+                end
                 // ----- LSL
 
                 // LSL - immediate
@@ -91,14 +98,7 @@ always @ (posedge clk) begin
                     num_to_rhs = 1;
                 end
 
-                // ----- MOV
 
-                // MOV - Register
-                5'b00000: begin
-                    uop=8;
-                    sel_p0=instruction[5:3];
-                    sel_in=instruction[2:0];
-                end
                 // MOV - Immediate
                 5'b100??: begin
                     uop=8;
