@@ -174,6 +174,36 @@ module execute_tb();
         #10;
 
         // Branch
+        num_to_rhs <= 1;
+        num <= 10; // Go forward a few instructions
+        sel_p0 <= 0; // Unused
+        sel_p1 <= 0; // Unused
+        sel_in <= 0; // Unused
+        uop <= 0; // Set to NOP to prevent undesired behavior
+        branch_cond <= 4'b1110; // Unconditional
+        #10;
+
+        // Here, we put instructions that would dbe streamed from decode
+        
+        // EOR r1 <= r1 EOR r3
+        num_to_rhs <= 0; // Unused
+        num <= 0; // Unused
+        sel_p0 <= 1; // r1
+        sel_p1 <= 3; // r2
+        sel_in <= 1; // r1, also return
+        uop <= 4;
+        branch_cond <= 4'b1111; // Unused
+        #10;
+
+        // LSL r9 <= r8 << 8
+        num_to_rhs <= 1;
+        num <= 8; // Shift by 8
+        sel_p0 <= 0; // Unused
+        sel_p1 <= 8; // r8
+        sel_in <= 9; // r9
+        uop <= 6;
+        branch_cond <= 4'b1111; // Unused
+        #10;
 
         #10;
         $stop; // End simulation
