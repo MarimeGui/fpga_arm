@@ -30,6 +30,7 @@ module Execute(
     regs i_regs(
         .clock(clk),
         .not_enable(global_disable),
+        .uop(uop),
         .sel_in(sel_in),
         .sel_p0(sel_p0),
         .sel_p1(sel_p1),

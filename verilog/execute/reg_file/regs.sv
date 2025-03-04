@@ -1,10 +1,9 @@
-// TODO: uOp input, disable either in reg or in flags for NOP, CMP, STR
-
 module regs (
     input clock,
     // While disabled, prevent changing internal state of register file. Synchronous
 	input not_enable,
-
+    // Used to prevent overwriting registers for NOP, CMP, STR
+    input [4:0] uop,
     // Select registers at input and both output ports
     input [3:0] sel_in, sel_p0, sel_p1,
 
@@ -22,8 +21,8 @@ module regs (
 
 // PC is stored separately
 
-bit [31:0] regs [14:0] ; // Internal register file, r0 - r15 (r13 = SP, r14 = LR)
-bit [3:0] flags ; // Internal flags register
+bit [31:0] regs [14:0]; // Internal register file, r0 - r15 (r13 = SP, r14 = LR)
+bit [3:0] flags; // Internal flags register
 
 // Register read operation
 always @ (posedge clock) begin
@@ -34,7 +33,7 @@ end
 
 // Register write operation
 always @ (negedge clock) begin
-    if (!not_enable) begin
+    if (!(not_enable || (uop == 0) || (uop == 5) || (uop == 9))) begin
         regs[sel_in] <= in_reg; // Write to the register selected by sel_in
 		flags <= in_flags; // Update flags register
     end
