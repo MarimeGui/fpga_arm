@@ -139,7 +139,7 @@ always @ (posedge clk) begin
             casez(instruction[11:9])
                 // ----- LDR
                 // Immediate Register
-                3'b0??: begin
+                3'b1??: begin
                     uop=10;
                     sel_in=instruction[2:0]; // Register to store value to
                     sel_p1=instruction[5:3]; // LHS of address
@@ -149,7 +149,7 @@ always @ (posedge clk) begin
 
                 // ----- STR
                 // T1
-                3'b1??: begin
+                3'b0??: begin
                     uop=9;
                     sel_p0=instruction[2:0]; // Register that has the value to write
                     sel_p1=instruction[5:3]; // LHS of address
