@@ -9,6 +9,7 @@ module dcache #(
     output reg [31:0] data_out
 );
 
+// This holds exactly 32 values of 32 bits, this means we need 5 bits for addressing
 bit [31:0] dcache_block [31:0];
 
 always @(posedge clock) begin
