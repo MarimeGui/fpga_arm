@@ -1,5 +1,5 @@
 module baud_generator #(
-    parameter ClkFrequency = 12000000,  // Standard: 12 MHz, 
+    parameter ClkFrequency = 100000000,  // Standard: 100 MHz, 
     parameter Baud = 115200             
 )(
     input clk,           // FPGA main clock
