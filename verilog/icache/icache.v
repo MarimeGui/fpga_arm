@@ -24,7 +24,7 @@ always @(negedge clk) begin
 	end
 end
 always @(posedge clk) begin
-
+	if(! download_program) begin	
 	if (!not_enable) begin
 		// Send the selected (index) memory cell
 		data <= cache_memory[index];
@@ -32,7 +32,7 @@ always @(posedge clk) begin
 		// Module disable
 		data <= 1'b0;
 	end
-	
+	end
 end
 
 endmodule
