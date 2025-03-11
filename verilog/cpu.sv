@@ -4,6 +4,8 @@ module CPU(
     input instruction_index,
     input instruction
 );
+    //Download data to i_cache
+    wire clk2 = (not download_program) and clk;
 
     // Branch and Fetch related
     wire global_disable;
@@ -25,16 +27,19 @@ module CPU(
         .not_enable(global_disable),
         .index(index),
         .data(instruction)
+        .download_program(download_program)
+        .instruction_index(instruction_index)
+        .instruction(instruction)
     );
 
     Fetch i_fetch(
-        .clk(clk),
+        .clk(clk2),
         .delta_i(delta_instruction),
         .index(index)
     );
 
     Decode i_decode(
-        .clk(clk),
+        .clk(clk2),
         .instruction(instruction),
         .reset(global_disable),
         .uop(uop),
@@ -47,7 +52,7 @@ module CPU(
     );
 
     Execute i_execute(
-        .clk(clk),
+        .clk(clk2),
         .num_to_rhs(num_to_rhs),
         .num(num),
         .sel_p0(sel_p0),
