@@ -2,9 +2,9 @@ module icache (
 	input clk,
 	input not_enable, // high = disable
 	input [31:0] index,
-	output reg [15:0] data
-	input download_program
-	input instruction_index
+	output reg [15:0] data,
+	input download_program,
+	input instruction_index,
 	input instruction
 );
 
