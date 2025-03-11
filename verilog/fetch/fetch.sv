@@ -8,7 +8,7 @@ initial begin
 	index = 9; // For stating at 10
 end
 
-always @(posedge clk) begin
+always @(negedge clk) begin
     index += 1 + delta_i;
 end
 
