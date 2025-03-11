@@ -1,11 +1,11 @@
 module CPU(
     input clk,
     input download_program,
-    input instruction_index,
-    input instruction
+    input [31:0] instruction_index,
+    input [15:0] program_in
 );
     //Download data to i_cache
-    wire clk2 = (not download_program) and clk;
+    wire clk2 = (! download_program) & clk;
 
     // Branch and Fetch related
     wire global_disable;
@@ -26,10 +26,10 @@ module CPU(
         .clk(clk),
         .not_enable(global_disable),
         .index(index),
-        .data(instruction)
-        .download_program(download_program)
-        .instruction_index(instruction_index)
-        .instruction(instruction)
+        .data(instruction),
+        .download_program(download_program),
+        .instruction_index(instruction_index),
+        .instruction(program_in)
     );
 
     Fetch i_fetch(

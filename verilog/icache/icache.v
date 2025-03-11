@@ -4,8 +4,8 @@ module icache (
 	input [31:0] index,
 	output reg [15:0] data,
 	input download_program,
-	input instruction_index,
-	input instruction
+	input [31:0] instruction_index,
+	input [15:0]instruction
 );
 
 // 1000 16-bit memory cells
@@ -18,12 +18,14 @@ initial begin
 	cache_memory[12] <= 16'h89AB;
 	cache_memory[13] <= 16'hCDEF;
 end
-
-always @(posedge clk) begin
-	if (download_program) begin
+always @(negedge clk) begin
+	if(download_program) begin
 	cache_memory[instruction_index] <= instruction;
 	end
-	else if (!not_enable) begin
+end
+always @(posedge clk) begin
+
+	if (!not_enable) begin
 		// Send the selected (index) memory cell
 		data <= cache_memory[index];
 	end else begin
