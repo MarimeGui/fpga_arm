@@ -13,6 +13,7 @@ module execute_tb();
 
     wire global_disable;
     wire [31:0] delta_instruction;
+    wire [31:0] gpio_state;
 
     Execute uut (
         .clk(clk),
@@ -24,7 +25,8 @@ module execute_tb();
         .uop(uop),
         .branch_cond(branch_cond),
         .global_disable(global_disable),
-        .delta_instruction(delta_instruction)
+        .delta_instruction(delta_instruction),
+        .gpio_state(gpio_state)
     );
 
     initial begin
@@ -153,9 +155,9 @@ module execute_tb();
         branch_cond <= 4'b1111; // Unused
         #10;
 
-        // STR r14 to an address
+        // STR r14 to special address for GPIO (31+1)=32
         num_to_rhs <= 1; // RHS contains part of the address
-        num <= 32'd28; // RHS of the address to use
+        num <= 32'd31; // RHS of the address to use
         sel_p0 <= 14; // r14, value to write, will be the result of previous add
         sel_p1 <= 6; // r6, LHS of address
         sel_in <= 0; // Unused
@@ -163,9 +165,9 @@ module execute_tb();
         branch_cond <= 4'b1111; // Unused
         #10;
 
-        // LDR from same address into r8
+        // LDR from same special address into r8
         num_to_rhs <= 1; // RHS contains part of the address
-        num <= 32'd28; // RHS of the address to use
+        num <= 32'd31; // RHS of the address to use
         sel_p0 <= 0; // Unused
         sel_p1 <= 6; // r6, LHS of address
         sel_in <= 8; // r8, register that will receive the value frm memory

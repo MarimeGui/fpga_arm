@@ -1,5 +1,3 @@
-// TODO: Make sure all synchronous modules have coherent posedge negedge
-
 module Execute(
     input clk,
 
@@ -13,7 +11,8 @@ module Execute(
     input [3:0] branch_cond,
 
     output wire global_disable,
-    output wire [31:0] delta_instruction
+    output wire [31:0] delta_instruction,
+    output wire [31:0] gpio_state
 );
 
     wire [31:0] reg_p0;
@@ -41,10 +40,12 @@ module Execute(
         .out_flags(reg_flg_to_bcc)
     );
 
-    Mux32 i_in_reg_mux(
-        .a(alu_out),
-        .b(dcache_out),
-        .sel(uop == 4'd10), // Generally route ALU output into register input, unless instruction is a store
+    RegReturnMux i_return_mux(
+        .uop(uop),
+        .addr(alu_out),
+        .alu(alu_out),
+        .d_cache(dcache_out),
+        .gpio_state(gpio_state),
         .out(mux_to_reg_in_reg)
     );
 
@@ -62,18 +63,6 @@ module Execute(
         .out(delta_instruction)
     );
 
-    // Delay1 i_num_signal_delay(
-    //     .clk(clk),
-    //     .in(num_to_rhs),
-    //     .out(delayed_num_to_rhs)
-    // );
-
-    // Delay32 i_delay(
-    //     .clk(clk),
-    //     .in(num),
-    //     .out(delayed_num)
-    // );
-
     ALU i_alu(
         .LHS(p1_reg_to_lhs_alu),
         .RHS(num_mux_to_rhs_alu),
@@ -82,7 +71,6 @@ module Execute(
         .flags(alu_flags_to_reg_flags)
     );
 
-    // TODO: Shouldn't the link between not_enable and Ok be internal ?
     Bcc i_bcc(
         .clk(clk),
         .branch_cond(branch_cond),
@@ -96,6 +84,14 @@ module Execute(
         .uop(uop),
         .data_in(reg_p0),
         .data_out(dcache_out)
+    );
+
+    GPIO i_gpio(
+        .clk(clk),
+        .uop(uop),
+        .addr(alu_out),
+        .state_in(reg_p0),
+        .state(gpio_state)
     );
 
 endmodule
