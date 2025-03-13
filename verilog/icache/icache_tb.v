@@ -6,7 +6,7 @@ module icache_tb();
 	reg [31:0] index;
 	wire [15:0] data;
 
-	icache UUT(
+	ICache UUT(
 		.clk(clk),
 		.not_enable(not_enable),
 		.index(index),
@@ -21,9 +21,6 @@ module icache_tb();
 	
 	// Test sequence
     initial begin
-        $dumpfile("icache_tb.vcd");
-        $dumpvars(0, icache_tb);
-
 		not_enable = 0; // Enable
 
 		index = 10;

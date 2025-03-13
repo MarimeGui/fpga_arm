@@ -23,12 +23,12 @@ module CPU(
     wire [4:0] uop;
     wire [3:0] branch_cond;
 
-    icache i_icache(
+    ICache i_icache(
         .clk(clk),
         .not_enable(global_disable),
         .index(index),
         .data(instruction),
-        .download_program(download_program),
+        .write(download_program),
         .instruction_index(instruction_index),
         .instruction(program_in)
     );
