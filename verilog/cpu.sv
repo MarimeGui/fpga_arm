@@ -2,7 +2,8 @@ module CPU(
     input clk,
     input download_program,
     input [31:0] instruction_index,
-    input [15:0] program_in
+    input [15:0] program_in,
+    output wire [31:0] gpio_state
 );
     //Download data to i_cache
     wire clk2 = (! download_program) & clk;
@@ -61,7 +62,8 @@ module CPU(
         .uop(uop),
         .branch_cond(branch_cond),
         .global_disable(global_disable),
-        .delta_instruction(delta_instruction)
+        .delta_instruction(delta_instruction),
+        .gpio_state(gpio_state)
     );
 
 endmodule
