@@ -28,11 +28,11 @@ module CPU(
     ICache i_icache(
         .clk(clk),
         .not_enable(global_disable),
+        .write_enable(download_program),
+        .write_instruction_index(instruction_index),
+        .write_instruction(program_in),
         .index(index),
-        .data(instruction),
-        .write(download_program),
-        .instruction_index(instruction_index),
-        .instruction(program_in)
+        .data(instruction)
     );
 
     Fetch i_fetch(

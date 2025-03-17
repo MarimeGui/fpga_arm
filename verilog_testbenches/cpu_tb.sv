@@ -19,17 +19,16 @@ module cpu_tb();
     end
     
     initial begin
-        download_program =1;
-        instruction_index =10;
-        program_in <=16'b0010000000000101;
-
+        download_program <= 1;
+        instruction_index <= 10;
+        program_in <= 16'b0010000000000101;
         #10;
-        instruction_index<=11;
+
+        instruction_index <= 11;
         program_in <= 16'b0001111111000010;;
-
-
         #10;
-        download_program<=0;
+
+        download_program <= 0;
         #10
 
         #10
