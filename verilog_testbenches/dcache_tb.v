@@ -10,10 +10,7 @@ module dcache_tb();
     parameter [4:0] STR_UOP = 4'b1001;
     parameter [4:0] LDR_UOP = 4'b1010;
 
-    dcache #(
-        .STR_UOP(STR_UOP), // Adds the parameters to the instantiated module
-        .LDR_UOP(LDR_UOP)
-    ) UUT (
+    DCache UUT (
         .clock(clock),
         .addr(addr),
         .data_in(data_in),

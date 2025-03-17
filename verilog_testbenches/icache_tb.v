@@ -9,6 +9,9 @@ module icache_tb();
 	ICache UUT(
 		.clk(clk),
 		.not_enable(not_enable),
+		.write_enable(),
+		.write_instruction_index(),
+		.write_instruction(),
 		.index(index),
 		.data(data)
 	);

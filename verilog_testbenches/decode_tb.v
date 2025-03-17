@@ -3,27 +3,29 @@
 module decode_tb();
     reg [15:0] instruction;
     reg clk;
+    reg reset;
     wire [4:0] uop;
     wire num_to_rhs;
     wire [31:0] num;
     wire [3:0] sel_p0;
     wire [3:0] sel_p1;
     wire [3:0] sel_in;
-    wire explose;
 
     Decode UUT (
         .instruction(instruction),
         .clk(clk),
+        .reset(reset),
         .uop(uop),
         .num_to_rhs(num_to_rhs),
         .num(num),
         .sel_p0(sel_p0),
         .sel_p1(sel_p1),
         .sel_in(sel_in),
-        .explose(explose)
+        .branch_cond()
     );
 
     initial begin
+        reset = 0;
         clk = 0;
         forever #5 clk = ~clk;
     end
@@ -101,5 +103,7 @@ module decode_tb();
         // SUB R3 <= R3 - 226
         instruction <= 16'b0011101111100010;
         #10;
+
+        $stop;
     end
 endmodule

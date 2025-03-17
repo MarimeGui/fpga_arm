@@ -7,11 +7,11 @@ module Bcc_tb();
     wire out;
 
     // Instantiate the Bcc module
-    Bcc UUT (
+    BCC UUT (
         .clk(clock),
         .flags(flags),
         .branch_cond(branch_cond),
-        .Ok(out)
+        .do_branch(out)
     );
 
     // Clock generation (50% duty cycle, period = 10ns)
@@ -28,7 +28,6 @@ module Bcc_tb();
         #10; // Wait for next clock cycle
         
         // Test BEQ = true
-
         flags = 4'b1111; // Z =1 , C = 1, N = 1 ,V = 1
         branch_cond = 4'b0000; // BEQ condition (true if Z =1)
         #10;
@@ -64,7 +63,5 @@ module Bcc_tb();
         #10;
 
         $stop; // End simulation
-
-
     end
 endmodule

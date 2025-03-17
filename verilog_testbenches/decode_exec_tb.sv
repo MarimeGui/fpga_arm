@@ -11,7 +11,6 @@ module decode_exec_tb();
     wire [3:0] sel_in;
     wire [4:0] uop;
     wire [3:0] branch_cond;
-    wire explose;
     wire global_disable;
     wire [31:0] delta_instruction;
     wire reset  =0;
@@ -25,7 +24,8 @@ module decode_exec_tb();
         .uop(uop),
         .branch_cond(branch_cond),
         .global_disable(global_disable),
-        .delta_instruction(delta_instruction)
+        .delta_instruction(delta_instruction),
+        .gpio_state()
     );
 
     Decode decode (
@@ -37,7 +37,6 @@ module decode_exec_tb();
         .sel_p0(sel_p0),
         .sel_p1(sel_p1),
         .sel_in(sel_in),
-        .explose(explose),
         .branch_cond(branch_cond),
         .reset(reset)
     );
@@ -51,16 +50,19 @@ module decode_exec_tb();
         // Init inputs
         instruction <= 0;
         #10;
+
         // mov R0 5
         instruction <=16'b0010000000000101;
-
         #10;
+
         // R2 = R0 - 7 
         instruction <= 16'b0001111111000010;
         #10;
+
         // str [R1+10] <= R2 --> [10] <= -2
         instruction <= 16'b0110001010001010;
         #10;
+
         instruction <= 0;
         #10;
         #10;

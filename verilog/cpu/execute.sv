@@ -1,3 +1,5 @@
+// Actually executes the instruction, holds memory. Mainly regroups all sub=modules
+
 module Execute(
     input clk,
 
@@ -26,7 +28,7 @@ module Execute(
     wire [31:0] delayed_num;
     wire delayed_num_to_rhs;
 
-    regs i_regs(
+    RegisterFile i_regs(
         .clock(clk),
         .not_enable(global_disable),
         .uop(uop),
@@ -64,21 +66,21 @@ module Execute(
     );
 
     ALU i_alu(
-        .LHS(p1_reg_to_lhs_alu),
-        .RHS(num_mux_to_rhs_alu),
+        .lhs(p1_reg_to_lhs_alu),
+        .rhs(num_mux_to_rhs_alu),
         .uop(uop),
         .out_alu(alu_out),
         .flags(alu_flags_to_reg_flags)
     );
 
-    Bcc i_bcc(
+    BCC i_bcc(
         .clk(clk),
         .branch_cond(branch_cond),
         .flags(reg_flg_to_bcc),
-        .Ok(global_disable)
+        .do_branch(global_disable)
     );
 
-    dcache i_dcache(
+    DCache i_dcache(
         .clock(clk),
         .addr(alu_out),
         .uop(uop),

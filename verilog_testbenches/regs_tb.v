@@ -6,11 +6,12 @@ module regs_tb();
     reg [31:0] in_reg;
     reg [3:0] sel_in, sel_p0, sel_p1;
     reg [3:0] in_flags;
+    reg [4:0] uop;
     wire [31:0] p0, p1;
     wire [3:0] out_flags;
 
     // Instantiate the regs module
-    regs UUT (
+    RegisterFile UUT (
         .clock(clock),
 		.not_enable(not_enable),
         .in_reg(in_reg),
@@ -20,12 +21,14 @@ module regs_tb();
         .in_flags(in_flags),
         .p0(p0),
         .p1(p1),
-        .out_flags(out_flags)
+        .out_flags(out_flags),
+        .uop(uop)
     );
 
     // Clock generation (50% duty cycle, period = 10ns)
     initial begin
         clock = 0;
+        uop = 1;
         forever #5 clock = ~clock; // Clock toggles every 5ns -> period of 10ns
     end
 

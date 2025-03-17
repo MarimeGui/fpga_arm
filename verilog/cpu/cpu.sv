@@ -1,3 +1,5 @@
+// Regroups the Fetch, Decode and Execute modules for execution of a program
+
 module CPU(
     input clk,
     input download_program,

@@ -1,4 +1,6 @@
-module regs (
+// Holds all the common registers used by instructions
+
+module RegisterFile (
     input clock,
     // While disabled, prevent changing internal state of register file. Synchronous
 	input not_enable,
@@ -11,12 +13,12 @@ module regs (
     input [31:0] in_reg,
     
     // Register data ports, will output current state of selected register
-    output reg [31:0] p0, p1,
+    output bit [31:0] p0, p1,
 
     // Set flags
     input [3:0] in_flags,
     // Get Flags
-    output reg [3:0] out_flags
+    output bit [3:0] out_flags
 );
 
 // PC is stored separately

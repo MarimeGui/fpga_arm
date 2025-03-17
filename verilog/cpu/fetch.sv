@@ -1,7 +1,9 @@
+// Is responsible for getting the next instruction from ICache
+
 module Fetch(
     input clk,
 	input [31:0] delta_i,
-	output reg [31:0] index
+	output bit [31:0] index
 );
 
 initial begin

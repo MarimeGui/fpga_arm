@@ -14,7 +14,7 @@ module RegReturnMux (
     input [31:0] d_cache,
     input [31:0] gpio_state,
 
-    output reg [31:0] out
+    output bit [31:0] out
 );
 
 always @(*) begin
