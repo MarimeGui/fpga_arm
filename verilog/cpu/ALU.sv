@@ -52,7 +52,7 @@ always_latch @(*) begin
             flags.V = ((lhs[31] != rhs[31]) && (out_alu[31] != lhs[31]));
         end
         LSL: begin
-            {flags.C, out_alu} = {1'd0, lhs << rhs};
+            {flags.C, out_alu} = {1'd0, lhs} << rhs;
         end
         LSR: out_alu = lhs >> rhs;
         MOV: out_alu = rhs;
