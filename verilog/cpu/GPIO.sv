@@ -1,8 +1,8 @@
 // This code is very similar to D-Cache, except that the internal state is always at the output
 
-module GPIO #(
-    parameter [4:0] STR_UOP = 5'd9
-) (
+import Utilities::STR;
+
+module GPIO(
     input clk,
     input [4:0] uop,
     input [31:0] addr,
@@ -15,7 +15,7 @@ module GPIO #(
 // On down edge
 always @(negedge clk) begin
     // If op is a STR and address is 32
-    if ((uop == STR_UOP) & (addr == 32'd32)) begin
+    if ((uop == STR) & (addr == 32'd32)) begin
         state <= state_in;
     end
 end

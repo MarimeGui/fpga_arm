@@ -1,9 +1,9 @@
 // Data cache, stores data in a memory-like way to reuse by instructions later.
 
-module DCache #(
-    parameter [4:0] STR_UOP = 5'b1001, 
-    parameter [4:0] LDR_UOP = 5'b1010
-)(
+import Utilities::STR;
+import Utilities::LDR;
+
+module DCache (
     input clock,
     input [4:0] addr,
     input [31:0] data_in,
@@ -16,7 +16,7 @@ bit [31:0] dcache_block [31:0];
 
 always @(posedge clock) begin
     case (uop)
-        LDR_UOP: begin
+        LDR: begin
             // LDR: Reads data stored on addr to data_out
             data_out <= dcache_block[addr];
         end
@@ -30,7 +30,7 @@ end
 
 always @(negedge clock) begin
     case (uop)
-        STR_UOP: begin
+        STR: begin
             // STR: Stores data on addr
             dcache_block[addr] <= data_in;
         end

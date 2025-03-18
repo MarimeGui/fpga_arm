@@ -1,5 +1,9 @@
 // Holds all the common registers used by instructions
 
+import Utilities::NOP;
+import Utilities::CMP;
+import Utilities::STR;
+
 module RegisterFile (
     input clock,
     // While disabled, prevent changing internal state of register file. Synchronous
@@ -35,7 +39,7 @@ end
 
 // Register write operation
 always @ (negedge clock) begin
-    if (!(not_enable || (uop == 0) || (uop == 5) || (uop == 9))) begin
+    if (!(not_enable || (uop == NOP) || (uop == CMP) || (uop == STR))) begin
         regs[sel_in] <= in_reg; // Write to the register selected by sel_in
 		flags <= in_flags; // Update flags register
     end

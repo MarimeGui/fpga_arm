@@ -6,6 +6,8 @@
 // Else if address is 31, select GPIO state
 // Else, return only zeroes as this address is not defined
 
+import Utilities::LDR;
+
 module RegReturnMux (
     input [4:0] uop,
     input [31:0] addr,
@@ -18,7 +20,7 @@ module RegReturnMux (
 );
 
 always @(*) begin
-    if (uop == 5'd10) begin
+    if (uop == LDR) begin
         if (addr < 32'd31) begin
             out = d_cache;
         end else if (addr == 32'd32) begin
