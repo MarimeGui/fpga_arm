@@ -34,14 +34,14 @@ module dcache_tb();
         addr <= 5'b01010;
         data_in <= 32'h12345678;
         uop <= STR_UOP;
-        $display("1) uop = 4'b0010 -> data_out = %h (expected zeroes)", data_out);
         #10;
+        $display("1) uop = 4'b0010 -> data_out = %h (expected zeroes)", data_out);
 
         // Retrieve it without changing parameters
         data_in <= 32'h0;
         uop <= LDR_UOP;
-        $display("2) Reading from addr %b, data_out = %h (expected 0x12345678)", addr, data_out);
         #10;
+        $display("2) Reading from addr %b, data_out = %h (expected 0x12345678)", addr, data_out);
 
         // Store some other data
         addr <= 5'b00101;
@@ -52,8 +52,8 @@ module dcache_tb();
         // Retrieve it too
         data_in <= 32'h0;
         uop <= LDR_UOP;
-        $display("3) reading from addr %b, data_out = %h (expected 0xAABBCCDD)", addr, data_out);
         #10;
+        $display("3) reading from addr %b, data_out = %h (expected 0xAABBCCDD)", addr, data_out);
 
         $stop;
     end
