@@ -2,13 +2,11 @@
 
 module icache_tb();
 	reg clk;
-	reg not_enable;
 	reg [31:0] index;
 	wire [15:0] data;
 
 	ICache UUT(
 		.clk(clk),
-		.not_enable(not_enable),
 		.write_enable(),
 		.write_instruction_index(),
 		.write_instruction(),
@@ -24,7 +22,7 @@ module icache_tb();
 	
 	// Test sequence
     initial begin
-		not_enable = 0; // Enable
+		// TODO: CUrrently does nothing, should write stuff
 
 		index = 10;
 		#10 // Read cell number 10
@@ -35,13 +33,9 @@ module icache_tb();
 		index = 12;
 		#10 // Read cell number 12
 		
-		not_enable = 1; // Disable
-		#10 // out must be at 0x0
-		
 		index = 13;
 		#10 // do nothing
 		
-		not_enable = 0;
 		#10; // Read cell number 14
 		
         $stop;

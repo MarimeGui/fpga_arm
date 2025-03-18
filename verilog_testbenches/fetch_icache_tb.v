@@ -2,7 +2,6 @@
 
 module fetch_icache_tb();
     reg clk;
-    reg not_enable;
     reg [31:0] index_in;
     reg [31:0] delta_i;
     wire [15:0] data;
@@ -16,7 +15,6 @@ module fetch_icache_tb();
 
     ICache UUT_B(
         .clk(clk),
-        .not_enable(not_enable),
         .write_enable(),
         .write_instruction_index(),
         .write_instruction(),
@@ -36,18 +34,16 @@ module fetch_icache_tb();
     end
 
     initial begin
-        
-        not_enable = 0;
+        // TODO: Currently does nothing, should add code
+
         delta_i = 0;
         #10; // index = 10
         #10; // index = 11
         
-        not_enable = 1;
         delta_i = -2;
         #10; // index = 10 & data = 0x0
         
         delta_i = 0;
-        not_enable = 0;
         #10; // index = 11
         #10; // index = 12
         

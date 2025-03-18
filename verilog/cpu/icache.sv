@@ -2,7 +2,6 @@
 
 module ICache (
     input clk,
-    input not_enable,
 
     input write_enable,
     input [31:0] write_instruction_index,
