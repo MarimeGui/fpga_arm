@@ -1,78 +1,194 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1742310058">
-  <File Type="BITSTR-BMM" Name="TestBench_bd.bmm"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="TestBench_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="TestBench_timing_summary_init.rpt"/>
-  <File Type="ROUTE-PWR" Name="TestBench_power_routed.rpt"/>
-  <File Type="PA-TCL" Name="TestBench.tcl"/>
-  <File Type="OPT-TIMING" Name="TestBench_timing_summary_opted.rpt"/>
-  <File Type="OPT-DCP" Name="TestBench_opt.dcp"/>
-  <File Type="ROUTE-PWR-SUM" Name="TestBench_power_summary_routed.pb"/>
-  <File Type="REPORTS-TCL" Name="TestBench_reports.tcl"/>
-  <File Type="OPT-DRC" Name="TestBench_drc_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="TestBench.hwdef"/>
-  <File Type="PWROPT-DCP" Name="TestBench_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="TestBench_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="TestBench_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="TestBench_placed.dcp"/>
-  <File Type="PLACE-IO" Name="TestBench_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="TestBench_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="TestBench_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="TestBench_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="TestBench_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="TestBench_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="TestBench_incremental_reuse_pre_placed.rpt"/>
-  <File Type="BG-BGN" Name="TestBench.bgn"/>
-  <File Type="PLACE-TIMING" Name="TestBench_timing_summary_placed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="TestBench_postplace_pwropt.dcp"/>
-  <File Type="BG-BIN" Name="TestBench.bin"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="TestBench_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="TestBench_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="TestBench_drc_physopted.rpt"/>
-  <File Type="BITSTR-MSK" Name="TestBench.msk"/>
-  <File Type="PHYSOPT-TIMING" Name="TestBench_timing_summary_physopted.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="TestBench_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="TestBench_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="TestBench_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="TestBench_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="TestBench_drc_routed.pb"/>
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1742318850">
+  <File Type="BITSTR-BMM" Name="CPU_tb_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="CPU_tb_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="CPU_tb_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="CPU_tb_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="CPU_tb.tcl"/>
+  <File Type="OPT-TIMING" Name="CPU_tb_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="CPU_tb_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="CPU_tb_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="CPU_tb_reports.tcl"/>
+  <File Type="OPT-DRC" Name="CPU_tb_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="CPU_tb.hwdef"/>
+  <File Type="PWROPT-DCP" Name="CPU_tb_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="CPU_tb_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="CPU_tb_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="CPU_tb_placed.dcp"/>
+  <File Type="PLACE-IO" Name="CPU_tb_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="CPU_tb_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="CPU_tb_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="CPU_tb_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="CPU_tb_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="CPU_tb_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="CPU_tb_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BGN" Name="CPU_tb.bgn"/>
+  <File Type="PLACE-TIMING" Name="CPU_tb_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="CPU_tb_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="CPU_tb.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="CPU_tb_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="CPU_tb_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="CPU_tb_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="CPU_tb.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="CPU_tb_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="CPU_tb_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="CPU_tb_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="CPU_tb_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="CPU_tb_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="CPU_tb_drc_routed.pb"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="TestBench.ltx"/>
-  <File Type="ROUTE-DRC-RPX" Name="TestBench_drc_routed.rpx"/>
-  <File Type="BITSTR-MMI" Name="TestBench.mmi"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="TestBench_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="TestBench_methodology_drc_routed.rpx"/>
-  <File Type="BITSTR-SYSDEF" Name="TestBench.sysdef"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="TestBench_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="TestBench_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="TestBench_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="TestBench_route_status.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="TestBench_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-TIMING-PB" Name="TestBench_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="TestBench_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="TestBench_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="TestBench_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="TestBench_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="TestBench_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="TestBench_bus_skew_routed.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="TestBench_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="TestBench_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="TestBench_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="TestBench_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="TestBench_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="TestBench_bus_skew_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="TestBench_bus_skew_postroute_physopted.pb"/>
-  <File Type="BG-BIT" Name="TestBench.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="TestBench_bus_skew_postroute_physopted.rpx"/>
-  <File Type="BITSTR-RBT" Name="TestBench.rbt"/>
-  <File Type="BITSTR-NKY" Name="TestBench.nky"/>
-  <File Type="BG-DRC" Name="TestBench.drc"/>
-  <File Type="RDI-RDI" Name="TestBench.vdi"/>
+  <File Type="BITSTR-LTX" Name="CPU_tb.ltx"/>
+  <File Type="ROUTE-DRC-RPX" Name="CPU_tb_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="CPU_tb.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="CPU_tb_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="CPU_tb_methodology_drc_routed.rpx"/>
+  <File Type="BITSTR-SYSDEF" Name="CPU_tb.sysdef"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="CPU_tb_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="CPU_tb_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="CPU_tb_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="CPU_tb_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="CPU_tb_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="CPU_tb_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="CPU_tb_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="CPU_tb_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="CPU_tb_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="CPU_tb_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="CPU_tb_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="CPU_tb_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="CPU_tb_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="CPU_tb_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="CPU_tb_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="CPU_tb_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="CPU_tb_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="CPU_tb_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="CPU_tb_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="CPU_tb.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="CPU_tb_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="CPU_tb.rbt"/>
+  <File Type="BITSTR-NKY" Name="CPU_tb.nky"/>
+  <File Type="BG-DRC" Name="CPU_tb.drc"/>
+  <File Type="RDI-RDI" Name="CPU_tb.vdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/cpu/alu.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../verilog/cpu/alu.sv"/>
+        <Attr Name="ImportTime" Val="1742312799"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/cpu/bcc.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../verilog/cpu/bcc.sv"/>
+        <Attr Name="ImportTime" Val="1742311482"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/cpu/cpu.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../verilog/cpu/cpu.sv"/>
+        <Attr Name="ImportTime" Val="1742311482"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/cpu/dcache.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../verilog/cpu/dcache.sv"/>
+        <Attr Name="ImportTime" Val="1742311482"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/cpu/decode.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../verilog/cpu/decode.sv"/>
+        <Attr Name="ImportTime" Val="1742311482"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/cpu/execute.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../verilog/cpu/execute.sv"/>
+        <Attr Name="ImportTime" Val="1742311482"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/cpu/fetch.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../verilog/cpu/fetch.sv"/>
+        <Attr Name="ImportTime" Val="1742311482"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/cpu/gpio.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../verilog/cpu/gpio.sv"/>
+        <Attr Name="ImportTime" Val="1742311482"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/cpu/icache.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../verilog/cpu/icache.sv"/>
+        <Attr Name="ImportTime" Val="1742311482"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/cpu/mux32.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../verilog/cpu/mux32.sv"/>
+        <Attr Name="ImportTime" Val="1742311482"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/cpu/reg_return_mux.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../verilog/cpu/reg_return_mux.sv"/>
+        <Attr Name="ImportTime" Val="1742311482"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/cpu/regs.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../verilog/cpu/regs.sv"/>
+        <Attr Name="ImportTime" Val="1742311482"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/CPU_tb.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/ALU_tb.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -80,6 +196,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/CTRLuOP.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -87,6 +204,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/Disp1Digit.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -94,22 +212,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/Display.v">
       <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/Tick_1ms.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/cpu/alu.sv">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../fpga_arm/verilog/cpu/alu.sv"/>
-        <Attr Name="ImportTime" Val="1742304213"/>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -117,6 +220,43 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/TestBench.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Tick_1ms.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/cpu/delay1.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../verilog/cpu/delay1.sv"/>
+        <Attr Name="ImportTime" Val="1742311482"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/cpu/delay32.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../verilog/cpu/delay32.sv"/>
+        <Attr Name="ImportTime" Val="1742311482"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Execute_tb.v">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -125,60 +265,8 @@
     <File Path="$PSRCDIR/sources_1/imports/ALU/ALU.v">
       <FileInfo>
         <Attr Name="UserDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../fpga_arm/verilog/execute/ALU/alu.v"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../verilog/execute/ALU/alu.v"/>
         <Attr Name="ImportTime" Val="1739283963"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/dcache/dcache.sv">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../fpga_arm/verilog/execute/dcache/dcache.sv"/>
-        <Attr Name="ImportTime" Val="1739276609"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/DCache_tb.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/ALU_Reg_tb.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/RegFile/regs.sv">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../../../Users/Nicolas/Downloads/RegFile/regs.sv"/>
-        <Attr Name="ImportTime" Val="1739053501"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/RegFile_tb.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/Execute_tb.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -186,7 +274,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="TestBench"/>
+      <Option Name="TopModule" Val="CPU_tb"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

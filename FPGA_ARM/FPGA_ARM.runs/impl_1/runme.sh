@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/ProgramsWorkspace/ENSEA/Projet_FGPA_ARM/FPGA_ARM/FPGA_ARM.runs/impl_1'
+HD_PWD='C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -42,6 +42,6 @@ EAStep()
 
 # pre-commands:
 /bin/touch .init_design.begin.rst
-EAStep vivado -log TestBench.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source TestBench.tcl -notrace
+EAStep vivado -log CPU_tb.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source CPU_tb.tcl -notrace
 
 
