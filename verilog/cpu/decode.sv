@@ -168,7 +168,7 @@ always @ (negedge clk) begin
         6'b11100?: begin
            uop <= 0;
            branch_cond <= 4'b1110;
-           num <= instruction[10:0];
+           num <= {{21{instruction[10]}},instruction[10:0]};
         end
 
         // Conditional Branch
@@ -178,7 +178,7 @@ always @ (negedge clk) begin
             //instruction 7:0 correspond to the delta i which will be send through num
             uop <= 0;
             branch_cond <= instruction[11:8];
-            num <= instruction[7:0];
+            num <= {{24{instruction[7]}},instruction[7:0]};
             
         end
 
