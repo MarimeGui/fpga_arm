@@ -23,13 +23,8 @@ end
 
 always @(posedge clk) begin
     if (!write_enable) begin
-        if (!not_enable) begin
-            // Send the selected (index) memory cell
-            data <= instructions[index];
-        end else begin
-            // Module disable
-            data <= 1'b0;
-        end
+        // Send the selected (index) memory cell
+        data <= instructions[index];
     end
 end
 
