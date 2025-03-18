@@ -15,6 +15,7 @@ module CPU(
     // Branch and Fetch related
     wire global_disable;
     wire [31:0] delta_instruction;
+    /* verilator lint_off UNUSEDSIGNAL */ // Limited by how much ICache can hold
     wire [31:0] index;
 
     // Instruction passing
