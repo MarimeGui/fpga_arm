@@ -1,0 +1,250 @@
+/*
+
+Xilinx Vivado v2019.1 (64-bit) [Major: 2019, Minor: 1]
+SW Build: 2552052 on Fri May 24 14:49:42 MDT 2019
+IP Build: 2548770 on Fri May 24 18:01:18 MDT 2019
+
+Process ID (PID): 8840
+License: Customer
+
+Current time: 	Tue Mar 18 16:29:42 CET 2025
+Time zone: 	Central European Standard Time (Europe/Paris)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 2
+
+Screen size: 1366x768
+Screen resolution (DPI): 100
+Available screens: 1
+Available disk space: 6 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	C:/Xilinx/Vivado/2019.1/tps/win64/jre9.0.4
+Java executable location: 	C:/Xilinx/Vivado/2019.1/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	Nicolas
+User home directory: C:/Users/Nicolas
+User working directory: C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM
+User country: 	FR
+User language: 	fr
+User locale: 	fr_FR
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2019.1
+RDI_DATADIR: C:/Xilinx/Vivado/2019.1/data
+RDI_BINDIR: C:/Xilinx/Vivado/2019.1/bin
+
+Vivado preferences file location: C:/Users/Nicolas/AppData/Roaming/Xilinx/Vivado/2019.1/vivado.xml
+Vivado preferences directory: C:/Users/Nicolas/AppData/Roaming/Xilinx/Vivado/2019.1/
+Vivado layouts directory: C:/Users/Nicolas/AppData/Roaming/Xilinx/Vivado/2019.1/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2019.1/lib/classes/planAhead.jar
+Vivado log file location: 	C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/vivado.log
+Vivado journal file location: 	C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/vivado.jou
+Engine tmp dir: 	C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/.Xil/Vivado-8840-DESKTOP-3T5D140
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2019.1/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2019.1/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2019.1
+XILINX_SDK: C:/Xilinx/SDK/2019.1
+XILINX_VIVADO: C:/Xilinx/Vivado/2019.1
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2019.1
+
+
+GUI allocated memory:	154 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 550 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// WARNING: HEventQueue.dispatchEvent() is taking  1174 ms.
+// TclEventType: PROJECT_OPEN_DIALOG
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// by (cl):  Open Project : addNotify
+// Opening Vivado Project: C:\ProgramsWorkspace\ENSEA\Projet_2A\fpga_arm\FPGA_ARM\FPGA_ARM.xpr. Version: Vivado v2019.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// WARNING: HEventQueue.dispatchEvent() is taking  2406 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 561 MB. GUI used memory: 47 MB. Current time: 3/18/25, 4:29:46 PM CET
+// Tcl Message: open_project C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/ProgramsWorkspace/ENSEA/Projet_FGPA_ARM/FPGA_ARM' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 62 MB (+62776kb) [00:00:39]
+// [Engine Memory]: 593 MB (+470559kb) [00:00:39]
+// [GUI Memory]: 81 MB (+15871kb) [00:00:40]
+// [GUI Memory]: 104 MB (+20106kb) [00:00:43]
+// [Engine Memory]: 639 MB (+17274kb) [00:00:43]
+// WARNING: HEventQueue.dispatchEvent() is taking  1107 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 2236 ms. Increasing delay to 3000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1346 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 658 MB. GUI used memory: 49 MB. Current time: 3/18/25, 4:30:03 PM CET
+// WARNING: HEventQueue.dispatchEvent() is taking  1682 ms.
+// Tcl Message: open_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 676.977 ; gain = 98.895 
+// Project name: FPGA_ARM; location: C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM; part: xc7a35tcpg236-1
+dismissDialog("Open Project"); // by (cl)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 0); // B (F, cl)
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking 450ms to process. Increasing delay to 3000 ms.
+// Tcl Message: update_compile_order -fileset sources_1 
+// PAPropertyPanels.initPanels (TestBench.v) elapsed time: 0.5s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, TestBench (TestBench.v)]", 1, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, TestBench (TestBench.v)]", 1, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+// [Engine Memory]: 694 MB (+23251kb) [00:01:02]
+// Elapsed time: 21 seconds
+selectCodeEditor("TestBench.v", 596, 93); // cl (w, cl)
+selectCodeEditor("TestBench.v", 484, 90); // cl (w, cl)
+selectCodeEditor("TestBench.v", 482, 91); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking 629ms to process. Increasing delay to 4000 ms.
+// Elapsed time: 19 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ALU_Reg_tb (ALU_Reg_tb.v)]", 4, true); // B (F, cl) - Node
+// [Engine Memory]: 730 MB (+1475kb) [00:01:51]
+// WARNING: HEventQueue.dispatchEvent() is taking  1349 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 730 MB. GUI used memory: 52 MB. Current time: 3/18/25, 4:31:06 PM CET
+// Elapsed time: 35 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ALU_Reg_tb (ALU_Reg_tb.v)]", 4, true, false, false, false, true, false); // B (F, cl) - Popup Trigger - Node
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ah (an, Popup.HeavyWeightWindow)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (cl): Remove Sources: addNotify
+selectCheckBox(PAResourceQtoS.RemoveSourcesDialog_ALSO_DELETE, "Also delete the project local file/directory from disk", true); // g (Q, aE): TRUE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aE)
+dismissDialog("Remove Sources"); // aE (cl)
+// aE (cl): Remove Sources: addNotify
+// by (aE):  Remove Sources : addNotify
+// Tcl Message: export_ip_user_files -of_objects  [get_files C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/new/ALU_Reg_tb.v] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 111 MB (+2524kb) [00:02:26]
+// Tcl Message: remove_files  C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/new/ALU_Reg_tb.v 
+// Tcl Message: file delete -force C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/new/ALU_Reg_tb.v 
+dismissDialog("Remove Sources"); // by (aE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DCache_tb (DCache_tb.v)]", 6, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DCache_tb (DCache_tb.v)]", 6, true, false, false, false, true, false); // B (F, cl) - Popup Trigger - Node
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ah (an, Popup.HeavyWeightWindow)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (cl): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aE)
+dismissDialog("Remove Sources"); // aE (cl)
+// Tcl Message: export_ip_user_files -of_objects  [get_files C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/new/DCache_tb.v] -no_script -reset -force -quiet 
+// aE (cl): Remove Sources: addNotify
+// by (aE):  Remove Sources : addNotify
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/new/DCache_tb.v 
+// Tcl Message: file delete -force C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/new/DCache_tb.v 
+dismissDialog("Remove Sources"); // by (aE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RegFile_tb (RegFile_tb.v)]", 7, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RegFile_tb (RegFile_tb.v)]", 7, true, false, false, false, true, false); // B (F, cl) - Popup Trigger - Node
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ah (an, Popup.HeavyWeightWindow)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (cl): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aE)
+dismissDialog("Remove Sources"); // aE (cl)
+// Tcl Message: export_ip_user_files -of_objects  [get_files C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/new/RegFile_tb.v] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// aE (cl): Remove Sources: addNotify
+// by (aE):  Remove Sources : addNotify
+// Tcl Message: remove_files  C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/new/RegFile_tb.v 
+// Tcl Message: file delete -force C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/new/RegFile_tb.v 
+dismissDialog("Remove Sources"); // by (aE)
+selectCodeEditor("TestBench.v", 40, 39); // cl (w, cl)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Disabled Sources]", 5); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Disabled Sources, ALU.v]", 6, false); // B (F, cl)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Disabled Sources]", 5); // B (F, cl)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Disabled Sources]", 5); // B (F, cl)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Disabled Sources]", 5); // B (F, cl)
+// Elapsed time: 12 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, TestBench (TestBench.v), TB : ALU_tb (ALU_tb.v)]", 2, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, TestBench (TestBench.v), TB : ALU_tb (ALU_tb.v)]", 2, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+// WARNING: HTimer (StateMonitor Timer) is taking 1338ms to process. Increasing delay to 4000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1339 ms.
+// Elapsed time: 36 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Execute_tb (Execute_tb.v)]", 6); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Execute_tb (Execute_tb.v), RegFile : regs (regs.sv)]", 9, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Execute_tb (Execute_tb.v), DCache : dcache (dcache.sv)]", 7, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Execute_tb (Execute_tb.v), DCache : dcache (dcache.sv)]", 7, false, false, false, false, true, false); // B (F, cl) - Popup Trigger
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Execute_tb (Execute_tb.v)]", 6, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Execute_tb (Execute_tb.v)]", 6, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Execute_tb (Execute_tb.v)]", 6, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Execute_tb (Execute_tb.v)]", 6, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Execute_tb (Execute_tb.v)]", 6); // B (F, cl)
+// Elapsed time: 13 seconds
+selectCodeEditor("Execute_tb.v", 552, 178); // cl (w, cl)
+selectCodeEditor("Execute_tb.v", 96, 177); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 20 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Execute_tb (Execute_tb.v)]", 6, true); // B (F, cl) - Node
+selectCheckBox(PAResourceQtoS.SrcFilePropPanels_ENABLED, "Enabled", false); // g (Q, cl): FALSE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: set_property is_enabled false [get_files  C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/new/Execute_tb.v] 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, dcache (dcache.sv)]", 6, false); // B (F, cl)
+selectCheckBox(PAResourceQtoS.SrcFilePropPanels_ENABLED, "Enabled", false); // g (Q, cl): FALSE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: set_property is_enabled false [get_files  C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/dcache/dcache.sv] 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, regs (regs.sv)]", 7, false); // B (F, cl)
+selectCheckBox(PAResourceQtoS.SrcFilePropPanels_ENABLED, "Enabled", false); // g (Q, cl): FALSE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: set_property is_enabled false [get_files  C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/RegFile/regs.sv] 
+// TclEventType: DG_GRAPH_STALE
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Disabled Sources]", 8); // B (F, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "TestBench.v", 1); // k (j, cl)
+selectCodeEditor("TestBench.v", 218, 137); // cl (w, cl)
+selectCodeEditor("TestBench.v", 220, 132); // cl (w, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Disabled Sources, Execute_tb.v]", 8, false); // B (F, cl)
+selectCheckBox(PAResourceQtoS.SrcFilePropPanels_ENABLED, "Enabled", true); // g (Q, cl): TRUE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: set_property is_enabled true [get_files  C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/new/Execute_tb.v] 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Disabled Sources, dcache.sv]", 9, false); // B (F, cl)
+selectCheckBox(PAResourceQtoS.SrcFilePropPanels_ENABLED, "Enabled", true); // g (Q, cl): TRUE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: set_property is_enabled true [get_files  C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/dcache/dcache.sv] 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Disabled Sources, regs.sv]", 10, false); // B (F, cl)
+selectCheckBox(PAResourceQtoS.SrcFilePropPanels_ENABLED, "Enabled", true); // g (Q, cl): TRUE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Disabled Sources, regs.sv]", 10, false); // B (F, cl)
+selectCheckBox(PAResourceQtoS.SrcFilePropPanels_ENABLED, "Enabled", true); // g (Q, cl): TRUE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: set_property is_enabled true [get_files  C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/RegFile/regs.sv] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 

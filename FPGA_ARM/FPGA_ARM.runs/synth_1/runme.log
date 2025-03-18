@@ -1,0 +1,407 @@
+
+*** Running vivado
+    with args -log TestBench.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source TestBench.tcl
+
+
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source TestBench.tcl -notrace
+Command: synth_design -top TestBench -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 13920 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 672.789 ; gain = 177.512
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'TestBench' [C:/ProgramsWorkspace/ENSEA/Projet_FGPA_ARM/FPGA_ARM/FPGA_ARM.srcs/sources_1/new/TestBench.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ALU_tb' [C:/ProgramsWorkspace/ENSEA/Projet_FGPA_ARM/FPGA_ARM/FPGA_ARM.srcs/sources_1/new/ALU_tb.v:1]
+INFO: [Synth 8-6157] synthesizing module 'CTRLuOP' [C:/ProgramsWorkspace/ENSEA/Projet_FGPA_ARM/FPGA_ARM/FPGA_ARM.srcs/sources_1/new/CTRLuOP.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'CTRLuOP' (1#1) [C:/ProgramsWorkspace/ENSEA/Projet_FGPA_ARM/FPGA_ARM/FPGA_ARM.srcs/sources_1/new/CTRLuOP.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [C:/ProgramsWorkspace/ENSEA/Projet_FGPA_ARM/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/alu.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (2#1) [C:/ProgramsWorkspace/ENSEA/Projet_FGPA_ARM/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/alu.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_tb' (3#1) [C:/ProgramsWorkspace/ENSEA/Projet_FGPA_ARM/FPGA_ARM/FPGA_ARM.srcs/sources_1/new/ALU_tb.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Display' [C:/ProgramsWorkspace/ENSEA/Projet_FGPA_ARM/FPGA_ARM/FPGA_ARM.srcs/sources_1/new/Display.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Tick_1ms' [C:/ProgramsWorkspace/ENSEA/Projet_FGPA_ARM/FPGA_ARM/FPGA_ARM.srcs/sources_1/new/Tick_1ms.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Tick_1ms' (4#1) [C:/ProgramsWorkspace/ENSEA/Projet_FGPA_ARM/FPGA_ARM/FPGA_ARM.srcs/sources_1/new/Tick_1ms.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Disp1Digit' [C:/ProgramsWorkspace/ENSEA/Projet_FGPA_ARM/FPGA_ARM/FPGA_ARM.srcs/sources_1/new/Disp1Digit.v:1]
+INFO: [Synth 8-226] default block is never used [C:/ProgramsWorkspace/ENSEA/Projet_FGPA_ARM/FPGA_ARM/FPGA_ARM.srcs/sources_1/new/Disp1Digit.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'Disp1Digit' (5#1) [C:/ProgramsWorkspace/ENSEA/Projet_FGPA_ARM/FPGA_ARM/FPGA_ARM.srcs/sources_1/new/Disp1Digit.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Display' (6#1) [C:/ProgramsWorkspace/ENSEA/Projet_FGPA_ARM/FPGA_ARM/FPGA_ARM.srcs/sources_1/new/Display.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'TestBench' (7#1) [C:/ProgramsWorkspace/ENSEA/Projet_FGPA_ARM/FPGA_ARM/FPGA_ARM.srcs/sources_1/new/TestBench.v:1]
+WARNING: [Synth 8-3331] design Display has unconnected port In[31]
+WARNING: [Synth 8-3331] design Display has unconnected port In[30]
+WARNING: [Synth 8-3331] design Display has unconnected port In[29]
+WARNING: [Synth 8-3331] design Display has unconnected port In[28]
+WARNING: [Synth 8-3331] design Display has unconnected port In[27]
+WARNING: [Synth 8-3331] design Display has unconnected port In[26]
+WARNING: [Synth 8-3331] design Display has unconnected port In[25]
+WARNING: [Synth 8-3331] design Display has unconnected port In[24]
+WARNING: [Synth 8-3331] design Display has unconnected port In[23]
+WARNING: [Synth 8-3331] design Display has unconnected port In[22]
+WARNING: [Synth 8-3331] design Display has unconnected port In[21]
+WARNING: [Synth 8-3331] design Display has unconnected port In[20]
+WARNING: [Synth 8-3331] design Display has unconnected port In[19]
+WARNING: [Synth 8-3331] design Display has unconnected port In[18]
+WARNING: [Synth 8-3331] design Display has unconnected port In[17]
+WARNING: [Synth 8-3331] design Display has unconnected port In[16]
+WARNING: [Synth 8-3331] design Display has unconnected port In[15]
+WARNING: [Synth 8-3331] design Display has unconnected port In[14]
+WARNING: [Synth 8-3331] design Display has unconnected port In[13]
+WARNING: [Synth 8-3331] design Display has unconnected port In[12]
+WARNING: [Synth 8-3331] design Display has unconnected port In[11]
+WARNING: [Synth 8-3331] design Display has unconnected port In[10]
+WARNING: [Synth 8-3331] design Display has unconnected port In[9]
+WARNING: [Synth 8-3331] design Display has unconnected port In[8]
+WARNING: [Synth 8-3331] design Display has unconnected port uOP[4]
+WARNING: [Synth 8-3331] design Display has unconnected port Out[31]
+WARNING: [Synth 8-3331] design Display has unconnected port Out[30]
+WARNING: [Synth 8-3331] design Display has unconnected port Out[29]
+WARNING: [Synth 8-3331] design Display has unconnected port Out[28]
+WARNING: [Synth 8-3331] design Display has unconnected port Out[27]
+WARNING: [Synth 8-3331] design Display has unconnected port Out[26]
+WARNING: [Synth 8-3331] design Display has unconnected port Out[25]
+WARNING: [Synth 8-3331] design Display has unconnected port Out[24]
+WARNING: [Synth 8-3331] design Display has unconnected port Out[23]
+WARNING: [Synth 8-3331] design Display has unconnected port Out[22]
+WARNING: [Synth 8-3331] design Display has unconnected port Out[21]
+WARNING: [Synth 8-3331] design Display has unconnected port Out[20]
+WARNING: [Synth 8-3331] design Display has unconnected port Out[19]
+WARNING: [Synth 8-3331] design Display has unconnected port Out[18]
+WARNING: [Synth 8-3331] design Display has unconnected port Out[17]
+WARNING: [Synth 8-3331] design Display has unconnected port Out[16]
+WARNING: [Synth 8-3331] design ALU_tb has unconnected port CLKBTNC
+WARNING: [Synth 8-3331] design ALU_tb has unconnected port BTNL
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 737.254 ; gain = 241.977
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 737.254 ; gain = 241.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 737.254 ; gain = 241.977
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/ProgramsWorkspace/ENSEA/Projet_FGPA_ARM/FPGA_ARM/FPGA_ARM.srcs/constrs_1/imports/new/Basys3.xdc]
+Finished Parsing XDC File [C:/ProgramsWorkspace/ENSEA/Projet_FGPA_ARM/FPGA_ARM/FPGA_ARM.srcs/constrs_1/imports/new/Basys3.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/ProgramsWorkspace/ENSEA/Projet_FGPA_ARM/FPGA_ARM/FPGA_ARM.srcs/constrs_1/imports/new/Basys3.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/TestBench_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/TestBench_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 832.891 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.006 . Memory (MB): peak = 832.891 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 832.891 ; gain = 337.613
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 832.891 ; gain = 337.613
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 832.891 ; gain = 337.613
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5587] ROM size for "is_nop" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "flags" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-327] inferring latch for variable 'flags_out_reg' [C:/ProgramsWorkspace/ENSEA/Projet_FGPA_ARM/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/alu.sv:92]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 832.891 ; gain = 337.613
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     33 Bit       Adders := 1     
+	   3 Input     33 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
+	   2 Input      7 Bit         XORs := 1     
+	   2 Input      4 Bit         XORs := 1     
++---Registers : 
+	                5 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   4 Input      7 Bit        Muxes := 1     
+	  11 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  11 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module TestBench 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module CTRLuOP 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module ALU 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     33 Bit       Adders := 1     
+	   3 Input     33 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	  11 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 2     
+	  11 Input      1 Bit        Muxes := 2     
+Module Tick_1ms 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module Display 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---XORs : 
+	   2 Input      7 Bit         XORs := 1     
+	   2 Input      4 Bit         XORs := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      7 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3917] design TestBench has port LED[11] driven by constant 0
+WARNING: [Synth 8-3917] design TestBench has port LED[10] driven by constant 0
+WARNING: [Synth 8-3917] design TestBench has port LED[9] driven by constant 0
+WARNING: [Synth 8-3917] design TestBench has port LED[8] driven by constant 0
+WARNING: [Synth 8-3331] design TestBench has unconnected port BTNC
+WARNING: [Synth 8-3331] design TestBench has unconnected port BTNL
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TB/ALU/flags_out_reg[0] )
+WARNING: [Synth 8-3332] Sequential element (TB/ALU/flags_out_reg[0]) is unused and will be removed from module TestBench.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:32 . Memory (MB): peak = 832.891 ; gain = 337.613
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:41 ; elapsed = 00:00:49 . Memory (MB): peak = 832.891 ; gain = 337.613
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:00:54 . Memory (MB): peak = 883.090 ; gain = 387.812
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:46 ; elapsed = 00:00:54 . Memory (MB): peak = 892.137 ; gain = 396.859
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:49 ; elapsed = 00:00:58 . Memory (MB): peak = 896.961 ; gain = 401.684
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:49 ; elapsed = 00:00:58 . Memory (MB): peak = 896.961 ; gain = 401.684
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:50 ; elapsed = 00:00:58 . Memory (MB): peak = 896.961 ; gain = 401.684
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:50 ; elapsed = 00:00:58 . Memory (MB): peak = 896.961 ; gain = 401.684
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:50 ; elapsed = 00:00:58 . Memory (MB): peak = 896.961 ; gain = 401.684
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:50 ; elapsed = 00:00:58 . Memory (MB): peak = 896.961 ; gain = 401.684
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    10|
+|3     |LUT1   |     2|
+|4     |LUT2   |    25|
+|5     |LUT3   |    12|
+|6     |LUT4   |    29|
+|7     |LUT5   |    50|
+|8     |LUT6   |    89|
+|9     |MUXF7  |     1|
+|10    |FDRE   |    27|
+|11    |LD     |     3|
+|12    |IBUF   |    20|
+|13    |OBUF   |    28|
++------+-------+------+
+
+Report Instance Areas: 
++------+------------+---------+------+
+|      |Instance    |Module   |Cells |
++------+------------+---------+------+
+|1     |top         |         |   297|
+|2     |  Display   |Display  |    36|
+|3     |    Tick    |Tick_1ms |    27|
+|4     |  TB        |ALU_tb   |   206|
+|5     |    ALU     |ALU      |    69|
+|6     |    CTRLuOP |CTRLuOP  |   137|
++------+------------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:50 ; elapsed = 00:00:58 . Memory (MB): peak = 896.961 ; gain = 401.684
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:37 ; elapsed = 00:00:53 . Memory (MB): peak = 896.961 ; gain = 306.047
+Synthesis Optimization Complete : Time (s): cpu = 00:00:50 ; elapsed = 00:00:59 . Memory (MB): peak = 896.961 ; gain = 401.684
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 14 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 913.020 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 3 instances were transformed.
+  LD => LDCE: 3 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+30 Infos, 51 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:59 ; elapsed = 00:01:11 . Memory (MB): peak = 913.020 ; gain = 621.961
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 913.020 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/ProgramsWorkspace/ENSEA/Projet_FGPA_ARM/FPGA_ARM/FPGA_ARM.runs/synth_1/TestBench.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file TestBench_utilization_synth.rpt -pb TestBench_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 18 16:02:24 2025...
