@@ -31,7 +31,7 @@ module cpu_tb();
         program_in <= 16'b0001111111000010;
         #10;
 
-        // B -2
+        // B -2 (end of program, loops back to same instruction)
         instruction_index <= 12;
         program_in <= 16'b1110011111111110;
         #10;
@@ -41,7 +41,7 @@ module cpu_tb();
         #30 // Wait for PC to get to 10
 
         // Execute instructions
-        #40
+        #100
 
         $stop;
     end
