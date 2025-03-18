@@ -12,7 +12,7 @@ module alu_tb();
         .rhs(rhs),
         .uop(uop),
         .out_alu(out_alu),
-        .flags(flags)
+        .flags_out(flags)
     );
 
     initial begin

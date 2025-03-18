@@ -1,0 +1,682 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Mar 18 22:56:52 2025
+# Process ID: 10752
+# Current directory: C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.runs/synth_1
+# Command line: vivado.exe -log CPU_tb.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source CPU_tb.tcl
+# Log file: C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.runs/synth_1/CPU_tb.vds
+# Journal file: C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source CPU_tb.tcl -notrace
+Command: synth_design -top CPU_tb -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 8124 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 672.754 ; gain = 176.758
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'CPU_tb' [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/new/CPU_tb.sv:1]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/new/CPU_tb.sv:22]
+INFO: [Synth 8-6157] synthesizing module 'PLL' [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/new/PLL.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'PLL' (1#1) [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/new/PLL.v:1]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/new/CPU_tb.sv:27]
+INFO: [Synth 8-6157] synthesizing module 'CPU' [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/cpu.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'ICache' [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/icache.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'ICache' (2#1) [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/icache.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'Fetch' [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/fetch.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'Fetch' (3#1) [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/fetch.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'Decode' [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/decode.sv:3]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/decode.sv:35]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/decode.sv:130]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/decode.sv:32]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/decode.sv:30]
+INFO: [Synth 8-6155] done synthesizing module 'Decode' (4#1) [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/decode.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'Execute' [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/execute.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'RegisterFile' [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/regs.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'RegisterFile' (5#1) [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/regs.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'RegReturnMux' [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/reg_return_mux.sv:9]
+INFO: [Synth 8-6155] done synthesizing module 'RegReturnMux' (6#1) [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/reg_return_mux.sv:9]
+INFO: [Synth 8-6157] synthesizing module 'Mux32' [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/mux32.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'Mux32' (7#1) [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/mux32.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/alu.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (8#1) [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/alu.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'BCC' [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/bcc.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'BCC' (9#1) [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/bcc.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'DCache' [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/dcache.sv:3]
+	Parameter STR_UOP bound to: 5'b01001 
+	Parameter LDR_UOP bound to: 5'b01010 
+INFO: [Synth 8-6155] done synthesizing module 'DCache' (10#1) [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/dcache.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'GPIO' [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/gpio.sv:3]
+	Parameter STR_UOP bound to: 5'b01001 
+INFO: [Synth 8-6155] done synthesizing module 'GPIO' (11#1) [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/gpio.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'Execute' (12#1) [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/execute.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'CPU' (13#1) [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/cpu.sv:3]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/new/CPU_tb.sv:44]
+INFO: [Synth 8-6155] done synthesizing module 'CPU_tb' (14#1) [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/new/CPU_tb.sv:1]
+WARNING: [Synth 8-3917] design CPU_tb has port Disable7Seg[3] driven by constant 1
+WARNING: [Synth 8-3917] design CPU_tb has port Disable7Seg[2] driven by constant 1
+WARNING: [Synth 8-3917] design CPU_tb has port Disable7Seg[1] driven by constant 1
+WARNING: [Synth 8-3917] design CPU_tb has port Disable7Seg[0] driven by constant 1
+WARNING: [Synth 8-3917] design CPU_tb has port Seg[6] driven by constant 1
+WARNING: [Synth 8-3917] design CPU_tb has port Seg[5] driven by constant 1
+WARNING: [Synth 8-3917] design CPU_tb has port Seg[4] driven by constant 1
+WARNING: [Synth 8-3917] design CPU_tb has port Seg[3] driven by constant 1
+WARNING: [Synth 8-3917] design CPU_tb has port Seg[2] driven by constant 1
+WARNING: [Synth 8-3917] design CPU_tb has port Seg[1] driven by constant 1
+WARNING: [Synth 8-3917] design CPU_tb has port Seg[0] driven by constant 1
+WARNING: [Synth 8-3917] design CPU_tb has port DP driven by constant 1
+WARNING: [Synth 8-3331] design ICache has unconnected port not_enable
+WARNING: [Synth 8-3331] design ICache has unconnected port write_instruction_index[31]
+WARNING: [Synth 8-3331] design ICache has unconnected port write_instruction_index[30]
+WARNING: [Synth 8-3331] design ICache has unconnected port write_instruction_index[29]
+WARNING: [Synth 8-3331] design ICache has unconnected port write_instruction_index[28]
+WARNING: [Synth 8-3331] design ICache has unconnected port write_instruction_index[27]
+WARNING: [Synth 8-3331] design ICache has unconnected port write_instruction_index[26]
+WARNING: [Synth 8-3331] design ICache has unconnected port write_instruction_index[25]
+WARNING: [Synth 8-3331] design ICache has unconnected port write_instruction_index[24]
+WARNING: [Synth 8-3331] design ICache has unconnected port write_instruction_index[23]
+WARNING: [Synth 8-3331] design ICache has unconnected port write_instruction_index[22]
+WARNING: [Synth 8-3331] design ICache has unconnected port write_instruction_index[21]
+WARNING: [Synth 8-3331] design ICache has unconnected port write_instruction_index[20]
+WARNING: [Synth 8-3331] design ICache has unconnected port write_instruction_index[19]
+WARNING: [Synth 8-3331] design ICache has unconnected port write_instruction_index[18]
+WARNING: [Synth 8-3331] design ICache has unconnected port write_instruction_index[17]
+WARNING: [Synth 8-3331] design ICache has unconnected port write_instruction_index[16]
+WARNING: [Synth 8-3331] design ICache has unconnected port write_instruction_index[15]
+WARNING: [Synth 8-3331] design ICache has unconnected port write_instruction_index[14]
+WARNING: [Synth 8-3331] design ICache has unconnected port write_instruction_index[13]
+WARNING: [Synth 8-3331] design ICache has unconnected port write_instruction_index[12]
+WARNING: [Synth 8-3331] design ICache has unconnected port write_instruction_index[11]
+WARNING: [Synth 8-3331] design ICache has unconnected port write_instruction_index[10]
+WARNING: [Synth 8-3331] design ICache has unconnected port write_instruction_index[9]
+WARNING: [Synth 8-3331] design ICache has unconnected port write_instruction_index[8]
+WARNING: [Synth 8-3331] design ICache has unconnected port index[31]
+WARNING: [Synth 8-3331] design ICache has unconnected port index[30]
+WARNING: [Synth 8-3331] design ICache has unconnected port index[29]
+WARNING: [Synth 8-3331] design ICache has unconnected port index[28]
+WARNING: [Synth 8-3331] design ICache has unconnected port index[27]
+WARNING: [Synth 8-3331] design ICache has unconnected port index[26]
+WARNING: [Synth 8-3331] design ICache has unconnected port index[25]
+WARNING: [Synth 8-3331] design ICache has unconnected port index[24]
+WARNING: [Synth 8-3331] design ICache has unconnected port index[23]
+WARNING: [Synth 8-3331] design ICache has unconnected port index[22]
+WARNING: [Synth 8-3331] design ICache has unconnected port index[21]
+WARNING: [Synth 8-3331] design ICache has unconnected port index[20]
+WARNING: [Synth 8-3331] design ICache has unconnected port index[19]
+WARNING: [Synth 8-3331] design ICache has unconnected port index[18]
+WARNING: [Synth 8-3331] design ICache has unconnected port index[17]
+WARNING: [Synth 8-3331] design ICache has unconnected port index[16]
+WARNING: [Synth 8-3331] design ICache has unconnected port index[15]
+WARNING: [Synth 8-3331] design ICache has unconnected port index[14]
+WARNING: [Synth 8-3331] design ICache has unconnected port index[13]
+WARNING: [Synth 8-3331] design ICache has unconnected port index[12]
+WARNING: [Synth 8-3331] design ICache has unconnected port index[11]
+WARNING: [Synth 8-3331] design ICache has unconnected port index[10]
+WARNING: [Synth 8-3331] design ICache has unconnected port index[9]
+WARNING: [Synth 8-3331] design ICache has unconnected port index[8]
+WARNING: [Synth 8-3331] design CPU_tb has unconnected port SW[15]
+WARNING: [Synth 8-3331] design CPU_tb has unconnected port SW[14]
+WARNING: [Synth 8-3331] design CPU_tb has unconnected port SW[13]
+WARNING: [Synth 8-3331] design CPU_tb has unconnected port SW[12]
+WARNING: [Synth 8-3331] design CPU_tb has unconnected port SW[11]
+WARNING: [Synth 8-3331] design CPU_tb has unconnected port SW[10]
+WARNING: [Synth 8-3331] design CPU_tb has unconnected port SW[9]
+WARNING: [Synth 8-3331] design CPU_tb has unconnected port SW[8]
+WARNING: [Synth 8-3331] design CPU_tb has unconnected port SW[7]
+WARNING: [Synth 8-3331] design CPU_tb has unconnected port SW[6]
+WARNING: [Synth 8-3331] design CPU_tb has unconnected port SW[5]
+WARNING: [Synth 8-3331] design CPU_tb has unconnected port SW[4]
+WARNING: [Synth 8-3331] design CPU_tb has unconnected port SW[3]
+WARNING: [Synth 8-3331] design CPU_tb has unconnected port SW[2]
+WARNING: [Synth 8-3331] design CPU_tb has unconnected port SW[1]
+WARNING: [Synth 8-3331] design CPU_tb has unconnected port SW[0]
+WARNING: [Synth 8-3331] design CPU_tb has unconnected port BTNC
+WARNING: [Synth 8-3331] design CPU_tb has unconnected port BTNU
+WARNING: [Synth 8-3331] design CPU_tb has unconnected port BTND
+WARNING: [Synth 8-3331] design CPU_tb has unconnected port BTNL
+WARNING: [Synth 8-3331] design CPU_tb has unconnected port BTNR
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 737.465 ; gain = 241.469
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 737.465 ; gain = 241.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 737.465 ; gain = 241.469
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/constrs_1/imports/new/Basys3.xdc]
+Finished Parsing XDC File [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/constrs_1/imports/new/Basys3.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/constrs_1/imports/new/Basys3.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/CPU_tb_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/CPU_tb_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 860.574 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 860.574 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 860.574 ; gain = 364.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 860.574 ; gain = 364.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 860.574 ; gain = 364.578
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5587] ROM size for "is_nop" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "flags" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-327] inferring latch for variable 'flags_out_reg' [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/alu.sv:92]
+WARNING: [Synth 8-327] inferring latch for variable 'data_out_reg' [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/dcache.sv:30]
+WARNING: [Synth 8-327] inferring latch for variable 'dcache_block_reg[31]' [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/dcache.sv:30]
+WARNING: [Synth 8-327] inferring latch for variable 'dcache_block_reg[30]' [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/dcache.sv:30]
+WARNING: [Synth 8-327] inferring latch for variable 'dcache_block_reg[29]' [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/dcache.sv:30]
+WARNING: [Synth 8-327] inferring latch for variable 'dcache_block_reg[28]' [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/dcache.sv:30]
+WARNING: [Synth 8-327] inferring latch for variable 'dcache_block_reg[27]' [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/dcache.sv:30]
+WARNING: [Synth 8-327] inferring latch for variable 'dcache_block_reg[26]' [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/dcache.sv:30]
+WARNING: [Synth 8-327] inferring latch for variable 'dcache_block_reg[25]' [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/dcache.sv:30]
+WARNING: [Synth 8-327] inferring latch for variable 'dcache_block_reg[24]' [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/dcache.sv:30]
+WARNING: [Synth 8-327] inferring latch for variable 'dcache_block_reg[23]' [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/dcache.sv:30]
+WARNING: [Synth 8-327] inferring latch for variable 'dcache_block_reg[22]' [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/dcache.sv:30]
+WARNING: [Synth 8-327] inferring latch for variable 'dcache_block_reg[21]' [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/dcache.sv:30]
+WARNING: [Synth 8-327] inferring latch for variable 'dcache_block_reg[20]' [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/dcache.sv:30]
+WARNING: [Synth 8-327] inferring latch for variable 'dcache_block_reg[19]' [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/dcache.sv:30]
+WARNING: [Synth 8-327] inferring latch for variable 'dcache_block_reg[18]' [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/dcache.sv:30]
+WARNING: [Synth 8-327] inferring latch for variable 'dcache_block_reg[17]' [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/dcache.sv:30]
+WARNING: [Synth 8-327] inferring latch for variable 'dcache_block_reg[16]' [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/dcache.sv:30]
+WARNING: [Synth 8-327] inferring latch for variable 'dcache_block_reg[15]' [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/dcache.sv:30]
+WARNING: [Synth 8-327] inferring latch for variable 'dcache_block_reg[14]' [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/dcache.sv:30]
+WARNING: [Synth 8-327] inferring latch for variable 'dcache_block_reg[13]' [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/dcache.sv:30]
+WARNING: [Synth 8-327] inferring latch for variable 'dcache_block_reg[12]' [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/dcache.sv:30]
+WARNING: [Synth 8-327] inferring latch for variable 'dcache_block_reg[11]' [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/dcache.sv:30]
+WARNING: [Synth 8-327] inferring latch for variable 'dcache_block_reg[10]' [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/dcache.sv:30]
+WARNING: [Synth 8-327] inferring latch for variable 'dcache_block_reg[9]' [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/dcache.sv:30]
+WARNING: [Synth 8-327] inferring latch for variable 'dcache_block_reg[8]' [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/dcache.sv:30]
+WARNING: [Synth 8-327] inferring latch for variable 'dcache_block_reg[7]' [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/dcache.sv:30]
+WARNING: [Synth 8-327] inferring latch for variable 'dcache_block_reg[6]' [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/dcache.sv:30]
+WARNING: [Synth 8-327] inferring latch for variable 'dcache_block_reg[5]' [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/dcache.sv:30]
+WARNING: [Synth 8-327] inferring latch for variable 'dcache_block_reg[4]' [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/dcache.sv:30]
+WARNING: [Synth 8-327] inferring latch for variable 'dcache_block_reg[3]' [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/dcache.sv:30]
+WARNING: [Synth 8-327] inferring latch for variable 'dcache_block_reg[2]' [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/dcache.sv:30]
+WARNING: [Synth 8-327] inferring latch for variable 'dcache_block_reg[1]' [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/dcache.sv:30]
+WARNING: [Synth 8-327] inferring latch for variable 'dcache_block_reg[0]' [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/dcache.sv:30]
+WARNING: [Synth 8-327] inferring latch for variable 'last_clock_state_reg' [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/dcache.sv:24]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:32 . Memory (MB): peak = 860.574 ; gain = 364.578
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     33 Bit       Adders := 1     
+	   3 Input     33 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 5     
+	               16 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 6     
+	                1 Bit    Registers := 4     
++---RAMs : 
+	               2K Bit         RAMs := 1     
+	              480 Bit         RAMs := 1     
++---Muxes : 
+	   6 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 7     
+	   2 Input     16 Bit        Muxes := 1     
+	   5 Input     16 Bit        Muxes := 1     
+	  11 Input      8 Bit        Muxes := 1     
+	  11 Input      4 Bit        Muxes := 3     
+	   2 Input      4 Bit        Muxes := 5     
+	   6 Input      4 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 5     
+	  11 Input      3 Bit        Muxes := 3     
+	   6 Input      3 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 5     
+	  11 Input      1 Bit        Muxes := 3     
+	   6 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 33    
+	   5 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module CPU_tb 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   5 Input     16 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   5 Input      1 Bit        Muxes := 2     
+Module PLL 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module ICache 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
++---RAMs : 
+	               2K Bit         RAMs := 1     
+Module Fetch 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+Module Decode 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 4     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   6 Input     32 Bit        Muxes := 1     
+	  11 Input      8 Bit        Muxes := 1     
+	  11 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   6 Input      4 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 5     
+	  11 Input      3 Bit        Muxes := 3     
+	   6 Input      3 Bit        Muxes := 3     
+	  11 Input      1 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 1     
+Module RegisterFile 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
++---RAMs : 
+	              480 Bit         RAMs := 1     
+Module RegReturnMux 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+Module Mux32 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module ALU 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     33 Bit       Adders := 1     
+	   3 Input     33 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	  11 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 2     
+	  11 Input      1 Bit        Muxes := 2     
+Module BCC 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module DCache 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 33    
+Module GPIO 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3917] design CPU_tb has port Disable7Seg[3] driven by constant 1
+WARNING: [Synth 8-3917] design CPU_tb has port Disable7Seg[2] driven by constant 1
+WARNING: [Synth 8-3917] design CPU_tb has port Disable7Seg[1] driven by constant 1
+WARNING: [Synth 8-3917] design CPU_tb has port Disable7Seg[0] driven by constant 1
+WARNING: [Synth 8-3917] design CPU_tb has port Seg[6] driven by constant 1
+WARNING: [Synth 8-3917] design CPU_tb has port Seg[5] driven by constant 1
+WARNING: [Synth 8-3917] design CPU_tb has port Seg[4] driven by constant 1
+WARNING: [Synth 8-3917] design CPU_tb has port Seg[3] driven by constant 1
+WARNING: [Synth 8-3917] design CPU_tb has port Seg[2] driven by constant 1
+WARNING: [Synth 8-3917] design CPU_tb has port Seg[1] driven by constant 1
+WARNING: [Synth 8-3917] design CPU_tb has port Seg[0] driven by constant 1
+WARNING: [Synth 8-3917] design CPU_tb has port DP driven by constant 1
+WARNING: [Synth 8-3331] design CPU_tb has unconnected port SW[15]
+WARNING: [Synth 8-3331] design CPU_tb has unconnected port SW[14]
+WARNING: [Synth 8-3331] design CPU_tb has unconnected port SW[13]
+WARNING: [Synth 8-3331] design CPU_tb has unconnected port SW[12]
+WARNING: [Synth 8-3331] design CPU_tb has unconnected port SW[11]
+WARNING: [Synth 8-3331] design CPU_tb has unconnected port SW[10]
+WARNING: [Synth 8-3331] design CPU_tb has unconnected port SW[9]
+WARNING: [Synth 8-3331] design CPU_tb has unconnected port SW[8]
+WARNING: [Synth 8-3331] design CPU_tb has unconnected port SW[7]
+WARNING: [Synth 8-3331] design CPU_tb has unconnected port SW[6]
+WARNING: [Synth 8-3331] design CPU_tb has unconnected port SW[5]
+WARNING: [Synth 8-3331] design CPU_tb has unconnected port SW[4]
+WARNING: [Synth 8-3331] design CPU_tb has unconnected port SW[3]
+WARNING: [Synth 8-3331] design CPU_tb has unconnected port SW[2]
+WARNING: [Synth 8-3331] design CPU_tb has unconnected port SW[1]
+WARNING: [Synth 8-3331] design CPU_tb has unconnected port SW[0]
+WARNING: [Synth 8-3331] design CPU_tb has unconnected port BTNC
+WARNING: [Synth 8-3331] design CPU_tb has unconnected port BTNU
+WARNING: [Synth 8-3331] design CPU_tb has unconnected port BTND
+WARNING: [Synth 8-3331] design CPU_tb has unconnected port BTNL
+WARNING: [Synth 8-3331] design CPU_tb has unconnected port BTNR
+INFO: [Synth 8-4652] Swapped enable and write-enable on 1 RAM instances of RAM CPU/i_icache/instructions_reg to conserve power
+INFO: [Synth 8-3886] merging instance 'CPU/i_decode/sel_p1_reg[3]' (FDR_1) to 'CPU/i_decode/sel_in_reg[3]'
+INFO: [Synth 8-3886] merging instance 'CPU/i_decode/sel_in_reg[3]' (FDR_1) to 'CPU/i_decode/sel_p0_reg[3]'
+INFO: [Synth 8-3886] merging instance 'CPU/i_decode/sel_p0_reg[3]' (FDR_1) to 'CPU/i_decode/uop_reg[4]'
+INFO: [Synth 8-3886] merging instance 'program_in_reg[0]' (FDE) to 'program_in_reg[1]'
+INFO: [Synth 8-3886] merging instance 'program_in_reg[1]' (FDE) to 'program_in_reg[2]'
+INFO: [Synth 8-3886] merging instance 'program_in_reg[2]' (FDE) to 'program_in_reg[4]'
+INFO: [Synth 8-3886] merging instance 'program_in_reg[6]' (FDE) to 'program_in_reg[7]'
+INFO: [Synth 8-3886] merging instance 'program_in_reg[7]' (FDE) to 'program_in_reg[9]'
+INFO: [Synth 8-3886] merging instance 'program_in_reg[9]' (FDE) to 'program_in_reg[10]'
+INFO: [Synth 8-3886] merging instance 'program_in_reg[10]' (FDE) to 'program_in_reg[11]'
+INFO: [Synth 8-3886] merging instance 'program_in_reg[11]' (FDE) to 'program_in_reg[12]'
+INFO: [Synth 8-3886] merging instance 'program_in_reg[12]' (FDE) to 'program_in_reg[15]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\program_in_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\program_in_reg[15] )
+INFO: [Synth 8-3886] merging instance 'CPU/i_decode/num_reg[10]' (FDR_1) to 'CPU/i_decode/num_reg[11]'
+INFO: [Synth 8-3886] merging instance 'CPU/i_decode/num_reg[11]' (FDR_1) to 'CPU/i_decode/num_reg[12]'
+INFO: [Synth 8-3886] merging instance 'CPU/i_decode/num_reg[12]' (FDR_1) to 'CPU/i_decode/num_reg[13]'
+INFO: [Synth 8-3886] merging instance 'CPU/i_decode/num_reg[13]' (FDR_1) to 'CPU/i_decode/num_reg[14]'
+INFO: [Synth 8-3886] merging instance 'CPU/i_decode/num_reg[14]' (FDR_1) to 'CPU/i_decode/num_reg[15]'
+INFO: [Synth 8-3886] merging instance 'CPU/i_decode/num_reg[15]' (FDR_1) to 'CPU/i_decode/num_reg[16]'
+INFO: [Synth 8-3886] merging instance 'CPU/i_decode/num_reg[16]' (FDR_1) to 'CPU/i_decode/num_reg[17]'
+INFO: [Synth 8-3886] merging instance 'CPU/i_decode/num_reg[17]' (FDR_1) to 'CPU/i_decode/num_reg[18]'
+INFO: [Synth 8-3886] merging instance 'CPU/i_decode/num_reg[18]' (FDR_1) to 'CPU/i_decode/num_reg[19]'
+INFO: [Synth 8-3886] merging instance 'CPU/i_decode/num_reg[19]' (FDR_1) to 'CPU/i_decode/num_reg[20]'
+INFO: [Synth 8-3886] merging instance 'CPU/i_decode/num_reg[20]' (FDR_1) to 'CPU/i_decode/num_reg[21]'
+INFO: [Synth 8-3886] merging instance 'CPU/i_decode/num_reg[21]' (FDR_1) to 'CPU/i_decode/num_reg[22]'
+INFO: [Synth 8-3886] merging instance 'CPU/i_decode/num_reg[22]' (FDR_1) to 'CPU/i_decode/num_reg[23]'
+INFO: [Synth 8-3886] merging instance 'CPU/i_decode/num_reg[23]' (FDR_1) to 'CPU/i_decode/num_reg[24]'
+INFO: [Synth 8-3886] merging instance 'CPU/i_decode/num_reg[24]' (FDR_1) to 'CPU/i_decode/num_reg[25]'
+INFO: [Synth 8-3886] merging instance 'CPU/i_decode/num_reg[25]' (FDR_1) to 'CPU/i_decode/num_reg[26]'
+INFO: [Synth 8-3886] merging instance 'CPU/i_decode/num_reg[26]' (FDR_1) to 'CPU/i_decode/num_reg[27]'
+INFO: [Synth 8-3886] merging instance 'CPU/i_decode/num_reg[27]' (FDR_1) to 'CPU/i_decode/num_reg[28]'
+INFO: [Synth 8-3886] merging instance 'CPU/i_decode/num_reg[28]' (FDR_1) to 'CPU/i_decode/num_reg[29]'
+INFO: [Synth 8-3886] merging instance 'CPU/i_decode/num_reg[29]' (FDR_1) to 'CPU/i_decode/num_reg[30]'
+INFO: [Synth 8-3886] merging instance 'CPU/i_decode/num_reg[30]' (FDR_1) to 'CPU/i_decode/num_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\CPU/i_decode/uop_reg[4] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:46 ; elapsed = 00:01:01 . Memory (MB): peak = 860.574 ; gain = 364.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping  Report (see note below)
++------------+------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|ICache:     | instructions_reg | 256 x 16(READ_FIRST)   | W |   | 256 x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
++------------+------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++------------+-------------------------------+-----------+----------------------+---------------+
+|Module Name | RTL Object                    | Inference | Size (Depth x Width) | Primitives    | 
++------------+-------------------------------+-----------+----------------------+---------------+
+|CPU_tb      | CPU/i_execute/i_regs/regs_reg | Implied   | 16 x 32              | RAM32M x 12   | 
++------------+-------------------------------+-----------+----------------------+---------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance i_0/CPU/i_icache/instructions_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:02 ; elapsed = 00:01:18 . Memory (MB): peak = 860.574 ; gain = 364.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:26 ; elapsed = 00:01:46 . Memory (MB): peak = 1024.605 ; gain = 528.609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping  Report
++------------+------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|ICache:     | instructions_reg | 256 x 16(READ_FIRST)   | W |   | 256 x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
++------------+------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+
+Distributed RAM: Final Mapping  Report
++------------+-------------------------------+-----------+----------------------+---------------+
+|Module Name | RTL Object                    | Inference | Size (Depth x Width) | Primitives    | 
++------------+-------------------------------+-----------+----------------------+---------------+
+|CPU_tb      | CPU/i_execute/i_regs/regs_reg | Implied   | 16 x 32              | RAM32M x 12   | 
++------------+-------------------------------+-----------+----------------------+---------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance CPU/i_icache/instructions_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:28 ; elapsed = 00:01:47 . Memory (MB): peak = 1024.605 ; gain = 528.609
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-5396] Clock pin CLKBWRCLK has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/icache.sv:20]
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:32 ; elapsed = 00:01:52 . Memory (MB): peak = 1024.605 ; gain = 528.609
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:32 ; elapsed = 00:01:52 . Memory (MB): peak = 1024.605 ; gain = 528.609
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:32 ; elapsed = 00:01:52 . Memory (MB): peak = 1024.605 ; gain = 528.609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:33 ; elapsed = 00:01:52 . Memory (MB): peak = 1024.605 ; gain = 528.609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:33 ; elapsed = 00:01:52 . Memory (MB): peak = 1024.605 ; gain = 528.609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:33 ; elapsed = 00:01:52 . Memory (MB): peak = 1024.605 ; gain = 528.609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |    12|
+|2     |CARRY4   |    44|
+|3     |LUT1     |     5|
+|4     |LUT2     |    52|
+|5     |LUT3     |    59|
+|6     |LUT4     |   164|
+|7     |LUT5     |   152|
+|8     |LUT6     |   687|
+|9     |MUXF7    |   119|
+|10    |MUXF8    |    54|
+|11    |RAM32M   |    12|
+|12    |RAMB18E1 |     1|
+|13    |FDRE     |   208|
+|14    |FDSE     |     5|
+|15    |LD       |  1061|
+|16    |IBUF     |     1|
+|17    |OBUF     |    28|
++------+---------+------+
+
+Report Instance Areas: 
++------+---------------+-------------+------+
+|      |Instance       |Module       |Cells |
++------+---------------+-------------+------+
+|1     |top            |             |  2664|
+|2     |  CPU          |CPU          |  2513|
+|3     |    i_decode   |Decode       |   520|
+|4     |    i_execute  |Execute      |  1920|
+|5     |      i_alu    |ALU          |    12|
+|6     |      i_bcc    |BCC          |     1|
+|7     |      i_dcache |DCache       |  1487|
+|8     |      i_gpio   |GPIO         |    32|
+|9     |      i_regs   |RegisterFile |   387|
+|10    |    i_fetch    |Fetch        |    18|
+|11    |    i_icache   |ICache       |    55|
+|12    |  PLL          |PLL          |    50|
++------+---------------+-------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:33 ; elapsed = 00:01:52 . Memory (MB): peak = 1024.605 ; gain = 528.609
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 69 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:19 ; elapsed = 00:01:44 . Memory (MB): peak = 1024.605 ; gain = 405.500
+Synthesis Optimization Complete : Time (s): cpu = 00:01:33 ; elapsed = 00:01:53 . Memory (MB): peak = 1024.605 ; gain = 528.609
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 1291 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 1 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1024.605 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1073 instances were transformed.
+  LD => LDCE: 1061 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 12 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+86 Infos, 153 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:42 ; elapsed = 00:02:07 . Memory (MB): peak = 1024.605 ; gain = 737.457
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1024.605 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.runs/synth_1/CPU_tb.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file CPU_tb_utilization_synth.rpt -pb CPU_tb_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 18 22:59:09 2025...
