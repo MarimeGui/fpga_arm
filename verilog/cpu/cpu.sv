@@ -7,13 +7,16 @@ module CPU(
     input [15:0] program_in,
     output wire [31:0] gpio_state
 );
-    //Download data to i_cache
+    // Download data to i_cache
     wire clk2 = (! download_program) & clk;
 
     // Branch and Fetch related
     wire global_disable;
     wire [31:0] delta_instruction;
     wire [31:0] index;
+
+    // Instruction passing
+    wire [15:0] instruction_from_mem;
     wire [15:0] instruction;
 
     // Decode and Execute related
@@ -32,7 +35,12 @@ module CPU(
         .write_instruction_index(instruction_index),
         .write_instruction(program_in),
         .index(index),
-        .data(instruction)
+        .data(instruction_from_mem)
+    );
+
+    LittleEndianInverter i_inverter(
+        .from_memory(instruction_from_mem),
+        .instruction(instruction)
     );
 
     Fetch i_fetch(
