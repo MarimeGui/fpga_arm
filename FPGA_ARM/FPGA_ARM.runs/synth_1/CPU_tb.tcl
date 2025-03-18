@@ -45,6 +45,7 @@ read_verilog -library xil_defaultlib -sv {
   C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/regs.sv
   C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/new/CPU_tb.sv
 }
+read_verilog -library xil_defaultlib C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/new/PLL.v
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
 # design are intentionally left as such for best results. Dcp files will be
