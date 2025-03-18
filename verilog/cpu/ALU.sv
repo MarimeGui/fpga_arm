@@ -23,7 +23,6 @@ module ALU(
     // Result of the operation
     output bit [31:0] out_alu,
     // Flags for condition checking
-    /* verilator lint_off ASCRANGE */
     output Flags flags
 );
 
