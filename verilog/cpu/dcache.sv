@@ -1,8 +1,8 @@
 // Data cache, stores data in a memory-like way to reuse by instructions later.
 
 module DCache #(
-    parameter [4:0] STR_UOP = 4'b1001, 
-    parameter [4:0] LDR_UOP = 4'b1010
+    parameter [4:0] STR_UOP = 5'b1001, 
+    parameter [4:0] LDR_UOP = 5'b1010
 )(
     input clock,
     input [31:0] addr,
@@ -22,7 +22,7 @@ always @(posedge clock) begin
         end
 
         default: begin
-            // 0 output if neither STR nor LDR 
+            // Output 0 if not LDR for rising edge
             data_out <= 32'b0;
         end
     endcase
@@ -36,8 +36,7 @@ always @(negedge clock) begin
         end
 
         default: begin
-            // 0 output if neither STR nor LDR 
-            data_out <= 32'b0;
+            // Don't do anything if not STR for falling edge
         end
     endcase
 end

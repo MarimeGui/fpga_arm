@@ -7,7 +7,7 @@ module LittleEndianInverter(
 );
 
 always @ (*) begin
-    instruction <= {from_memory[7:0], from_memory[15:8]};
+    instruction = {from_memory[7:0], from_memory[15:8]};
 end
 
 endmodule

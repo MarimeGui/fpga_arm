@@ -18,7 +18,7 @@ module RegReturnMux (
 );
 
 always @(*) begin
-    if (uop == 4'd10) begin
+    if (uop == 5'd10) begin
         if (addr < 32'd31) begin
             out = d_cache;
         end else if (addr == 32'd32) begin

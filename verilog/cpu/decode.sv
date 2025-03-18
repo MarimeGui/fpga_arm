@@ -38,25 +38,25 @@ always @ (negedge clk) begin
                 // ADD - between registers
                 5'b01100: begin
                     uop <= 5'b00001;
-                    sel_p0 <= instruction[8:6];
-                    sel_p1 <= instruction[5:3];
-                    sel_in <= instruction[2:0];
+                    sel_p0 <= {1'd0, instruction[8:6]};
+                    sel_p1 <= {1'd0, instruction[5:3]};
+                    sel_in <= {1'd0, instruction[2:0]};
                 end
 
                 // ADD - Immediate 3 to Register
                 5'b01110: begin
                     uop <= 5'b00001;
-                    num <= instruction[8:6];
-                    sel_p1 <= instruction[5:3];
-                    sel_in <= instruction[2:0];
+                    num <= {29'd0, instruction[8:6]};
+                    sel_p1 <= {1'd0, instruction[5:3]};
+                    sel_in <= {1'd0, instruction[2:0]};
                     num_to_rhs <= 1;
                 end
                 // ADD - Immediate 8 to Register directly
                 5'b110??: begin
                     uop <= 5'b00001;
-                    num <= instruction[7:0];
-                    sel_p1 <= instruction[10:8];
-                    sel_in <= instruction[10:8];
+                    num <= {24'd0, instruction[7:0]};
+                    sel_p1 <= {1'd0, instruction[10:8]};
+                    sel_in <= {1'd0, instruction[10:8]};
                     num_to_rhs <= 1;
                 end
 
@@ -65,52 +65,44 @@ always @ (negedge clk) begin
                 // SUB - between registers
                 5'b01101: begin
                     uop <= 2;
-                    sel_p0 <= instruction[8:6];
-                    sel_p1 <= instruction[5:3];
-                    sel_in <= instruction[2:0];
+                    sel_p0 <= {1'd0, instruction[8:6]};
+                    sel_p1 <= {1'd0, instruction[5:3]};
+                    sel_in <= {1'd0, instruction[2:0]};
                 end
                 // SUB - Immediate 3 to Register
                 5'b01111: begin
                     uop <= 2;
-                    num <= instruction[8:6];
-                    sel_p1 <= instruction[5:3];
-                    sel_in <= instruction[2:0];
+                    num <= {29'd0, instruction[8:6]};
+                    sel_p1 <= {1'd0, instruction[5:3]};
+                    sel_in <= {1'd0, instruction[2:0]};
                     num_to_rhs <= 1;
                 end
                 // SUB - Immediate 8 to Register
                 5'b111??: begin
                     uop <= 2;
-                    num <= instruction[7:0];
-                    sel_p1 <= instruction[10:8];
-                    sel_in <= instruction[10:8];
+                    num <= {24'd0, instruction[7:0]};
+                    sel_p1 <= {1'd0, instruction[10:8]};
+                    sel_in <= {1'd0, instruction[10:8]};
                     num_to_rhs <= 1;
                 end
-                // ----- MOV
 
-                // MOV - Register
-                5'b00000: begin
-                    uop <= 8;
-                    sel_p0 <= instruction[5:3];
-                    sel_in <= instruction[2:0];
-                end
-                // ----- LSL
+                // ----- LSL / MOV
 
-                // LSL - immediate
+                // LSL - immediate (also MOV Register when shift is 0)
                 5'b00???: begin
                     uop <= 5'b00110;
-                    num <= instruction[10:6];
-                    sel_p1 <= instruction[5:3];
-                    sel_in <= instruction[2:0];
+                    num <= {27'd0, instruction[10:6]};
+                    sel_p1 <= {1'd0, instruction[5:3]};
+                    sel_in <= {1'd0, instruction[2:0]};
                     num_to_rhs <= 1;
                 end
-
 
                 // MOV - Immediate
                 5'b100??: begin
                     uop <= 8;
-                    sel_in <= instruction[10:8];
+                    sel_in <= {1'd0, instruction[10:8]};
                     num_to_rhs <= 1;
-                    num <= instruction[7:0];
+                    num <= {24'd0, instruction[7:0]};
                 end
 
                 // ----- CMP
@@ -118,9 +110,13 @@ always @ (negedge clk) begin
                 // CMP - Immediate
                 5'b101??: begin
                     uop <= 5;
-                    sel_p1 <= instruction[10:8];
-                    num <= instruction[7:0];
+                    sel_p1 <= {1'd0, instruction[10:8]};
+                    num <= {24'd0, instruction[7:0]};
                     num_to_rhs <= 1;
+                end
+
+                default: begin
+                    // Unknown instruction
                 end
             endcase
         end
@@ -131,9 +127,13 @@ always @ (negedge clk) begin
                 // ----- EOR
                 4'b0001: begin
                     uop <= 4;
-                    sel_p0 <= instruction[2:0];
-                    sel_in <= instruction[2:0];
-                    sel_p1 <= instruction[5:3];
+                    sel_p0 <= {1'd0, instruction[2:0]};
+                    sel_in <= {1'd0, instruction[2:0]};
+                    sel_p1 <= {1'd0, instruction[5:3]};
+                end
+
+                default: begin
+                    // Unknown instruction
                 end
             endcase
         end
@@ -145,20 +145,20 @@ always @ (negedge clk) begin
                 // Immediate Register
                 3'b1??: begin
                     uop <= 10;
-                    sel_in <= instruction[2:0]; // Register to store value to
-                    sel_p1 <= instruction[5:3]; // LHS of address
+                    sel_in <= {1'd0, instruction[2:0]}; // Register to store value to
+                    sel_p1 <= {1'd0, instruction[5:3]}; // LHS of address
                     num_to_rhs <= 1;
-                    num <= instruction[10:6]; // RHS of address
+                    num <= {27'd0, instruction[10:6]}; // RHS of address
                 end
 
                 // ----- STR
                 // T1
                 3'b0??: begin
                     uop <= 9;
-                    sel_p0 <= instruction[2:0]; // Register that has the value to write
-                    sel_p1 <= instruction[5:3]; // LHS of address
+                    sel_p0 <= {1'd0, instruction[2:0]}; // Register that has the value to write
+                    sel_p1 <= {1'd0, instruction[5:3]}; // LHS of address
                     num_to_rhs <= 1;
-                    num <= instruction[10:6]; // RHS of address
+                    num <= {27'd0, instruction[10:6]}; // RHS of address
                 end
             endcase
         end
@@ -180,6 +180,10 @@ always @ (negedge clk) begin
             branch_cond <= instruction[11:8];
             num <= {{24{instruction[7]}},instruction[7:0]};
             
+        end
+
+        default: begin
+            // Unknown instruction
         end
 
     endcase

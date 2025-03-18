@@ -20,7 +20,7 @@ always @ (posedge clk) begin
         //Equal
         4'b0000: begin
             // condition verified if Z = 1
-            do_branch = Z;
+            do_branch <= Z;
         end
 
         // ----- BNE Not equal
@@ -122,7 +122,7 @@ always @ (posedge clk) begin
         end
 
         4'b1111:begin //Undefined (does not branch)
-            do_branch<=0;
+            do_branch <= 0;
         end
     endcase
 end

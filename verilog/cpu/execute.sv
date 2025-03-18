@@ -26,7 +26,6 @@ module Execute(
     wire [3:0] alu_flags_to_reg_flags;
     wire [31:0] dcache_out;
     wire [31:0] delayed_num;
-    wire delayed_num_to_rhs;
 
     RegisterFile i_regs(
         .clock(clk),

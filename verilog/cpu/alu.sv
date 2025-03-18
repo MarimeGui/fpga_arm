@@ -10,10 +10,11 @@ module ALU(
     // Result of the operation
     output bit [31:0] out_alu,
     // Flags for condition checking
+    /* verilator lint_off ASCRANGE */
     output bit [0:3] flags // [Z, C, N, V] (Zero, Carry, Negative, Overflow)
 );
 
-always @(*) begin
+always_latch @(*) begin
     // Reset flags
     flags = 4'b0000;
 
@@ -38,13 +39,16 @@ always @(*) begin
             flags[3] = ((lhs[31] != rhs[31]) && (out_alu[31] != lhs[31]));
         end
         5'b00110: begin  // LSL (Logical Shift Left)
-            {flags[1], out_alu} = lhs << rhs;  
+            {flags[1], out_alu} = {1'd0, lhs << rhs};
         end
         5'b00111: out_alu = lhs >> rhs;  // LSR (Logical Shift Right) 
         5'b01000: out_alu = rhs;  // MOV
         5'b01001, 5'b01010: begin // STR, LDR
             // Just an add for address, but do not set any flags
             out_alu = lhs + rhs;
+        end
+        default: begin
+            // ALU does not need to be used, keep previous values (hence always_latch)
         end
     endcase
 

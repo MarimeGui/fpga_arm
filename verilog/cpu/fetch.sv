@@ -7,11 +7,11 @@ module Fetch(
 );
 
 initial begin
-	index <= 5; // For stating at 10
+	index = 5; // For stating at 10
 end
 
 always @(negedge clk) begin
-    index += 1 + delta_i;
+    index <= index + 1 + delta_i;
 end
 
 endmodule
