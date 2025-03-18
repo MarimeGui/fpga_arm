@@ -20,19 +20,29 @@ module cpu_tb();
     
     initial begin
         download_program <= 1;
+
+        // MOV 5 => R0
         instruction_index <= 10;
         program_in <= 16'b0010000000000101;
         #10;
 
+        // SUB r2 <= r0 - 7
         instruction_index <= 11;
-        program_in <= 16'b0001111111000010;;
+        program_in <= 16'b0001111111000010;
         #10;
 
-        download_program <= 0;
-        #10
+        // B -2
+        instruction_index <= 12;
+        program_in <= 16'b1110011111111110;
+        #10;
 
-        #10
-        #10
+        // Finish downloading
+        download_program <= 0;
+        #30 // Wait for PC to get to 10
+
+        // Execute instructions
+        #40
+
         $stop;
     end
 

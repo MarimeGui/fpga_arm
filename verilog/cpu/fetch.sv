@@ -7,7 +7,7 @@ module Fetch(
 );
 
 initial begin
-	index <= 9; // For stating at 10
+	index <= 5; // For stating at 10
 end
 
 always @(negedge clk) begin
