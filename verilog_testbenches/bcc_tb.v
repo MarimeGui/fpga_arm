@@ -22,6 +22,8 @@ module Bcc_tb();
 
     // Test sequence
     initial begin
+        // TODO: I think all flags are wrong now with new Flags struct
+
         // Initialize inputs
         branch_cond = 4'b1110;// by default condition initialized to always
         flags = 4'b0000;

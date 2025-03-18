@@ -11,6 +11,8 @@ import Utilities::MOV;
 import Utilities::STR;
 import Utilities::LDR;
 
+import Utilities::Flags;
+
 module ALU(
     // Left-Hand Side of the operation
     input [31:0] lhs,
@@ -22,7 +24,7 @@ module ALU(
     output bit [31:0] out_alu,
     // Flags for condition checking
     /* verilator lint_off ASCRANGE */
-    output bit [0:3] flags // [Z, C, N, V] (Zero, Carry, Negative, Overflow)
+    output Flags flags
 );
 
 always_latch @(*) begin
@@ -33,24 +35,24 @@ always_latch @(*) begin
     
     case(uop)
         ADD: begin
-            {flags[1], out_alu} = lhs + rhs; // Set Carry flag (C)
+            {flags.C, out_alu} = lhs + rhs; // Set Carry flag (C)
             // Overflow flag (for signed addition): Overflow occurs if signs of lhs and rhs are the same, but result sign differs.
-            flags[3] = ((lhs[31] == rhs[31]) && (out_alu[31] != lhs[31])); 
+            flags.V = ((lhs[31] == rhs[31]) && (out_alu[31] != lhs[31])); 
         end
         SUB: begin
-            {flags[1], out_alu} = lhs - rhs; // Set Carry flag (C) for borrow
+            {flags.C, out_alu} = lhs - rhs; // Set Carry flag (C) for borrow
             // Overflow flag (for signed subtraction): Overflow occurs if signs of lhs and rhs are different, but result sign differs from lhs.
-            flags[3] = ((lhs[31] != rhs[31]) && (out_alu[31] != lhs[31]));
+            flags.V = ((lhs[31] != rhs[31]) && (out_alu[31] != lhs[31]));
         end
         AND: out_alu = lhs & rhs;
         EOR: out_alu = lhs ^ rhs;
         CMP: begin
-            {flags[1], out_alu} = lhs - rhs;  // Calculate difference for flags, but do not store result in `out_alu`
+            {flags.C, out_alu} = lhs - rhs;  // Calculate difference for flags, but do not store result in `out_alu`
             // Overflow flag for subtraction, same logic as SUB
-            flags[3] = ((lhs[31] != rhs[31]) && (out_alu[31] != lhs[31]));
+            flags.V = ((lhs[31] != rhs[31]) && (out_alu[31] != lhs[31]));
         end
         LSL: begin
-            {flags[1], out_alu} = {1'd0, lhs << rhs};
+            {flags.C, out_alu} = {1'd0, lhs << rhs};
         end
         LSR: out_alu = lhs >> rhs;
         MOV: out_alu = rhs;
@@ -66,13 +68,13 @@ always_latch @(*) begin
     // ----- Compute Flags
     
     // Set the Negative flag (N) based on MSB of the result
-    flags[2] = out_alu[31];  
+    flags.N = out_alu[31];
 
     // Set the Zero flag (Z)
     if (out_alu == 32'b0) 
-        flags[0] = 1'b1;  // Zero flag is set if result is zero
+        flags.Z = 1'b1;  // Zero flag is set if result is zero
     else 
-        flags[0] = 1'b0;
+        flags.Z = 1'b0;
 end
 
 endmodule

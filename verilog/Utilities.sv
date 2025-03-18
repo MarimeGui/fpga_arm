@@ -11,7 +11,14 @@ package Utilities;
     bit [4:0] MOV = 5'd8;
     bit [4:0] STR = 5'd9;
     bit [4:0] LDR = 5'd10;
-    bit [4:0] PUSH = 5'd11;
-    bit [4:0] POP = 5'd12;
+    //bit [4:0] PUSH = 5'd11;
+    //bit [4:0] POP = 5'd12;
+
+    typedef struct packed {
+        bit Z; // Zero
+        bit C; // Carry
+        bit N; // Negative
+        bit V; // Overflow
+    } Flags;
 
 endpackage
