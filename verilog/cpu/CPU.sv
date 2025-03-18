@@ -2,13 +2,15 @@
 
 module CPU(
     input clk,
-    input download_program,
-    input [31:0] instruction_index,
-    input [15:0] program_in,
+
+    input write,
+    input [7:0] write_instruction_index,
+    input [15:0] write_instruction,
+
     output wire [31:0] gpio_state
 );
     // Download data to i_cache
-    wire clk2 = (!download_program) & clk;
+    wire clk2 = (!write) & clk;
 
     // Branch and Fetch related
     wire global_disable;
@@ -30,10 +32,10 @@ module CPU(
 
     ICache i_icache(
         .clk(clk),
-        .write_enable(download_program),
-        .write_instruction_index(instruction_index),
-        .write_instruction(program_in),
-        .index(index),
+        .write_enable(write),
+        .write_instruction_index(write_instruction_index),
+        .write_instruction(write_instruction),
+        .index(index[7:0]),
         .data(instruction_from_mem)
     );
 

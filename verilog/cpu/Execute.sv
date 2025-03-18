@@ -25,7 +25,6 @@ module Execute(
     wire [31:0] mux_to_reg_in_reg;
     wire [3:0] alu_flags_to_reg_flags;
     wire [31:0] dcache_out;
-    wire [31:0] delayed_num;
 
     RegisterFile i_regs(
         .clock(clk),
@@ -81,7 +80,7 @@ module Execute(
 
     DCache i_dcache(
         .clock(clk),
-        .addr(alu_out),
+        .addr(alu_out[4:0]),
         .uop(uop),
         .data_in(reg_p0),
         .data_out(dcache_out)

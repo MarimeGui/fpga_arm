@@ -4,10 +4,10 @@ module ICache (
     input clk,
 
     input write_enable,
-    input [31:0] write_instruction_index,
+    input [7:0] write_instruction_index,
     input [15:0] write_instruction,
 
-    input [31:0] index,
+    input [7:0] index,
     output bit [15:0] data
 );
 

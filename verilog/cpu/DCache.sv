@@ -5,7 +5,7 @@ module DCache #(
     parameter [4:0] LDR_UOP = 5'b1010
 )(
     input clock,
-    input [31:0] addr,
+    input [4:0] addr,
     input [31:0] data_in,
     input [4:0] uop,
     output bit [31:0] data_out
