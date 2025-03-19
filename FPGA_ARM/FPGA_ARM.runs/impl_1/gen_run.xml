@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1742335004">
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1742366294">
   <File Type="BITSTR-BMM" Name="CPU_tb_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="CPU_tb_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="CPU_tb_timing_summary_init.rpt"/>
@@ -71,116 +71,99 @@
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/new/PLL.v">
+    <File Path="$PPRDIR/../verilog/Utilities.sv">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/cpu/alu.sv">
+    <File Path="$PPRDIR/../verilog/cpu/ALU.sv">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../verilog/cpu/alu.sv"/>
-        <Attr Name="ImportTime" Val="1742312799"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/cpu/bcc.sv">
+    <File Path="$PPRDIR/../verilog/cpu/BCC.sv">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../verilog/cpu/bcc.sv"/>
-        <Attr Name="ImportTime" Val="1742311482"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/cpu/cpu.sv">
+    <File Path="$PPRDIR/../verilog/cpu/CPU.sv">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../verilog/cpu/cpu.sv"/>
-        <Attr Name="ImportTime" Val="1742311482"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/cpu/dcache.sv">
+    <File Path="$PPRDIR/../verilog/cpu/DCache.sv">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../verilog/cpu/dcache.sv"/>
-        <Attr Name="ImportTime" Val="1742311482"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/cpu/decode.sv">
+    <File Path="$PPRDIR/../verilog/cpu/Decode.sv">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../verilog/cpu/decode.sv"/>
-        <Attr Name="ImportTime" Val="1742311482"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/cpu/execute.sv">
+    <File Path="$PPRDIR/../verilog/cpu/Execute.sv">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../verilog/cpu/execute.sv"/>
-        <Attr Name="ImportTime" Val="1742311482"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/cpu/fetch.sv">
+    <File Path="$PPRDIR/../verilog/cpu/Fetch.sv">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../verilog/cpu/fetch.sv"/>
-        <Attr Name="ImportTime" Val="1742311482"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/cpu/gpio.sv">
+    <File Path="$PPRDIR/../verilog/cpu/GPIO.sv">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../verilog/cpu/gpio.sv"/>
-        <Attr Name="ImportTime" Val="1742311482"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/cpu/icache.sv">
+    <File Path="$PPRDIR/../verilog/cpu/ICache.sv">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../verilog/cpu/icache.sv"/>
-        <Attr Name="ImportTime" Val="1742311482"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/cpu/mux32.sv">
+    <File Path="$PPRDIR/../verilog/cpu/LittleEndianInverter.sv">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../verilog/cpu/mux32.sv"/>
-        <Attr Name="ImportTime" Val="1742311482"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/cpu/reg_return_mux.sv">
+    <File Path="$PPRDIR/../verilog/cpu/Mux32.sv">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../verilog/cpu/reg_return_mux.sv"/>
-        <Attr Name="ImportTime" Val="1742311482"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/cpu/regs.sv">
+    <File Path="$PPRDIR/../verilog/cpu/RegReturnMux.sv">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../verilog/cpu/regs.sv"/>
-        <Attr Name="ImportTime" Val="1742311482"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../verilog/cpu/RegisterFile.sv">
+      <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -193,7 +176,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/CTRLuOP.v">
+    <File Path="$PSRCDIR/sources_1/new/ALU_tb.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -201,7 +184,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/DCache_tb.v">
+    <File Path="$PSRCDIR/sources_1/new/CTRLuOP.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -241,29 +224,9 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/ALU_tb.v">
+    <File Path="$PSRCDIR/sources_1/new/DCache_tb.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/cpu/delay1.sv">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../verilog/cpu/delay1.sv"/>
-        <Attr Name="ImportTime" Val="1742311482"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/cpu/delay32.sv">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../verilog/cpu/delay32.sv"/>
-        <Attr Name="ImportTime" Val="1742311482"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>

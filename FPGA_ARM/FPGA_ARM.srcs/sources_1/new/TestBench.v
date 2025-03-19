@@ -20,8 +20,8 @@ module TestBench( //NordVPN.com/tytelman
     wire [3:0] Flag;
     
     //Execute_tb // SW=SelP0_SelIn_RHS_RHS, BTNC=CLK, BTNU=uOP+1, BTND=uOP-1
-    DCache_tb
-    //ALU_tb // SW=LHS_RHS, BTNU=uOP+1, BTND=uOP-1
+    //DCache_tb
+    ALU_tb // SW=LHS_RHS, BTNU=uOP+1, BTND=uOP-1
     TB(
         .CLK(CLK100MHZ), .CLKBTNC(CLKBTNC),
         .BTNU(BTNU), .BTND(BTND), .BTNL(BTNL), .BTNR(BTNR),

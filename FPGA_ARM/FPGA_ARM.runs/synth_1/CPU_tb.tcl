@@ -31,21 +31,22 @@ set_property target_language Verilog [current_project]
 set_property ip_output_repo c:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib -sv {
-  C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/alu.sv
-  C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/bcc.sv
-  C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/cpu.sv
-  C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/dcache.sv
-  C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/decode.sv
-  C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/execute.sv
-  C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/fetch.sv
-  C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/gpio.sv
-  C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/icache.sv
-  C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/mux32.sv
-  C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/reg_return_mux.sv
-  C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/imports/cpu/regs.sv
+  C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/verilog/Utilities.sv
+  C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/verilog/cpu/ALU.sv
+  C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/verilog/cpu/BCC.sv
+  C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/verilog/cpu/CPU.sv
+  C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/verilog/cpu/DCache.sv
+  C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/verilog/cpu/Decode.sv
+  C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/verilog/cpu/Execute.sv
+  C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/verilog/cpu/Fetch.sv
+  C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/verilog/cpu/GPIO.sv
+  C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/verilog/cpu/ICache.sv
+  C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/verilog/cpu/LittleEndianInverter.sv
+  C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/verilog/cpu/Mux32.sv
+  C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/verilog/cpu/RegReturnMux.sv
+  C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/verilog/cpu/RegisterFile.sv
   C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/new/CPU_tb.sv
 }
-read_verilog -library xil_defaultlib C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/new/PLL.v
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
 # design are intentionally left as such for best results. Dcp files will be

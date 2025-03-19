@@ -21,9 +21,9 @@ assign LED = CPU.gpio_state[15:0];
 // ===== Module =====
 CPU CPU(
     .clk(CLK100MHZ),
-    .download_program(download_program),
-    .instruction_index(instruction_index),
-    .program_in(program_in),
+    .write(download_program),
+    .write_instruction_index(instruction_index),
+    .write_instruction(program_in),
     .gpio_state()
 );
 
