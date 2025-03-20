@@ -68,6 +68,18 @@ module alu_tb();
         rhs <= 32'h12345678;
         uop <= 5'b01000;  // MOV operation
         #10;
+
+        // Test 8: SUB (0 - 1)
+        lhs <= 32'h00000000;
+        rhs <= 32'h00000001;
+        uop <= 5'b00010;  // SUB operation
+        #10;
+		
+        // Test 0: NOP (flags must be keep as before)
+        lhs <= 32'h00000001;
+        rhs <= 32'h00000000;
+        uop <= 5'b00000;  // Nothing
+        #10;
         
         $stop; // End simulation
     end
