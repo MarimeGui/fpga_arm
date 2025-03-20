@@ -19,6 +19,11 @@ proc create_report { reportName command } {
 }
 set_param xicom.use_bs_reader 1
 set_msg_config  -id {Labtoolstcl 44-513}  -string {{ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183A4D897A}}  -suppress 
+set_msg_config  -id {Synth 8-3917}  -string {{WARNING: [Synth 8-3917] design CPU_tb has port Disable7Seg[3] driven by constant 1}}  -suppress 
+set_msg_config  -id {Synth 8-3917}  -string {{WARNING: [Synth 8-3917] design CPU_tb has port Disable7Seg[2] driven by constant 1}}  -suppress 
+set_msg_config  -id {Synth 8-3917}  -string {{WARNING: [Synth 8-3917] design CPU_tb has port Disable7Seg[1] driven by constant 1}}  -suppress 
+set_msg_config  -id {Synth 8-3917}  -suppress 
+set_msg_config  -id {Synth 8-3331}  -suppress 
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -35,9 +40,10 @@ read_verilog -library xil_defaultlib -sv {
   C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/verilog/cpu/ALU.sv
   C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/verilog/cpu/BCC.sv
   C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/verilog/cpu/CPU.sv
+  C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/new/CPU_tb.sv
+  C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/new/CTRL7Segments.sv
   C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/verilog/cpu/DCache.sv
   C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/verilog/cpu/Decode.sv
-  C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/verilog/cpu/Execute.sv
   C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/verilog/cpu/Fetch.sv
   C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/verilog/cpu/GPIO.sv
   C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/verilog/cpu/ICache.sv
@@ -45,8 +51,14 @@ read_verilog -library xil_defaultlib -sv {
   C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/verilog/cpu/Mux32.sv
   C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/verilog/cpu/RegReturnMux.sv
   C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/verilog/cpu/RegisterFile.sv
-  C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/new/CPU_tb.sv
+  C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/verilog/cpu/Execute.sv
+  C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/new/Execute_tb.sv
+  C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/new/CTRLuOP.sv
+  C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/new/ALU_tb.sv
+  C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/new/FrequencyDivider.sv
+  C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/new/Decode_tb.sv
 }
+read_verilog -library xil_defaultlib C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/new/Disp1Digit.v
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
 # design are intentionally left as such for best results. Dcp files will be

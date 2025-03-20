@@ -15,6 +15,8 @@ module Execute(
     output wire global_disable,
     output wire [31:0] delta_instruction,
     output wire [31:0] gpio_state
+    
+    //output wire [31:0] alu_out // only for test bench
 );
 
     wire [31:0] reg_p0;
