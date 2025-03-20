@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Thu Mar 20 19:23:46 2025
+| Date         : Thu Mar 20 23:36:27 2025
 | Host         : DESKTOP-3T5D140 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file CPU_tb_control_sets_placed.rpt
 | Design       : CPU_tb
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    48 |
-|    Minimum number of control sets                        |    48 |
+| Total control sets                                       |    45 |
+|    Minimum number of control sets                        |    45 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    49 |
+| Unused register locations in slices containing registers |    30 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    48 |
-| >= 0 to < 4        |     4 |
+| Total control sets |    45 |
+| >= 0 to < 4        |     3 |
 | >= 4 to < 6        |     1 |
 | >= 6 to < 8        |     0 |
 | >= 8 to < 10       |     3 |
 | >= 10 to < 12      |     0 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
-| >= 16              |    40 |
+| >= 16              |    38 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,10 +58,10 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |            1177 |          557 |
+| No           | No                    | No                     |            1175 |          545 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              96 |           28 |
-| Yes          | No                    | No                     |              54 |           20 |
+| No           | Yes                   | No                     |              31 |           14 |
+| Yes          | No                    | No                     |              52 |           23 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
@@ -74,52 +74,49 @@ Table of Contents
 |                      Clock Signal                     |       Enable Signal       |          Set/Reset Signal          | Slice Load Count | Bel Load Count |
 +-------------------------------------------------------+---------------------------+------------------------------------+------------------+----------------+
 |  CPU/i_execute/i_alu/flags_out_reg[Z]/G0              |                           |                                    |                1 |              1 |
+|  CLK100MHZ_IBUF_BUFG                                  |                           |                                    |                1 |              1 |
 |  CPU/i_execute/i_dcache/last_clock_state_reg_i_2_n_10 |                           |                                    |                1 |              1 |
-| ~PLL2/CLKout                                          |                           |                                    |                1 |              1 |
-|  CLK100MHZ_IBUF_BUFG                                  |                           |                                    |                2 |              2 |
 | ~clk2                                                 | CPU/i_decode/p_0_in__0    |                                    |                1 |              4 |
+|  CLK100MHZ_IBUF_BUFG                                  | download_program_reg_n_10 |                                    |                3 |              8 |
+|  CLK100MHZ_IBUF_BUFG                                  | program_in                |                                    |                2 |              8 |
 | ~clk2                                                 |                           |                                    |                2 |              8 |
-| ~PLL2/CLKout                                          | download_program_reg_n_10 |                                    |                3 |              8 |
-| ~PLL2/CLKout                                          | program_in                |                                    |                2 |              9 |
-|  n_9_135_BUFG                                         |                           |                                    |               18 |             32 |
-|  n_8_159_BUFG                                         |                           |                                    |               20 |             32 |
-|  CPU/i_execute/i_alu/uop_reg[0]_0[0]                  |                           |                                    |               18 |             32 |
-|  CPU/i_execute/i_dcache/data_out_reg[31]_i_2_n_10     |                           |                                    |               12 |             32 |
-|  n_2_156_BUFG                                         |                           |                                    |               16 |             32 |
-|  n_3_121_BUFG                                         |                           |                                    |               15 |             32 |
-|  CLK100MHZ_IBUF_BUFG                                  |                           | PLL2/clear                         |                8 |             32 |
-|  CLK100MHZ_IBUF_BUFG                                  |                           | PLL/i[0]_i_1__0_n_10               |                8 |             32 |
-|  CPU/i_execute/i_alu/uop_reg[0]_2[0]                  |                           |                                    |               17 |             32 |
-|  n_4_155_BUFG                                         |                           |                                    |               17 |             32 |
-|  n_5_153_BUFG                                         |                           |                                    |               19 |             32 |
-|  n_1_157_BUFG                                         |                           |                                    |               16 |             32 |
-|  CPU/i_execute/i_alu/uop_reg[3]_6[0]                  |                           |                                    |               12 |             32 |
-| ~clk2                                                 |                           | CPU/i_execute/i_bcc/global_disable |               12 |             32 |
-|  n_7_120_BUFG                                         |                           |                                    |               14 |             32 |
-|  CPU/i_execute/i_alu/uop_reg[3]_1[0]                  |                           |                                    |               10 |             32 |
-|  CPU/i_execute/i_alu/uop_reg[3]_2[0]                  |                           |                                    |               14 |             32 |
-|  CPU/i_execute/i_alu/uop_reg[3]_8[0]                  |                           |                                    |                9 |             32 |
-|  CPU/i_execute/i_alu/uop_reg[3]_7[0]                  |                           |                                    |               16 |             32 |
-|  CPU/i_execute/i_alu/uop_reg[3][0]                    |                           |                                    |               12 |             32 |
-|  CPU/i_execute/i_alu/uop_reg[3]_4[0]                  |                           |                                    |               12 |             32 |
-|  CPU/i_execute/i_alu/uop_reg[3]_0[0]                  |                           |                                    |               11 |             32 |
-|  CPU/i_execute/i_alu/uop_reg[3]_3[0]                  |                           |                                    |               20 |             32 |
-|  CPU/i_execute/i_alu/uop_reg[3]_5[0]                  |                           |                                    |               21 |             32 |
-|  n_6_152_BUFG                                         |                           |                                    |               17 |             32 |
-|  CPU/i_execute/i_alu/CLKout_reg[0]                    |                           |                                    |               12 |             32 |
-|  CPU/i_execute/i_alu/uop_reg[0]_3[0]                  |                           |                                    |               17 |             32 |
-|  CPU/i_execute/i_alu/uop_reg[0]_1[0]                  |                           |                                    |               16 |             32 |
-|  CPU/i_execute/i_alu/uop_reg[0]_4[0]                  |                           |                                    |               16 |             32 |
+| ~clk2                                                 |                           | CPU/i_execute/i_bcc/global_disable |               14 |             31 |
+|  CPU/i_execute/i_alu/uop_reg[0]_5[0]                  |                           |                                    |               12 |             32 |
 |  CPU/i_execute/i_alu/uop_reg[0]_7[0]                  |                           |                                    |               14 |             32 |
 |  CPU/i_execute/i_alu/uop_reg[0]_9[0]                  |                           |                                    |               18 |             32 |
-|  CPU/i_execute/i_alu/uop_reg[1][0]                    |                           |                                    |               18 |             32 |
-|  CPU/i_execute/i_alu/uop_reg[0]_5[0]                  |                           |                                    |               13 |             32 |
-|  CPU/i_execute/i_alu/uop_reg[0]_6[0]                  |                           |                                    |               12 |             32 |
-|  CPU/i_execute/i_alu/uop_reg[0]_8[0]                  |                           |                                    |               15 |             32 |
+|  CPU/i_execute/i_alu/uop_reg[0]_0[0]                  |                           |                                    |               19 |             32 |
+|  CPU/i_execute/i_alu/uop_reg[0]_3[0]                  |                           |                                    |               16 |             32 |
+|  CPU/i_execute/i_alu/uop_reg[0]_4[0]                  |                           |                                    |               11 |             32 |
+|  CPU/i_execute/i_alu/uop_reg[3]_0[0]                  |                           |                                    |               13 |             32 |
+|  CPU/i_execute/i_alu/uop_reg[3]_1[0]                  |                           |                                    |               11 |             32 |
+|  CPU/i_execute/i_alu/uop_reg[3]_2[0]                  |                           |                                    |               20 |             32 |
+|  CPU/i_execute/i_alu/uop_reg[3]_4[0]                  |                           |                                    |               18 |             32 |
+|  CPU/i_execute/i_alu/uop_reg[3]_6[0]                  |                           |                                    |               15 |             32 |
+|  CPU/i_execute/i_alu/uop_reg[0]_6[0]                  |                           |                                    |               14 |             32 |
+|  CPU/i_execute/i_alu/uop_reg[3]_7[0]                  |                           |                                    |               12 |             32 |
+|  CPU/i_execute/i_alu/uop_reg[0]_8[0]                  |                           |                                    |               14 |             32 |
+|  CPU/i_execute/i_alu/uop_reg[3]_8[0]                  |                           |                                    |               13 |             32 |
+|  CPU/i_execute/i_alu/download_program_reg[0]          |                           |                                    |               12 |             32 |
+|  n_7_123_BUFG                                         |                           |                                    |               17 |             32 |
+|  n_6_100_BUFG                                         |                           |                                    |               16 |             32 |
+|  n_9_114_BUFG                                         |                           |                                    |               18 |             32 |
+|  n_5_119_BUFG                                         |                           |                                    |               16 |             32 |
+|  n_2_96_BUFG                                          |                           |                                    |               16 |             32 |
+|  n_8_104_BUFG                                         |                           |                                    |               20 |             32 |
+|  CPU/i_execute/i_alu/uop_reg[1][0]                    |                           |                                    |               16 |             32 |
+|  CPU/i_execute/i_alu/uop_reg[3]_5[0]                  |                           |                                    |               12 |             32 |
+|  CPU/i_execute/i_alu/uop_reg[3]_9[0]                  |                           |                                    |               11 |             32 |
+|  CPU/i_execute/i_alu/uop_reg[0]_1[0]                  |                           |                                    |               12 |             32 |
+|  CPU/i_execute/i_alu/uop_reg[3]_3[0]                  |                           |                                    |               10 |             32 |
 |  CPU/i_execute/i_alu/uop_reg[0][0]                    |                           |                                    |               16 |             32 |
-| ~clk2                                                 | CPU/i_execute/i_alu/E[0]  |                                    |               14 |             33 |
-|  n_0_110_BUFG                                         |                           |                                    |               23 |             39 |
-|  clk2                                                 |                           |                                    |               24 |             69 |
+| ~clk2                                                 | CPU/i_execute/i_alu/E[0]  |                                    |               17 |             32 |
+|  CPU/i_execute/i_alu/uop_reg[0]_2[0]                  |                           |                                    |               14 |             32 |
+|  n_1_115_BUFG                                         |                           |                                    |               21 |             32 |
+|  n_3_105_BUFG                                         |                           |                                    |               18 |             32 |
+|  n_4_102_BUFG                                         |                           |                                    |               18 |             32 |
+|  CPU/i_execute/i_dcache/data_out_reg[31]_i_2_n_10     |                           |                                    |               15 |             32 |
+|  n_0_213_BUFG                                         |                           |                                    |               23 |             39 |
+|  clk2                                                 |                           |                                    |               19 |             69 |
 |  CPU/i_execute/i_/regs_reg_r1_0_15_0_5_i_1_n_10       | CPU/i_decode/p_0_in__0    |                                    |               12 |             96 |
 +-------------------------------------------------------+---------------------------+------------------------------------+------------------+----------------+
 

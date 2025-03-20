@@ -60,6 +60,9 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {Common 17-41} -limit 10000000
+set_msg_config -id {HDL 9-1061} -limit 100000
+set_msg_config -id {HDL 9-1654} -limit 100000
 set_msg_config  -id {Labtoolstcl 44-513}  -string {{ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183A4D897A}}  -suppress 
 set_msg_config  -id {Synth 8-3917}  -string {{WARNING: [Synth 8-3917] design CPU_tb has port Disable7Seg[3] driven by constant 1}}  -suppress 
 set_msg_config  -id {Synth 8-3917}  -string {{WARNING: [Synth 8-3917] design CPU_tb has port Disable7Seg[2] driven by constant 1}}  -suppress 

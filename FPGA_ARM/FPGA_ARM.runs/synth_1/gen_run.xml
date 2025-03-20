@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1742494814">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1742509967">
   <File Type="PA-TCL" Name="CPU_tb.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="CPU_tb_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="CPU_tb_reports.tcl"/>
@@ -21,6 +21,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/Disp1Digit.v">
       <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -63,6 +64,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/CTRL7Segments.sv">
       <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -140,6 +142,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/Execute_tb.sv">
       <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -147,6 +150,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/CTRLuOP.sv">
       <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -154,6 +158,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/ALU_tb.sv">
       <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -168,6 +173,15 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/Decode_tb.sv">
       <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Decode_Execute_tb.sv">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>

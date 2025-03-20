@@ -37,7 +37,7 @@ initial begin
 	out_alu = 32'b0;
 end
 
-always @(*) begin
+always_latch @(*) begin
     
 	is_nop = 0;
 
