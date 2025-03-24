@@ -28,20 +28,23 @@ module RegisterFile (
 // PC is stored separately
 
 bit [31:0] regs [14:0]; // Internal register file, r0 - r15 (r13 = SP, r14 = LR)
-bit [3:0] flags; // Internal flags register
 
 // Register read operation
 always @ (posedge clock) begin
-    out_flags <= flags;     
     p0 <= regs[sel_p0]; // Read register selected by sel_p0
     p1 <= regs[sel_p1]; // Read register selected by sel_p1
 end
 
 // Register write operation
 always @ (negedge clock) begin
-    if (!(not_enable || (uop == NOP) || (uop == CMP) || (uop == STR))) begin
-        regs[sel_in] <= in_reg; // Write to the register selected by sel_in
-		flags <= in_flags; // Update flags register
+    if (!not_enable) begin
+        if (!((uop == NOP) || (uop == STR))) begin
+            out_flags <= in_flags; // Update flags register
+        end
+
+        if (!((uop == NOP) || (uop == CMP) || (uop == STR))) begin
+            regs[sel_in] <= in_reg; // Write to the register selected by sel_in
+        end
     end
 end
 
