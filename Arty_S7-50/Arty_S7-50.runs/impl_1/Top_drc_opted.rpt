@@ -1,0 +1,42 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1.2 (win64) Build 2615518 Fri Aug  9 15:55:25 MDT 2019
+| Date         : Mon Mar 24 13:01:13 2025
+| Host         : c306-pc3 running 64-bit major release  (build 9200)
+| Command      : report_drc -file Top_drc_opted.rpt -pb Top_drc_opted.pb -rpx Top_drc_opted.rpx
+| Design       : Top
+| Device       : xc7s50csga324-2
+| Speed File   : -2
+| Design State : Synthesized
+------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 1
++-------------+----------+-------------------------------------------------------------+------------+
+| Rule        | Severity | Description                                                 | Violations |
++-------------+----------+-------------------------------------------------------------+------------+
+| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 1          |
++-------------+----------+-------------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+PLHOLDVIO-2#1 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT CPU/i_execute/i_/regs_reg_r1_0_15_0_5_i_1 is driving clock pin of 96 cells. This could lead to large hold time violations. Involved cells are:
+CPU/i_execute/i_regs/regs_reg_r1_0_15_0_5/RAMA (in CPU/i_execute/i_regs/regs_reg_r1_0_15_0_5 macro), CPU/i_execute/i_regs/regs_reg_r1_0_15_0_5/RAMA_D1 (in CPU/i_execute/i_regs/regs_reg_r1_0_15_0_5 macro), CPU/i_execute/i_regs/regs_reg_r1_0_15_0_5/RAMB (in CPU/i_execute/i_regs/regs_reg_r1_0_15_0_5 macro), CPU/i_execute/i_regs/regs_reg_r1_0_15_0_5/RAMB_D1 (in CPU/i_execute/i_regs/regs_reg_r1_0_15_0_5 macro), CPU/i_execute/i_regs/regs_reg_r1_0_15_0_5/RAMC (in CPU/i_execute/i_regs/regs_reg_r1_0_15_0_5 macro), CPU/i_execute/i_regs/regs_reg_r1_0_15_0_5/RAMC_D1 (in CPU/i_execute/i_regs/regs_reg_r1_0_15_0_5 macro), CPU/i_execute/i_regs/regs_reg_r1_0_15_0_5/RAMD (in CPU/i_execute/i_regs/regs_reg_r1_0_15_0_5 macro), CPU/i_execute/i_regs/regs_reg_r1_0_15_0_5/RAMD_D1 (in CPU/i_execute/i_regs/regs_reg_r1_0_15_0_5 macro), CPU/i_execute/i_regs/regs_reg_r1_0_15_12_17/RAMA (in CPU/i_execute/i_regs/regs_reg_r1_0_15_12_17 macro), CPU/i_execute/i_regs/regs_reg_r1_0_15_12_17/RAMA_D1 (in CPU/i_execute/i_regs/regs_reg_r1_0_15_12_17 macro), CPU/i_execute/i_regs/regs_reg_r1_0_15_12_17/RAMB (in CPU/i_execute/i_regs/regs_reg_r1_0_15_12_17 macro), CPU/i_execute/i_regs/regs_reg_r1_0_15_12_17/RAMB_D1 (in CPU/i_execute/i_regs/regs_reg_r1_0_15_12_17 macro), CPU/i_execute/i_regs/regs_reg_r1_0_15_12_17/RAMC (in CPU/i_execute/i_regs/regs_reg_r1_0_15_12_17 macro), CPU/i_execute/i_regs/regs_reg_r1_0_15_12_17/RAMC_D1 (in CPU/i_execute/i_regs/regs_reg_r1_0_15_12_17 macro), CPU/i_execute/i_regs/regs_reg_r1_0_15_12_17/RAMD (in CPU/i_execute/i_regs/regs_reg_r1_0_15_12_17 macro) (the first 15 of 96 listed)
+Related violations: <none>
+
+
