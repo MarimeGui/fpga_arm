@@ -21,7 +21,7 @@ module alu_tb();
         rhs <= 32'h00000001;
         uop <= 5'b00000;  // Nothing
         #10;
-		
+        
         // Test 1: ADD (0 + 1)
         lhs <= 32'h00000000;
         rhs <= 32'h00000001;
@@ -74,7 +74,7 @@ module alu_tb();
         rhs <= 32'h00000001;
         uop <= 5'b00010;  // SUB operation
         #10;
-		
+        
         // Test 0: NOP (flags must be keep as before)
         lhs <= 32'h00000001;
         rhs <= 32'h00000000;

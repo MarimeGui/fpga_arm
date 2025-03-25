@@ -2,7 +2,7 @@
 
 module execute_tb();
     reg clk;
-	
+    
     reg num_to_rhs;
     reg [31:0] num;
     reg [3:0] sel_p0;

@@ -2,7 +2,7 @@
 
 module regs_tb();
     reg clock;
-	reg not_enable;
+    reg not_enable;
     reg [31:0] in_reg;
     reg [3:0] sel_in, sel_p0, sel_p1;
     reg [3:0] in_flags;
@@ -13,7 +13,7 @@ module regs_tb();
     // Instantiate the regs module
     RegisterFile UUT (
         .clock(clock),
-		.not_enable(not_enable),
+        .not_enable(not_enable),
         .in_reg(in_reg),
         .sel_in(sel_in),
         .sel_p0(sel_p0),
@@ -35,7 +35,7 @@ module regs_tb();
     // Test sequence
     initial begin
         // Initialize inputs
-		not_enable <= 0;
+        not_enable <= 0;
         in_reg = 32'h00000000;
         sel_in = 4'b1111; // Should prevent writing to any registers
         sel_p0 = 4'b0000;
@@ -62,12 +62,12 @@ module regs_tb();
         sel_p0 = 4'b0101; // Select r5
         sel_p1 = 4'b0110; // Select r6
         #10;
-		
-		// Disable reg & Write to r5
-		not_enable <= 1; // Disable write
+        
+        // Disable reg & Write to r5
+        not_enable <= 1; // Disable write
         sel_p0 = 4'b0101;
         sel_in = 4'b0101; // Select r5
-		in_reg = 32'hDEAD;
+        in_reg = 32'hDEAD;
         #10;
 
         // Release not_enable, r5 should change

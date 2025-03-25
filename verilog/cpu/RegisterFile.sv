@@ -7,7 +7,7 @@ import Utilities::STR;
 module RegisterFile (
     input clock,
     // While disabled, prevent changing internal state of register file. Synchronous
-	input not_enable,
+    input not_enable,
     // Used to prevent overwriting registers for NOP, CMP, STR
     input [4:0] uop,
     // Select registers at input and both output ports

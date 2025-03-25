@@ -2,9 +2,9 @@
 
 module fetch_tb();
     reg clk;
-	reg [31:0] delta_i;
-	wire [31:0] index;
-	
+    reg [31:0] delta_i;
+    wire [31:0] index;
+    
     Fetch UUT(
         .clk(clk),
         .delta_i(delta_i),
@@ -20,19 +20,19 @@ module fetch_tb();
     initial begin
         $dumpfile("fetch_tb.vcd");
         $dumpvars(0, fetch_tb);
-		
-		delta_i = 0;
-		#10;
-		#10;
-		
-		delta_i = 10;
-		#10;
-		
-		delta_i = -5;
-		#10;
-		#10;
-		
-		$stop;
+        
+        delta_i = 0;
+        #10;
+        #10;
+        
+        delta_i = 10;
+        #10;
+        
+        delta_i = -5;
+        #10;
+        #10;
+        
+        $stop;
     end
 
 endmodule

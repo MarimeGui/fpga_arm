@@ -34,19 +34,19 @@ Flags flags;
 initial begin
     // Reset flags
     flags = 4'b0000;
-	out_alu = 32'b0;
+    out_alu = 32'b0;
 end
 
 always_latch @(*) begin
     
-	is_nop = 0;
+    is_nop = 0;
 
     // ----- Perform operation
     
     case(uop)
-		NOP: begin
+        NOP: begin
            is_nop = 1; // Flags do not change
-	    end
+        end
         ADD: begin
             {flags.C, out_alu} = lhs + rhs; // Set Carry flag (C)
             // Overflow flag (for signed addition): Overflow occurs if signs of lhs and rhs are the same, but result sign differs.
@@ -58,13 +58,13 @@ always_latch @(*) begin
             flags.V = ((lhs[31] != rhs[31]) && (out_alu[31] != lhs[31]));
         end
         AND: begin
-			out_alu = lhs & rhs;
-			flags.C = 1'b0; flags.V = 1'b0;
-		end
+            out_alu = lhs & rhs;
+            flags.C = 1'b0; flags.V = 1'b0;
+        end
         EOR: begin
-			out_alu = lhs ^ rhs;
-			flags.C = 1'b0; flags.V = 1'b0;
-		end
+            out_alu = lhs ^ rhs;
+            flags.C = 1'b0; flags.V = 1'b0;
+        end
         CMP: begin
             {flags.C, out_alu} = lhs - rhs;  // Calculate difference for flags, but do not store result in `out_alu`
             // Overflow flag for subtraction, same logic as SUB
@@ -72,16 +72,16 @@ always_latch @(*) begin
         end
         LSL: begin
             {flags.C, out_alu} = {1'd0, lhs << rhs};
-			flags.V = 1'b0; // At check
+            flags.V = 1'b0; // At check
         end
         LSR: begin
-			out_alu = lhs >> rhs;
-			flags.C = 1'b0; flags.V = 1'b0;
-		end
+            out_alu = lhs >> rhs;
+            flags.C = 1'b0; flags.V = 1'b0;
+        end
         MOV: begin
-			out_alu = rhs;
-			flags.C = 1'b0; flags.V = 1'b0;
-		end
+            out_alu = rhs;
+            flags.C = 1'b0; flags.V = 1'b0;
+        end
         STR, LDR: begin
             // Just an add for address, but do not set any flags
             out_alu = lhs + rhs;
@@ -90,19 +90,19 @@ always_latch @(*) begin
         end
         default: begin
             // ALU does not need to be used, keep previous values (hence always_latch)
-			is_nop = 1; // Flags do not change
+            is_nop = 1; // Flags do not change
         end
     endcase
 
-	if (!is_nop) begin
-		// ----- Compute Flags
-		
-		// Set the Negative flag (N) based on MSB of the result
-		flags.N = out_alu[31];
+    if (!is_nop) begin
+        // ----- Compute Flags
+        
+        // Set the Negative flag (N) based on MSB of the result
+        flags.N = out_alu[31];
 
-		// Zero flag (Z) is set if result is zero
-		flags.Z = (out_alu == 32'b0) ? 1'b1 : 1'b0;
-	end
+        // Zero flag (Z) is set if result is zero
+        flags.Z = (out_alu == 32'b0) ? 1'b1 : 1'b0;
+    end
     
     flags_out = flags;
 end

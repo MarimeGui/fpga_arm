@@ -1,7 +1,7 @@
 
 module decode_exec_tb();
     reg clk;
-	
+    
     reg[15:0] instruction;
 
     wire num_to_rhs;

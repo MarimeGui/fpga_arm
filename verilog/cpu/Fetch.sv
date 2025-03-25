@@ -2,12 +2,12 @@
 
 module Fetch(
     input clk,
-	input [31:0] delta_i,
-	output bit [31:0] index
+    input [31:0] delta_i,
+    output bit [31:0] index
 );
 
 initial begin
-	index = 5; // For stating at 10
+    index = 5; // For stating at 10
 end
 
 always @(negedge clk) begin
