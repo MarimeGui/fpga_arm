@@ -30,7 +30,7 @@ module RegisterFile (
 bit [31:0] regs [14:0]; // Internal register file, r0 - r15 (r13 = SP, r14 = LR)
 
 // Register read operation
-always @ (posedge clock) begin
+always @ (posedge clock) begin   
     p0 <= regs[sel_p0]; // Read register selected by sel_p0
     p1 <= regs[sel_p1]; // Read register selected by sel_p1
 end
@@ -38,12 +38,11 @@ end
 // Register write operation
 always @ (negedge clock) begin
     if (!not_enable) begin
-        if (!((uop == NOP) || (uop == STR))) begin
-            out_flags <= in_flags; // Update flags register
-        end
-
         if (!((uop == NOP) || (uop == CMP) || (uop == STR))) begin
             regs[sel_in] <= in_reg; // Write to the register selected by sel_in
+        end
+        if (!((uop == NOP) || (uop == STR))) begin
+            out_flags <= in_flags; // Update flags register
         end
     end
 end

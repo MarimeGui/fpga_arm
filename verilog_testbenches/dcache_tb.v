@@ -2,7 +2,7 @@
 
 module dcache_tb();
     reg clock;
-    reg [4:0] addr;
+    reg [31:0] addr;
     reg [31:0] data_in;
     reg [4:0] uop;
     wire [31:0] data_out;

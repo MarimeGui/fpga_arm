@@ -17,10 +17,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param xicom.use_bs_reader 1
-set_msg_config -id {Common 17-41} -limit 10000000
-set_msg_config -id {HDL 9-1061} -limit 100000
-set_msg_config -id {HDL 9-1654} -limit 100000
 set_msg_config  -id {Labtoolstcl 44-513}  -string {{ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183A4D897A}}  -suppress 
 set_msg_config  -id {Synth 8-3917}  -string {{WARNING: [Synth 8-3917] design CPU_tb has port Disable7Seg[3] driven by constant 1}}  -suppress 
 set_msg_config  -id {Synth 8-3917}  -string {{WARNING: [Synth 8-3917] design CPU_tb has port Disable7Seg[2] driven by constant 1}}  -suppress 
@@ -54,7 +50,7 @@ read_verilog -library xil_defaultlib -sv {
   C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/verilog/cpu/RegReturnMux.sv
   C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/verilog/cpu/RegisterFile.sv
   C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/verilog/cpu/Execute.sv
-  C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/new/FrequencyDivider.sv
+  C:/ProgramsWorkspace/ENSEA/Projet_2A/fpga_arm/FPGA_ARM/FPGA_ARM.srcs/sources_1/new/PLL.sv
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

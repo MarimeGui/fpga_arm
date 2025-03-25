@@ -2,13 +2,12 @@
 .global _start
 
 _start:
-begin:
     MOV R1, #32 // Gpio address
-    MOV R2, #0 // Chaser
-    MOV R3, #0 // Chaser counter
-loop:
+    MOV R2, #0  // Chaser
+    MOV R3, #0 //Chaser counter
+loop:    
     CMP R3,#32
-    BEQ begin
+    BEQ _start 
     
     LSL R2,#1
     CMP R3,#16
@@ -16,7 +15,7 @@ loop:
     ADD R2,#1
 skip:
     ADD R3,#1
-    
+        
     STR R2,[R1,#0]
     B loop
 halt:
