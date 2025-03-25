@@ -4,7 +4,7 @@ module ClockSecond #(
     parameter DIVISOR = 32'd100000000
 ) (
     input clk_in,
-    output bit clk_out,
+    output bit clk_out
 );
 
 bit[31:0] counter=32'd0;
