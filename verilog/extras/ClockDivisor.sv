@@ -1,6 +1,6 @@
 // https://www.fpga4student.com/2017/08/verilog-code-for-clock-divider-on-fpga.html
 
-module ClockSecond #(
+module ClockDivisor #(
     parameter DIVISOR = 32'd100000000
 ) (
     input clk_in,
