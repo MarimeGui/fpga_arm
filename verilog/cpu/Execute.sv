@@ -67,8 +67,8 @@ module Execute(
         .lhs(p1_reg_to_lhs_alu),
         .rhs(num_mux_to_rhs_alu),
         .uop(uop),
-        .out_alu(alu_out),
-        .flags_out(alu_flags_to_reg_flags)
+        .out(alu_out),
+        .flags(alu_flags_to_reg_flags)
     );
 
     BCC i_bcc(
