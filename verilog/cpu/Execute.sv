@@ -1,5 +1,7 @@
 // Actually executes the instruction, holds memory. Mainly regroups all sub=modules
 
+import Utilities::*;
+
 module Execute(
     input clk,
 
@@ -9,7 +11,7 @@ module Execute(
     input [3:0] sel_p0,
     input [3:0] sel_p1,
     input [3:0] sel_in,
-    input [4:0] uop,
+    input Uop uop,
     input [3:0] branch_cond,
 
     output wire global_disable,

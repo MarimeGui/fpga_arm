@@ -1,20 +1,12 @@
 // Takes in a 16-bit instruction and processes it to extract useful information for easy execution afterwards
 
-import Utilities::ADD;
-import Utilities::SUB;
-import Utilities::LSL;
-import Utilities::MOV;
-import Utilities::CMP;
-import Utilities::EOR;
-import Utilities::LDR;
-import Utilities::STR;
-import Utilities::NOP;
+import Utilities::*;
 
 module Decode(
     input [15:0] instruction,
     input clk,
     input reset,
-    output bit [4:0] uop,
+    output Uop uop,
     output bit num_to_rhs,
     output bit [31:0] num,
     output bit [3:0] sel_p0,
@@ -29,7 +21,7 @@ end
 
 always @ (negedge clk) begin
     // Set to default outputs
-    uop <= 0;
+    uop <= NOP;
     num_to_rhs <= 0;
     num <= 0;
     sel_p0 <= 0;

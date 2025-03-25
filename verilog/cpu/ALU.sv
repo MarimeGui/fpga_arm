@@ -1,18 +1,6 @@
 // Performs all mathematical operations
 
-import Utilities::NOP;
-import Utilities::ADD;
-import Utilities::SUB;
-import Utilities::AND;
-import Utilities::EOR;
-import Utilities::CMP;
-import Utilities::LSL;
-import Utilities::LSR;
-import Utilities::MOV;
-import Utilities::STR;
-import Utilities::LDR;
-
-import Utilities::Flags;
+import Utilities::*;
 
 module ALU(
     // Left-Hand Side of the operation
@@ -20,7 +8,7 @@ module ALU(
     // RIght-Hand SIde of the operation
     input [31:0] rhs,
     // Micro-Operation
-    input [4:0] uop,
+    input Uop uop,
     // Result of the operation
     output bit [31:0] out,
     // Flags for condition checking

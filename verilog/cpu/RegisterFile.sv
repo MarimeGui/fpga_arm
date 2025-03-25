@@ -1,15 +1,13 @@
 // Holds all the common registers used by instructions
 
-import Utilities::NOP;
-import Utilities::CMP;
-import Utilities::STR;
+import Utilities::*;
 
 module RegisterFile (
     input clock,
     // While disabled, prevent changing internal state of register file. Synchronous
     input not_enable,
     // Used to prevent overwriting registers for NOP, CMP, STR
-    input [4:0] uop,
+    input Uop uop,
     // Select registers at input and both output ports
     input [3:0] sel_in, sel_p0, sel_p1,
 

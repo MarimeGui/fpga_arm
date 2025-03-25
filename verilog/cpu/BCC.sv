@@ -1,6 +1,6 @@
 // Checks if there will be a branch coming up next instruction cycle
 
-import Utilities::Flags;
+import Utilities::*;
 
 module BCC (
     input [3:0] branch_cond,

@@ -6,10 +6,10 @@
 // Else if address is 31, select GPIO state
 // Else, return only zeroes as this address is not defined
 
-import Utilities::LDR;
+import Utilities::*;
 
 module RegReturnMux (
-    input [4:0] uop,
+    input Uop uop,
     input [31:0] addr,
 
     input [31:0] alu,

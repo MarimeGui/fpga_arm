@@ -1,10 +1,10 @@
 // This code is very similar to D-Cache, except that the internal state is always at the output
 
-import Utilities::STR;
+import Utilities::*;
 
 module GPIO(
     input clk,
-    input [4:0] uop,
+    input Uop uop,
     input [31:0] addr,
     input [31:0] state_in,
 

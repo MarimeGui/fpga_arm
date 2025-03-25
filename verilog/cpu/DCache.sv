@@ -1,13 +1,12 @@
 // Data cache, stores data in a memory-like way to reuse by instructions later.
 
-import Utilities::STR;
-import Utilities::LDR;
+import Utilities::*;
 
 module DCache (
     input clock,
     input [4:0] addr,
     input [31:0] data_in,
-    input [4:0] uop,
+    input Uop uop,
     output bit [31:0] data_out
 );
 
