@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command=".planAhead." Owner="Nicolas" Host="DESKTOP-3T5D140" Pid="1624">
-    </Process>
-</ProcessHandle>
