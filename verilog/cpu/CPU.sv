@@ -7,7 +7,8 @@ module CPU(
     input [7:0] write_instruction_index,
     input [15:0] write_instruction,
 
-    output wire [31:0] gpio_state
+    output wire [31:0] gpio_state,
+    output wire [31:0] index
 );
     // Download data to i_cache
     wire clk2 = (!write) & clk;
@@ -15,8 +16,6 @@ module CPU(
     // Branch and Fetch related
     wire global_disable;
     wire [31:0] delta_instruction;
-    /* verilator lint_off UNUSEDSIGNAL */ // Limited by how much ICache can hold
-    wire [31:0] index;
 
     // Instruction passing
     wire [15:0] instruction_from_mem;

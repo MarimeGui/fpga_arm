@@ -10,15 +10,12 @@ module BasysRunFixedProgram(
     output [7:0] segments
 );
 
-    // Disable 7 segment display
-    assign digit_disable = 4'hF;
-    assign segments = 8'hFF;
-
     bit download_program;
     bit [7:0] instruction_index;
     bit [15:0] program_in;
 
     wire clk;
+    wire [31:0] index;
     wire [15:0] unused;
 
     // 20Hz clock divisor
@@ -32,7 +29,16 @@ module BasysRunFixedProgram(
         .write(download_program),
         .write_instruction_index(instruction_index),
         .write_instruction(program_in),
-        .gpio_state({unused, leds})
+        .gpio_state({unused, leds}),
+        .index(index)
+    );
+
+    DisplayDecimalValue i_display(
+        .sysclk(sysclk),
+        .value(index),
+        .dot_pattern(4'b0001),
+        .segments(segments),
+        .digit_disable(digit_disable)
     );
     
     initial begin
