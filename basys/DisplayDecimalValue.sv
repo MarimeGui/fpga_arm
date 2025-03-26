@@ -44,7 +44,7 @@ bit [1:0] counter;
 always @(posedge clk) begin
     digit_disable <= ~(1 << counter); // Select correct digit
     segments <= all_segments[counter]; // Main digit
-    segments[7] <= (~dots) >> (counter); // Dot
+    segments[7] <= (~dot_pattern) >> (counter); // Dot
 
     // Let overflow happen
     counter <= counter + 1;
