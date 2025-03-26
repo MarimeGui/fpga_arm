@@ -15,6 +15,9 @@ module ArtyRunFixedProgram(
     wire [31:0] index;
     wire [27:0] unused;
 
+    // Blue LED turns on when program is downloading
+    assign rgb_leds[0][2] = download_program;
+
     // 20Hz clock divisor
     ClockDivisor #(5000000) i_divisor(
         .clk_in(sysclk),
