@@ -3,15 +3,17 @@
 module CPU(
     input clk,
 
-    input write,
+    // Disables execution and returns to index 5
+    input reset,
+
     input [7:0] write_instruction_index,
     input [15:0] write_instruction,
 
     output wire [31:0] gpio_state,
     output wire [31:0] index
 );
-    // Download data to i_cache
-    wire clk2 = (!write) & clk;
+    // For modules deactivated while held in reset
+    wire clk2 = (!reset) & clk;
 
     // Branch and Fetch related
     wire global_disable;
@@ -32,7 +34,7 @@ module CPU(
 
     ICache i_icache(
         .clk(clk),
-        .write_enable(write),
+        .write_enable(reset), // When CPU is held in Reset, program ICache
         .write_instruction_index(write_instruction_index),
         .write_instruction(write_instruction),
         .index(index[7:0]),
@@ -45,15 +47,16 @@ module CPU(
     );
 
     Fetch i_fetch(
-        .clk(clk2),
+        .clk(clk),
+        .reset(reset),
         .delta_i(delta_instruction),
         .index(index)
     );
 
     Decode i_decode(
-        .clk(clk2),
+        .clk(clk),
         .instruction(instruction),
-        .reset(global_disable),
+        .reset(global_disable | reset),
         .uop(uop),
         .num_to_rhs(num_to_rhs),
         .num(num),

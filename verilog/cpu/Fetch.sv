@@ -2,6 +2,7 @@
 
 module Fetch(
     input clk,
+    input reset,
     input [31:0] delta_i,
     output bit [31:0] index
 );
@@ -11,7 +12,13 @@ initial begin
 end
 
 always @(negedge clk) begin
-    index <= index + 1 + delta_i;
+    if (!reset) begin
+        // If not held in reset, increment with clk
+        index <= index + 1 + delta_i;
+    end else begin
+        // When held in reset, keep index at 5
+        index <= 5;
+    end
 end
 
 endmodule

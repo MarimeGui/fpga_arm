@@ -26,7 +26,7 @@ module ArtyRunFixedProgram(
 
     CPU i_cpu(
         .clk(clk),
-        .write(download_program),
+        .reset(download_program),
         .write_instruction_index(instruction_index),
         .write_instruction(program_in),
         .gpio_state({unused, leds}),

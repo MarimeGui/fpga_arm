@@ -1,17 +1,19 @@
 module cpu_tb();
 
     reg clk;
-    reg write;
+    reg reset;
     reg [7:0] write_instruction_index;
     reg [15:0] write_instruction;
 
     CPU CPU(
         .clk(clk),
-        .write(write),
+        .reset(reset),
         .write_instruction_index(write_instruction_index),
         .write_instruction(write_instruction),
         /* verilator lint_off PINCONNECTEMPTY */
-        .gpio_state()
+        .gpio_state(),
+        /* verilator lint_off PINCONNECTEMPTY */
+        .index()
     );
 
     initial begin
@@ -23,7 +25,7 @@ module cpu_tb();
     end
     
     initial begin
-        write = 1;
+        reset = 1;
 
         // /!\ These are Little-Endian instructions, in other words, the second byte comes first !
 
@@ -68,11 +70,24 @@ module cpu_tb();
         #10;
 
         // Finish downloading
-        write = 0;
-        #30 // Wait for PC to get to 10
+        reset = 0;
 
         // Execute instructions
-        #500
+        #500;
+
+        // Partially change program
+        reset = 1;
+
+        // MOV 20 => r0 (loop counter)
+        write_instruction_index = 11;
+        write_instruction = 16'b0001010000100000;
+        #10;
+
+        // Finish downloading
+        reset = 0;
+
+        // Execute new instructions
+        #500;
 
         $finish;
     end
