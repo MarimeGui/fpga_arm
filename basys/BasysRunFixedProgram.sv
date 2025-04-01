@@ -17,18 +17,43 @@ module BasysRunFixedProgram(
     bit [7:0] instruction_index;
     bit [15:0] program_in;
 
-    wire clk;
     wire [31:0] index;
     wire [15:0] unused;
 
     // 20Hz clock divisor
+    wire clk;
     ClockDivisor #(5000000) i_divisor(
         .clk_in(sysclk),
         .clk_out(clk)
     );
 
-    CPU i_cpu(
+    wire up_pulse;
+    ButtonHandler i_up_handler(
+        .clk(sysclk),
+        .button(button_up),
+        .pulse(up_pulse),
+        .state()
+    );
+
+    wire center_pulse;
+    ButtonHandler i_center_handler(
+        .clk(sysclk),
+        .button(button_center),
+        .pulse(center_pulse),
+        .state()
+    );
+
+    wire cpu_clk;
+    ClockControl i_clock_control(
+        .sysclk(sysclk),
         .clk(clk),
+        .manual_button_pulse(center_pulse),
+        .automatic_button_pulse(up_pulse),
+        .clk_out(cpu_clk)
+    );
+
+    CPU i_cpu(
+        .clk(cpu_clk),
         .reset(reset),
         .write_instruction_index(instruction_index),
         .write_instruction(program_in),
@@ -44,7 +69,7 @@ module BasysRunFixedProgram(
         .digit_disable(digit_disable)
     );
 
-    always @(posedge clk) begin
+    always @(posedge cpu_clk) begin
         if ((current_program != selected_program) & (selected_program <= 3)) begin
             download_program <= 1; // write the program instructions
             instruction_index <= 10;
